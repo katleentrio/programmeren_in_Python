@@ -21,6 +21,7 @@ zijn:
 | `%` | modulo |
 {:class="table table-striped table-condensed" style="width:auto;margin-left:auto;margin-right:auto;"}
 
+
 De meeste operatoren zijn gekend, behalve
 misschien de integer deling en modulo.
 
