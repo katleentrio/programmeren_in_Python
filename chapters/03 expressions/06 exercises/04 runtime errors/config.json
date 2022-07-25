@@ -5,9 +5,11 @@
       "en": "Runtime errors"
     }
   },
-  "labels": [],
+  "labels": [
+
+  ],
   "internals": {
-    "token": "JsRIq8KGq7h-nSBG22IgB9UaEeuXIUSttVa9_FG7rbyna5dVS4EEvgNYr4WC5mhH",
+    "token": "RS5dIpmHudnJbiSPNunIFEMTWs8C_8D2hkfjetrcjRIzVFAuUGqe37sWa52wDi8N",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }
