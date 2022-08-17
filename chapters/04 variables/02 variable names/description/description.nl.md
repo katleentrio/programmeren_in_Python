@@ -12,15 +12,14 @@ voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels**:
 
 -   Een variabele naam mag geen gereserveerd woord zijn.
     "Gereserveerde woorden" (of "keywords") zijn:
-
-    False      class      finally    is         return
-    None       continue   for        lambda     try
-    True       def        from       nonlocal   while
-    and        del        global     not        with
-    as         elif       if         or         yield
-    assert     else       import     pass
-    break      except     in         raise
     {: .table}
+     >   False      class      finally    is         return
+     >   None       continue   for        lambda     try
+     >   True       def        from       nonlocal   while
+     >   and        del        global     not        with
+     >   as         elif       if         or         yield
+     >   assert     else       import     pass
+     >   break      except     in         raise
 
 
 ### Afspraken 
@@ -93,10 +92,9 @@ nog meer duidelijkheid kan bieden:
 ```python
 # berekening van volume van kegel met gegeven straal en hoogte
 ```
-  
 {:class="callout callout-info"}
 > ### Oefening op het gebruik van correcte variabele namen
-> 
+>  
 > #### Opgave
 > In de code hieronder wordt de waarde 1 toegekend aan een aantal mogelijke variabele namen. Sommige hiervan zijn correct, andere niet. Identificeer de foutieve namen en leg uit waarom.
 > ```python
@@ -109,7 +107,7 @@ nog meer duidelijkheid kan bieden:
 >  class = 1           # 7
 >  Class = 1           # 8
 >  ```
-> 
+>  
 > #### Antwoord
 > De derde, vijfde, en zevende zijn *foutieve* namen: in de derde gebruikt men een at-sign (`@`), de vijfde begint met een cijfer, en de zevende naam is een gereserveerd woord (dit valt op vanwege de syntax highlighting). 
 > Alle andere namen zijn correct. Toch zouden *volgens de conventies* de tweede, de zesde en de achtste naam *vermeden* moeten worden: de zesde begint met een underscore, de tweede en achtste bevatten een hoofdletter en de achtste maam lijkt bovendien op een gereserveerd woord.
