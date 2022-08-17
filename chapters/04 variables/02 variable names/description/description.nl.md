@@ -20,6 +20,7 @@ voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels**:
     as         elif       if         or         yield
     assert     else       import     pass
     break      except     in         raise
+    {: .table}
 
 
 ### Afspraken 
