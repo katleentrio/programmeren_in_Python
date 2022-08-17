@@ -1,12 +1,14 @@
-In dit hoofdstuk is het volgende besproken:
+Kort overzicht van we in dit hoofdstuk leerden:
 
--   Het gebruik van de `print()` functie om zaken op het scherm te tonen
+-   Het gebruik van de `print()` functie om resultaten te tonen
 
--   Data types string, integer, en float
+-   Het gebruik van en het verschil tussen de data types string, integer en float
 
--   Berekeningen
+-   Type casting tussen strings, integers, en floats door gebruik te maken van
+    `str()`, `int()`, en `float()`
 
--   Basale string expressies
+-   Berekeningen uitvoeren in Python
 
--   Type casting tussen strings, integers, en floats, middels `str()`,
-    `int()`, en `float()`
+-   Eenvoudige string expressies
+
+Tijd om dit nu zelf toe te passen in de volgende oefeningen.

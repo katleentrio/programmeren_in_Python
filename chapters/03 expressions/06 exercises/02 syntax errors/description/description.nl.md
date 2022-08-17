@@ -1,4 +1,4 @@
-Kun je de fouten in de volgende regels code identificeren? Verbeter ze.
+Je krijgt een aantal code regels waar fouten in staan. Verbeter deze zodat de uitvoer overeenkomt met diegene die hieronder wordt gegeven.
 
 ### Voorbeeld
 

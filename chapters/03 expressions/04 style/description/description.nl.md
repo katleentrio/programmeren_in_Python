@@ -1,13 +1,13 @@
-Misschien is het je opgevallen dat ik in mijn voorbeelden veel spaties
-gebruik. Bijvoorbeeld, bij de haakjes die achter een functienaam staan,
-zet ik altijd een spatie na het openingshaakje en voor het sluithaakje.
-In berekeningen zet ik vaak spaties rondom operatoren als dat de
-berekening beter leesbaar maakt. Ik zet ook vaak lege regels in mijn
-code, en gebruik consequent vier spaties als tabulatie waar nodig.
+Bij het schrijven van de code, worden dikwijls spaties gebruikt. Denk bijvoorbeeld
+aan de spatie net na het openingshaakje en voor het sluithaakje
+bij de haakjes die achter een functienaam staan.
+Ook in berekeningen worden vaak spaties rondom operatoren geplaatst als dat de
+berekening beter leesbaar maakt. Soms worden lege regels in de code toegevoegd
+en worden consequent vier spaties gebruikt als tabulatie/insprong waar nodig.
 
-De meeste van deze zaken zijn gewoon "stijl." De spaties bij de haakjes
-en rond de operatoren zijn niet nodig. Python begrijpt de code ook prima
-als ze er niet staan. De volgende vier regels code zijn equivalent:
+De meeste van deze spaties zijn niet nodig voor Python om de code te kunnen uitvoeren
+maar zijn gewoon "stijl"; hulpmiddelen om de code leesbaarder te maken voor ons.
+Zo zijn de volgende regels code equivalent:
 
 ```python
 # Equivalente regels code
@@ -18,20 +18,13 @@ print       (       2       +       3       )
 ```
 
 Het "vastplakken" van het openingshaakje aan de functienaam doet vrijwel
-iedere programmeur, maar de rest verschillen de stijlen van spaties
-plaatsen tussen programmeurs (bijvoorbeeld, mijn stijl waarin ik een
-spatie plaats voor een sluithaakje is hoogst zeldzaam). Je kunt hierin
-je eigen stijlvoorkeur gebruiken, je hoeft niet de mijne te volgen. Maar
-ik raad je wel aan om een consistente stijl te gebruiken, want dat maakt
-je code leesbaarder, zelfs voor programmeurs die er een andere stijl op
-nahouden.
+iedere programmeur. Voor de rest verschillen de stijlen tussen programmeurs.
+Wees wel consistent binnen je eigen stijl; dit maakt je code leesbaarder.
 
-Merk op dat de code hierboven een "hash mark" (\#; hiervoor bestaat geen
-Nederlandstalig woord) heeft op de eerste regel, waarna een tekst volgt
-die wat details over de code uitlegt. Deze regel is een commentaarregel:
-als je een hash mark gebruikt in je code (behalve als die in een string
-staat, natuurlijk) dan is alles wat rechts van de hash mark staat op de
-regel commentaar, dat door Python genegeerd wordt. Je kunt commentaar
-gebruiken om details over je code te geven, als je denkt dat uitleg
-nodig is. Meer over het geven van commentaar volgt in een later
-hoofdstuk.
+Merk op in de code hierboven dat de eerste regel een "hash mark" (\#) heeft,
+gevolgd door een tekst.
+Het "hash mark" teken wordt gebruikt om commentaar te schrijven.
+Alles wat rechts van de hash mark staat is commentaar en wordt door Python genegeerd
+(behalve uiteraard wanneer een hash mark in een string staat).
+Commentaar wordt gebruikt om details over de code te geven waar nodig.
+In een later hoofdstuk gaan we hier dieper op in.
