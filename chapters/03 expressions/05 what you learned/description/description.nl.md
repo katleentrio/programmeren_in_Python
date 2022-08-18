@@ -1,4 +1,4 @@
-Kort overzicht van we in dit hoofdstuk leerden:
+Kort overzicht van wat we in dit hoofdstuk leerden:
 
 -   Het gebruik van de `print()` functie om resultaten te tonen
 

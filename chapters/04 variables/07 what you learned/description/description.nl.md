@@ -1,17 +1,17 @@
-In dit hoofdstuk is het volgende besproken:
+Kort overzicht van wat we in dit hoofdstuk leerden:
 
--   Wat variabelen zijn
+-   Wat zijn variabelen?
 
--   Het toekennen van een waarde aan een variabele
+-   Hoe geef je een variabele een correcte naam? Welke afspraken worden er gehanteerd bij de naamgeving?
 
--   Correcte namen voor variabelen
+-   Hoe ken je een waarde toe aan een variabele?
 
--   Conventies met betrekking tot variabele namen
+-   Wat is Hard typing / Soft typing?
 
--   Soft typing
+-   Hoe kun je code debuggen waarin variabelen onverwachte waarden hebben?
 
--   Het debuggen van code waarin variabelen onverwachte waardes hebben
+-   Werken met verkorte operatoren
 
--   Verkorte operatoren
+-   Invoegen van commentaar in code
 
--   Commentaar
+Tijd om dit nu zelf toe te passen in de volgende oefeningen.
