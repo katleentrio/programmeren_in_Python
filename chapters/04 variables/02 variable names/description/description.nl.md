@@ -2,17 +2,13 @@ Zoals eerder gemeld, krijgen variabelen een naam. Je bent vrij om de naam
 te kiezen en hoeft je dus niet te beperken tot `x`, `y`, en `z` zoals in voorgaande
 voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels**:
 
--   Een variabele naam mag enkel bestaan uit letters (zowel hoofd- als kleine letters),
-    cijfers, en "underscores" (`_`).
-    Let op: Python is "case sensitive" dus gevoelig voor de verschillen tussen 
-    hoofd- en kleine letters. Zo is de variabele naam `wereld`
-    voor Python niet hetzelfde als de variabele naam `Wereld`.
+-   Een variabele naam mag enkel bestaan uit letters (zowel hoofd- als kleine letters), cijfers en "underscores" (`_`).
+    Let op: Python is "case sensitive" dus gevoelig voor de verschillen tussen hoofd- en kleine letters. Zo is de variabele naam `wereld` voor Python niet hetzelfde als de variabele naam `Wereld`.
 
 -   Een variabele naam moet beginnen met een letter of een underscore.
 
--   Een variabele naam mag geen gereserveerd woord zijn.
-    "Gereserveerde woorden" (of "keywords") zijn:
-    
+-   Een variabele naam mag geen gereserveerd woord zijn. "Gereserveerde woorden" (of "keywords") zijn:
+
     False      class      finally    is         return
     None       continue   for        lambda     try
     True       def        from       nonlocal   while
