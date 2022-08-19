@@ -1,46 +1,46 @@
-Een functie is een blok herbruikbare code dat een bepaalde actie uitvoert.
-Om een functie aan het werk te zetten, roep je hem aan (Engels: "call"),
-met de parameters als de functie nodig heeft. Je hoeft niet te weten hoe
-de functie precies werkt. Je hoeft slechts drie dingen te weten:
+Achter een functie zit code die een bepaalde actie uitvoert. Je kan de functie
+meermaals oproepen (Engels: "call") met opgave van eventuele parameters
+die de functie nodig heeft om uitgevoerd te kunnen worden. Je hoeft dus niet te
+weten hoe de functie precies werkt. De volgende drie dingen moet je wel weten
+om de functie te kunnen oproepen:
 
 -   De naam van de functie
 
--   De parameters die de functie nodig heeft (als die er zijn)
+-   De parameters die de functie nodig heeft (indien nodig)
 
--   De waarde die de functie teruggeeft (als er zo'n waarde is)
+-   De waarde die de functie teruggeeft (indien van toepassing)
 
-Ik ga deze elementen één voor één bespreken.
+Deze drie elementen worden hieronder één voor één besproken.
 
 ### Functienamen
 
-Iedere functie heeft een naam. Net als variabele namen, mogen functie
-namen alleen bestaan uit letters, cijfers, en underscores, en mogen ze
-niet starten met een cijfer. Vrijwel alle standaard Python functies
-bestaan alleen uit kleine letters. Gewoonlijk is de naam van een functie
-een korte beschrijving van wat de functie doet.
+Iedere functie heeft een naam. Net als variabele namen mogen functienamen
+alleen bestaan uit letters, cijfers en underscores. Ze mogen
+niet starten met een cijfer. Gewoonlijk is de naam van een functie
+een korte beschrijving van wat de functie doet. Vrijwel alle standaard
+Python functienamen bestaan uit kleine letters. 
 
-Als je in een tekst refereert aan een functie, is het de gewoonte dat je
-achter de naam van de functie een openings- en sluithaakje zet, omdat
-functies in code altijd die haakjes hebben (zelfs al staat er niks
-tussen de haakjes).
+Wanneer je in een tekst refereert naar een functie, is het de gewoonte om
+achter de naam van de functie een openings- en sluithaakje te zetten. Functies
+hebben in code immers altijd die haakjes (ook als er niet tussen de haakjes staat).
 
 ### Parameters
 
-Sommige functies worden aangeroepen met parameters ("argumenten"), die
-meestal verplicht zijn. De parameters worden geplaatst tussen de haakjes
-die achter de functienaam staan. Als er meerdere parameters zijn, moet
-je er komma's tussen zetten.
+Sommige functies hebben parameters ("argumenten") nodig om te kunnen werken.
+Die parameters zijn dan meestal verplicht op te geven bij het oproepen van de
+betreffende functie. De parameters worden geplaatst tussen de haakjes
+achter de functienaam. Als er meerdere parameters vereist zijn, 
+worden ze gescheiden door komma's.
 
-De parameters zijn de waardes die de programmeur aan de functie geeft om
-te verwerken. Bijvoorbeeld, de functie `int()` wordt aangeroepen met één
-parameter, namelijk de waarde waarvan de functie probeert een integer
-representatie te maken. De `print()` functie mag worden aangeroepen met
-een willekeurig aantal parameters (zelfs nul), die de functie op het
-scherm zal tonen, waarna de functie naar een nieuwe regel op het scherm
-zal gaan.
+De parameters zijn waarden die de programmeur aan de functie geeft om
+te verwerken. Zo wordt de functie `int()` bijvoorbeeld aangeroepen met één
+parameter: de waarde die door de functie omgezet zal worden naar een integer.
+De `print()` functie kan worden opgeroepen met een willekeurig aantal parameters
+(ook nul) die de functie op het scherm zal tonen, waarna de functie naar een 
+nieuwe regel op het scherm gaat.
 
-Over het algemeen is het zo dat een functie de waardes van de parameters
-niet kan wijzigen. Bekijk bijvoorbeeld de volgende code:
+Algemeen genomen kan een functie de waarde van een parameter niet kan wijzigen.
+Bekijk de volgende code:
 
 ```python
 x = 1.56
@@ -48,8 +48,10 @@ print( int( x ) )
 print( x )
 ```
 
-Als je deze code uitvoert, zie je dat `int()` niet de waarde van `x`
-heeft aangepast; de functie heeft alleen aan `print()` doorgegeven wat
+Het eerste printcommando toont 1 op het scherm, het tweede 1.56.
+Je ziet dus dat door `int()` tussen de haakjes van de `print()` functie te 
+plaatsen de waarde van de variabele `x` niet gewijzigd is naar een integer; 
+de functie heeft alleen aan `print()` doorgegeven wat
 de integer representatie van de waarde van `x` is. De reden dat dit zo
 is, is dat over het algemeen alleen de waarde van parameters wordt
 doorgegeven (Engels: "passed by value"). Dit betekent dat de functie
