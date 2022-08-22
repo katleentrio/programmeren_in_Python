@@ -8,7 +8,7 @@ om de functie te kunnen oproepen:
 
 -   De parameters die de functie nodig heeft (indien nodig)
 
--   De waarde die de functie teruggeeft (indien van toepassing)
+-   De return value: de waarde die de functie teruggeeft (indien van toepassing)
 
 Deze drie elementen worden hieronder één voor één besproken.
 

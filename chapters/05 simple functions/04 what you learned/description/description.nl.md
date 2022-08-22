@@ -1,31 +1,18 @@
-In dit hoofdstuk is het volgende besproken:
+Kort overzicht van wat we in dit hoofdstuk leerden:
 
--   Wat functies zijn
+-   Wat zijn functies
 
--   Functie namen
+-   Functienamen, parameters van een functie en return values
 
--   Functie parameters
-
--   Functie retourwaardes
-
--   Details van type casting functies `float()`, `int()`, en `str()`
+-   Type casting functies `float()`, `int()`, en `str()`
 
 -   Basis berekeningen met `abs()`, `max()`, `min()`, `pow()`, en
     `round()`
 
--   `len()`
+-   De functies `len()`, `input()`, `print()` in detail
 
--   `input()`
+-   String formattering met de `format()` methode
 
--   Details van the `print()` functie
+-   Wat zijn modules
 
--   String formattering met `format()`
-
--   Wat modules zijn
-
--   De `math` functies `exp()`, `log()`, `log10()`, en `sqrt()`
-
--   De `random` functies `random()`, `randint()`, en `seed()`
-
--   De `pcinput` functies `getInteger()`, `getFloat()`, `getString()`,
-    en `getLetter()`
+-   Veel gebruikte functies binnen twee modules: de `math` functies `exp()`, `log()`, `log10()`, `sqrt()` en de `random` functies `random()`, `randint()`, en `seed()`
