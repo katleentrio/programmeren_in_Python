@@ -1,14 +1,11 @@
-Ik introduceer nu een aantal basis functies die je in je programma's
-kunt gebruiken.
+We bekijken een aantal basis functies.
 
 ### Type casting
 
-Ik heb al gesproken over type casting functies in hoofdstuk
-<a href="#ch:variables" data-reference-type="ref" data-reference="ch:variables">5</a>,
-maar nu ik meer details van functies heb gegeven, kan ik de beschrijving
-completeren.
+Eerder heb ik al gesproken over type casting functies. We gaan hier meer
+in detail op in.
 
--   `float()` heeft één parameter en retourneert een floating-point
+-   `float()` heeft één parameter en geeft als return value een floating-point
     representatie van de waarde van de parameter. Als de waarde een
     integer is, krijg je dezelfde waarde terug als float. Als de
     parameter een float is, krijg je dezelfde waarde terug. Als de
@@ -16,44 +13,45 @@ completeren.
     interpreteren, dan krijg je die float terug als waarde. Anders krijg
     je een runtime error.
 
--   `int()` heeft één parameter en retourneert een integer representatie
-    van de waarde van de parameter. Als de waarde een integer is, krijg
-    je dezelfde waarde terug. Als de waarde een float is, krijg je een
+-   `int()` heeft één parameter en geeft als return value een integer 
+    representatie van de waarde van de parameter. Als de waarde een integer is,
+    krijg je dezelfde waarde terug. Als de waarde een float is, krijg je een
     integer terug die de waarde van de float naar beneden heeft
     afgerond. Als de parameter een string bevat die je als integer zou
     kunnen interpreteren, dan krijg je die integer terug als waarde.
     Anders krijg je een runtime error.
 
--   `str()` heeft één parameter en retourneert een string representatie
-    van de waarde van de parameter.
+-   `str()` heeft één parameter en geeft als return value een string
+    representatie van de waarde van de parameter.
 
-Wat denk je dat de volgende code doet? Als je het niet weet, test dan de
-code.
+Wat doet de volgende code?
 
 ```python
 print( 10 * int( "100,000,000" ) )
 ```
 
-De code hierboven geeft een runtime error. Los het probleem op door
-precies twee tekens te verwijderen.
+De code hierboven geeft een runtime error.
+Welke twee tekens moet je verwijderen om dit probleem op te lossen ?
+*(de twee komma's)*
 
 ### Berekeningen
 
-Een paar basis Python functies helpen met berekeningen.
+Een paar basis Python functies helpen bij berekeningen.
 
--   `abs()` krijgt een numerieke parameter waarde. Als de waarde
-    positief is, wordt hij weer geretourneerd. Als de waarde negatief
-    is, wordt de waarde vermenigvuldigd met -1 geretourneerd.
+-   `abs()` krijgt een numerieke parameter waarde en en geeft als
+    return value de absolute waarde van de parameter (is de waarde
+    positief wordt hij geretourneerd, is de waarde negatief
+    wordt de waarde vermenigvuldigd met -1 geretourneerd).
 
--   `max()` krijgt twee of meer numerieke parameters en retourneert de
-    grootste.
+-   `max()` krijgt twee of meer numerieke parameters en geeft als
+    return value de grootste.
 
--   `min()` krijgt twee of meer numerieke parameters en retourneert de
-    kleinste.
+-   `min()` krijgt twee of meer numerieke parameters en geeft als
+    return value de kleinste.
 
--   `pow()` krijgt twee numerieke parameters en retourneert de eerste
-    verheven tot de macht weergeven door de tweede. Optioneel mag je een
-    derde parameter meegeven, die een integer moet zijn. Als je dat
+-   `pow()` krijgt twee numerieke parameters en geeft als return value
+    de eerste verheven tot de macht weergeven door de tweede. Optioneel
+    mag je een derde parameter meegeven die een integer moet zijn. Als je dat
     doet, krijg je de waarde modulo de derde parameter terug.
 
 -   `round()` krijgt een numerieke parameter die wiskundig wordt
@@ -63,7 +61,6 @@ Een paar basis Python functies helpen met berekeningen.
     gehele getallen.
 
 Bekijk de code hieronder en bedenk wat er op het scherm getoond wordt.
-Voer daarna de code uit en controleer of je gelijk hebt.
 
 ```python
 x = -2
@@ -79,45 +76,37 @@ print( round( z, 1 ) )
 
 ### `len()`
 
-`len()` is a basis functie die één parameter krijgt, en die de lengte
+`len()` is een basis functie die één parameter krijgt en de lengte
 van die parameter teruggeeft. Op dit moment is het enig zinvolle data
-type dat je mee kunt geven aan `len()` een string, waarvan je dan de
-lengte krijgt. In latere hoofdstukken volgen meer data types waarvan je
-de lengte kunt bepalen.
+type dat je mee kunt geven aan `len()` een string waarvan je de
+lengte krijgt. 
 
-Wat print de code hieronder? Controleer of je vermoeden klopt.
+Wat print de code hieronder?
 
 ```python
 print( len( 'man' ) )
 print( len( 'mango' ) )
 print( len( "" ) )  # "" is een lege string
-```
-
-En wat denk je van de code hieronder? Denk goed na voor je een antwoord
-geeft.
-
-```python
 print( len( 'mango\'s' ) )
 ```
 
+*Antwoorden: 3, 5, 0, 7. Waarom heeft de laatste string een lengte van 7 en niet van 8?*
+
 ### `input()`
 
-In veel programma's wil je dat de gebruiker van het programma data
-verstrekt. Je kunt de gebruiker vragen een string in te typen met behulp
-van de functie `input()`. De functie krijgt één parameter mee, namelijk
-een string. Deze string is de zogeheten "prompt." Als `input()` wordt
-aangeroepen, wordt de prompt op het scherm gezet en mag de gebruiker een
-tekst ingeven. De gebruiker mag ingeven wat hij of zij wil, inclusief
-niks. De gebruiker sluit het ingeven af met een druk op de `Enter`
-toets. De retour waarde van de functie is hetgeen de gebruiker heeft
+Veel programma's wensen data te krijgen van de gebruiker om verder te verwerken.
+Je kunt de gebruiker vragen om een string in te voeren met behulp
+van de functie `input()`. De functie krijgt één parameter: een string.
+Deze string is de zogeheten "prompt." Wanneer nu `input()` wordt
+aangeroepen, verschijnt de prompt op het schermen. De gebruiker geeft eender
+welke tekst in (mag ook niets zijn) en sluit de invoer af door op `Enter` te drukken.
+De return value van de functie is de string die de gebruiker heeft
 ingegeven, exclusief de `Enter`.
 
-Het hangt van de omgeving waar je je programma in draait hoe de
-gebruiker de ingave precies doet. Soms wordt er een rechthoek op het
-scherm getoond met de prompt ervoor waarin de gebruiker mag typen. Als
-je een Python programma draait op de command-line, moet de gebruiker ook
-de ingave op de command-line doen. Sommige editors tonen een
-popup-window waarin de gebruiker moet typen.
+Afhankelijk van de omgeving waarin je werkt, kan de prompt er anders uit zien.
+Soms is het een rechthoek op het scherm met de prompt ervoor waarin de gebruiker
+mag typen, soms moet de gebruiker de ingave op een command-line doen, soms
+verschijnt een popup-window waarin de gebruiker moet typen.
 
 Hier is een voorbeeld:
 
@@ -134,12 +123,10 @@ nummer = input( "Geef een getal: " )
 print( "Je getal in het kwadraat is", nummer * nummer )
 ```
 
-Het maakt niet uit wat je ingeeft, deze code geeft een runtime error.
-Omdat `input()` een string teruggeeft, wordt op de tweede regel een
-poging gedaan twee strings met elkaar te vermenigvuldigen, en dat kan
-niet. Het maakt niet uit of je string een getal bevat: een string is een
-string. Je kunt het probleem oplossen middels type casting,
-bijvoorbeeld:
+Deze code geeft ALTIJD een runtime error. Vermits `input()` een string
+teruggeeft (ook al voer je een getal in!), wordt op de tweede regel een
+poging gedaan twee strings met elkaar te vermenigvuldigen wat niet kan.
+Je kunt dit probleem oplossen door gebruik te maken van type casting:
 
 ```python
 nummer = input( "Geef een getal: " )
@@ -147,56 +134,37 @@ nummer = float( nummer )
 print( "Je getal in het kwadraat is", nummer * nummer )
 ```
 
-Voor deze code geldt dat als de gebruiker een getal ingeeft, de code
-doet wat hij moet doen. Maar als de gebruiker iets anders ingeeft, dat
-niet in een getal omgezet kan worden, krijg je toch weer een runtime
-error. Ook dat probleem kan opgelost worden, maar ik heb nog niet de
-zaken uitgelegd die je nodig hebt om dit probleem aan te pakken, en het
-zal nog tot hoofdstuk
-<a href="#ch:exceptions" data-reference-type="ref" data-reference="ch:exceptions">18</a>
-duren voordat ik eraan toekom. Tot dat moment geef ik iets later in dit
-hoofdstuk een methode die je kunt gebruiken om je programma om een getal
-te laten vragen zonder dat het "crasht" als de gebruiker een wijsneus
-probeert te zijn en iets anders ingeeft.
-
-Schrijf code die de gebruiker twee getallen laat ingeven, en die dan
-toont wat de uitkomst is als je ze optelt en als je ze vermenigvuldigt.
-Je code mag een runtime error geven als de gebruiker iets ingeeft wat
-geen getal is.
+Deze code werkt indien de gebruiker een getal ingeeft; als de gebruiker
+iets ingeeft dat niet in een getal omgezet kan worden, krijg je toch weer
+een runtime error.
+Verderop in dit hoofdstuk geef ik een methode die je kunt gebruiken om
+naar een getal te vragen en je programma niet te laten "crashen" wanneer
+de gebruiker iets anders ingeeft.
 
 ### `print()`
 
 De functie `print()` krijgt nul of meer parameters mee, toont ze op het
-scherm (als het er meerdere zijn, met spaties ertussen), en gaat daarna
+scherm (als het er meerdere zijn met spaties ertussen) en gaat daarna
 naar de volgende regel. Dus als je twee `print` statements gebruikt,
 komt de output van de tweede onder die van de eerste te staan.
-
 Als `print()` wordt aangeroepen zonder parameters, gaat de functie
 alleen naar de volgende regel. Zo kun je lege regels op het scherm
 zetten.
-
-Je mag als parameters meegeven wat je wilt, en `print()` zal zijn best
-doen het op het scherm weer te geven. Vooralsnog zul je echter alleen
-basis data types printen.
 
 `print()` kan twee speciale parameters meekrijgen, die `sep` en `end`
 heten.
 
 `sep` geeft aan wat er getoond moet worden tussen iedere twee
-parameters, en is als default een spatie. Je kunt die spatie wijzigen in
+parameters; default is dit een spatie. Je kunt die spatie wijzigen in
 iets anders via `sep`, inclusief in een lege string.
 
-`end` geeft aan wat `print()` moet tonen nadat alle parameters zijn
-getoond, en is als default een "nieuwe regel." Door `end` te wijzigen
-kun je ervoor zorgen dat `print()` iets anders doet dan naar een nieuwe
-regel gaan als hij klaar is met het tonen van parameters.
+`end` geeft aan wat `print()` moet uitvoeren nadat alle parameters zijn
+getoond; default gaat hij naar een "nieuwe regel." Door `end` te wijzigen
+kun je ervoor zorgen dat `print()` iets anders doet.
 
-On `sep` en `end` te gebruiken, moet je speciale parameters opnemen,
-namelijk parameters `sep=<string>` en/of `end=<string>` (merk op: als in
-een beschrijving van code je iets ziet dat tussen `<` en `>` staat,
-betekent dat meestal dat je dat niet letterlijk moet typen, maar moet
-vervangen door van wat de term tussen de `<` en `>` aangeeft, dus
-`<string>` betekent dat je daar een string moet plaatsen). Bijvoorbeeld:
+Om `sep` en `end` te gebruiken, moet je de parameters `sep=<string>` en/of
+`end=<string>` opnemen. *(opmerking: als in een beschrijving van code iets tussen `<` en `>` staat, moet je dit niet letterlijk typen maar vervangen door wat de term tussen de `<` en `>` aangeeft, dus `<string>` betekent dat je daar een string moet typen.)*
+Een voorbeeld met gebruikt van `sep` en `end`:
 
 ```python
 print( "X", "X", "X", sep="x" )
@@ -205,58 +173,46 @@ print( "Y", end="" )
 print( "Z" )
 ```
 
-Als je deze code uitvoert, zie je twee regels. De eerste bevat "XxXxX,"
-aangezien er is aangegeven dat er drie keer een hoofdletter "X"
-afgedrukt moet worden met tussen iedere twee als separator een kleine
-letter "x." De tweede regel bevat "XYZ", omdat weliswaar dit drie
-verschillende aanroepen van `print()` betreft, maar na ieder van de
-eerste twee er niet naar een volgende regel wordt gegaan.
+Na uitvoer bevat de eerste regel "XxXxX": drie keer hoofdletter "X"
+gescheiden door een kleine letter "x", waarna wordt overgegaan naar een
+nieuwe regel.
+De tweede regel bevat "XYZ": na aanroepen van de `print()` "X" en "Y",
+wordt niet naar een volgende regel gegaan.
 
 ### `format()`
 
 `format()` is een nogal complexe functie die op een speciale manier
 gebruikt moet worden. De functie staat je toe een geformatteerde string
-te bouwen, dus een string waarin bepaalde waardes op een specifiek
-geformatteerde manier zijn opgenomen. Om een voorbeeld te geven, stel je
-voor dat ik de uitkomst van de berekening van een float wil tonen:
+te bouwen, dus een string met opmaak. We illustreren dit met een voorbeeld.
+Je wilt de uitkomst van de volgende berekening tonen (float):
 
 ```python
 print( 7/11 )
 ```
 
-Nu stel ik dat je de uitkomst moet tonen met 3 decimalen. Dat zou je
-kunnen doen met de `round()` functie, dus iets als:
+Als je de uitkomst moet tonen met 3 decimalen kan dit door te werken
+met de `round()` functie. Bijvoorbeeld:
 
 ```python
 print( round( 7/11, 3 ) )
 ```
 
-Dit werkt, maar misschien heb ik extra eisen. Misschien stel ik dat je
-10 posities ruimte moet reserveren voor deze uitkomst, en dat je binnen
-die 10 posities de uitkomst links moet aanlijnen. Dat lijkt lastig te
-realiseren, maar middels de `format()` functie is het vrij eenvoudig om
-waardes te formatteren op allerlei manieren. De volgende toepassing van
-`format()` realiseert het afronden op drie decimalen:
+Mogelijk heb je nog meerdere eisen. Stel bijvoorbeeld dat je ook
+10 posities ruimte moet reserveren voor deze uitkomst, en dat binnen
+deze 10 posities de uitkomst links moet uitgelijnd zijn. Dit lijkt
+moeilijk realiseerbaar maar de `format()` functie maakt het mogelijk om
+verschillende manieren van opmaak van het resulaat te combineren.
+We bespreken hieronder een aantal mogelijkheden voor het gebruik van
+de `format()` functie.
 
-```python
-print( "{:.3f}".format( 7/11 ) )
-```
-
-`format()` "werkt" op een string. Tot op dit moment heb ik alleen
-functies gebruikt die aangestuurd worden via parameters. Echter, er zijn
-functies die alleen werken met een specifiek data type, en die op zo'n
-manier gedefinieerd zijn dat een variabele (of waarde) van dat data type
-vóór de functie naam moet staan, met een punt tussen de variabele (of
-waarde) en de naam van de functie. De reden hiervoor is een techniek die
-"object oriëntatie" heet, en die ik zal bediscussiëren in hoofdstukken
-<a href="#ch:objectorientation" data-reference-type="ref" data-reference="ch:objectorientation">21</a>
-tot en met
-<a href="#ch:iteratorsandgenerators" data-reference-type="ref" data-reference="ch:iteratorsandgenerators">24</a>.
-Je hoeft nu alleen te weten dat zulke functie "methodes" genoemd worden,
-en dat je, om ze aan te roepen, een variabele (of waarde) van het juiste
-type voor de aanroep van de methode moet zetten, met een punt ertussen.
-Die variabele (of waarde) zelf is ook beschikbaar voor de methode, net
-als de parameters.
+De `format()` functie wordt niet alleen aangestuurd via parameters
+(zoals bij de eerder besproken functies), maar werkt bovendien enkel 
+met een bepaald data type nl. "string". Dit soort functies -"methodes" genoemd-
+worden anders aangeroepen dan diegene die we eerder behandelden. Hierbij is het
+belangrijkste dat je hoeft te weten dat je een variabele (of waarde)
+van het juiste data type vóór de functienaam plaatst, met een punt tussen
+de variabele en de naam van de functie. Die variabele (of waarde) zelf is
+ook beschikbaar voor de methode, net als de parameters.
 
 De `format()` methode (laten we de correcte benaming gebruiken, het is
 geen functie maar een methode) wordt als volgt aangeroepen:
@@ -368,6 +324,14 @@ ervoor zal zorgen dat een float wordt getoond als een integer.
 ```python
 print( "{:.2f} gedeeld door {:.2f} is {:.2f}".format( 1,2,1/2 ))
 ```
+
+De volgende toepassing van
+`format()` realiseert het afronden op drie decimalen:
+
+```python
+print( "{:.3f}".format( 7/11 ) )
+```
+
 
 De combinatie van precisie, aanlijning, en decimalen staat je toe om
 redelijk uitziende tabellen te tonen.

@@ -27,8 +27,8 @@ hebben in code immers altijd die haakjes (ook als er niet tussen de haakjes staa
 ### Parameters
 
 Sommige functies hebben parameters ("argumenten") nodig om te kunnen werken.
-Die parameters zijn dan meestal verplicht op te geven bij het oproepen van de
-betreffende functie. De parameters worden geplaatst tussen de haakjes
+Die parameters worden opgegeven bij het oproepen van de
+betreffende functie. Ze worden tussen de haakjes geplaatst
 achter de functienaam. Als er meerdere parameters vereist zijn, 
 worden ze gescheiden door komma's.
 
@@ -37,9 +37,9 @@ te verwerken. Zo wordt de functie `int()` bijvoorbeeld aangeroepen met één
 parameter: de waarde die door de functie omgezet zal worden naar een integer.
 De `print()` functie kan worden opgeroepen met een willekeurig aantal parameters
 (ook nul) die de functie op het scherm zal tonen, waarna de functie naar een 
-nieuwe regel op het scherm gaat.
+nieuwe regel op het scherm springt.
 
-Algemeen genomen kan een functie de waarde van een parameter niet kan wijzigen.
+Algemeen genomen kan een functie de waarde van een parameter niet wijzigen.
 Bekijk de volgende code:
 
 ```python
@@ -49,65 +49,54 @@ print( x )
 ```
 
 Het eerste printcommando toont 1 op het scherm, het tweede 1.56.
-Je ziet dus dat door `int()` tussen de haakjes van de `print()` functie te 
-plaatsen de waarde van de variabele `x` niet gewijzigd is naar een integer; 
-de functie heeft alleen aan `print()` doorgegeven wat
-de integer representatie van de waarde van `x` is. De reden dat dit zo
-is, is dat over het algemeen alleen de waarde van parameters wordt
-doorgegeven (Engels: "passed by value"). Dit betekent dat de functie
+Door `int()` tussen de haakjes van de `print()` functie te 
+plaatsen, wordt de waarde van de variabele `x` dus niet gewijzigd naar
+een integer en als dusdanig toegepast in de verdere code; de functie
+`int()` heeft alleen aan `print()` doorgegeven wat de integer
+representatie van de waarde van `x` is. Dit betekent dat de functie
 geen toegang heeft tot de variabelen die als parameters gebruikt worden,
-maar dat de functie kopieën krijgt van de waardes die in de parameters
-staan. Ik zeg "over het algemeen" omdat dit niet geldt voor alle data
-types, maar het geldt in ieder geval voor de data types die tot op dit
-moment bediscussieerd zijn. Pas in hoofdstuk
-<a href="#ch:lists" data-reference-type="ref" data-reference="ch:lists">13</a>
-ga ik spreken over data types die wel door functies gewijzigd kunnen
-worden, en op dat moment zal ik dat heel duidelijk maken.
+maar dat de functie kopieën krijgt van de waarden die in de parameters
+staan. Een aantal data types vormen een uitzondering hierop, maar deze
+worden voorlopig niet besproken.
 
-Als een functie meerdere parameters krijgt, maakt de volgorde uit.
-Bijvoorbeeld, de standaard functie `pow()` krijgt twee parameters, en
+Indien een functie meerdere parameters nodig heeft, is de volgorde waarin
+deze gegeven worden belangrijk.
+Voorbeeld: de standaard functie `pow()` vereist twee parameters en
 rekent de waarde uit van de eerste die wordt verheven tot de macht
 weergegeven door de tweede.
 
 ```python
-basis = 2
+grondtal = 2
 exponent = 3
-print( pow( basis, exponent ) )
+print( pow( grondtal, exponent ) )
 ```
 
-De namen die aan de variabelen zijn gegeven doen niet ter zake, de
-eerste wordt verheven tot de macht die de tweede is. Dus de volgende
-code geeft een ander antwoord dan de vorige, omdat de variabelen in een
-andere (nogal verwarrende) volgorde aan de functie worden doorgegeven.
+De volgende code geeft een ander antwoord dan de vorige. De functie houdt
+geen rekening met de naamgeving, enkel met de volgorde.
 
 ```python
-basis = 2
+grondtal = 2
 exponent = 3
-print( pow( exponent, basis ) ) # verwarrende variabele namen 
+print( pow( exponent, grondtal ) ) # verwarrende keuze variabele namen 
 ```
 
-Wat gebeurt er als je een functie aanroept met parameter waardes waarmee
-de functie niet kan werken? Bijvoorbeeld, wat gebeurt er als ik `int()`
-aanroep met een string die geen integer bevat, of `pow()` met strings in
-plaats van getallen? Dat leidt meestal tot "runtime errors" (fouten
-tijdens de uitvoering van code). Bijvoorbeeld, beide regels in de
-volgende code leiden tot runtime errors.
+Wanneer je een functie aanroept met parameterwaarden waarmee de functie
+niet kan werken, leidt dit meestal tot "runtime errors" (fouten tijdens
+de uitvoering van code). Zo leiden beide regels in de volgende code tot
+runtime errors.
 
 ```python
-x = pow( 3, "2" )
-y = int( "twee-en-een-half" )
+x = pow( 3, "2" ) # `pow()` aanroepen met strings
+y = int( "twee-en-een-half" ) # `int()`aanroepen met een string die geen integer bevat
 ```
 
-### Retour waarde
+### Return value
 
-Een functie heeft vaak een retour waarde. Als een functie een waarde
-retourneert, kun je die in je code gebruiken. Bijvoorbeeld, de `int()`
-functie retourneert een integer representatie van de parameter die is
-meegegeven. Je kunt deze retour waarde in een variabele stoppen middels
-een assignment, of je kunt de waarde op een andere manier gebruiken,
-bijvoorbeeld deze onmiddellijk printen. Je kunt er zelfs voor kiezen
-niks met de waarde te doen, maar in dat geval had het waarschijnlijk
-weinig zin om de functie aan te roepen.
+Een functie heeft vaak een return value; het resultaat na uitvoering van de functie.
+Als een functie een waarde teruggeeft, kun je die verder in je code gebruiken.
+Zo geeft de `int()` functie een integer representatie van de parameter die is
+meegegeven. Je kunt deze return value bijvoorbeeld in een variabele stoppen
+door een assignment, of je kunt de waarde ook onmiddellijk printen.
 
 ```python
 x = 2.1
@@ -117,74 +106,59 @@ print( z )
 print( int( y ) )
 ```
 
-Zoals je hierboven kunt zien, kun je zelfs functie aanroepen als
-parameter meegeven aan een functie, bijvoorbeeld, in de laatste regel
-van de code hierboven krijgt de `print()` functie als waarde een aanroep
-van de `int()` functie mee. De aanroep van `int()` vindt dan plaats
-voordat de `print()` wordt afgehandeld, dus de return waarde van `int()`
-is een parameter voor `print()`.
+In de laatste regel van bovenstaande code krijgt de `print()` functie als parameter
+een aanroep van de `int()` functie. In dit geval wordt de aanroep van `int()` eerst
+uitgevoerd, daarna `print()`. De return value van `int()` is de uiteindelijke
+parameter voor `print()`.
 
-Niet alle functies retourneren een waarde. Bijvoorbeeld, `print()` geeft
-geen waarde terug. Als je niet uitkijkt, kan dit tot vreemd gedrag van
-je code leiden. Voer maar eens de volgende code uit:
+Niet alle functies geven een return value. Zo geeft `print()` geen waarde terug.
+Dit kan leiden tot vreemd gedrag van je code leiden. Bekijk volgende code en
+bedenkt wat er uiteindelijk op het scherm getoond zal worden:
 
 ```python
 print( print( "Hello, world!" ) )
 ```
 
-Je ziet dat deze code twee regels print. De eerste bevat de tekst
-"Hello, world!" en de tweede het woord "None." Wat betekent dat woord
-"None"? Om dat te begrijpen, moet je uitpluizen hoe Python deze regel
-code verwerkt.
+Deze code drukt twee regels af. De eerste regel bevat de tekst
+"Hello, world!", de tweede het woord "None." Voor de laatste `print()`
+functie is dus geen geldige parameter ingevoerd.
+We bekijken even in detail hoe Python deze regel code verwerkt.
 
-Wanneer Python deze regel code bekijkt, ziet het eerst
-`print( <iets> )`. Omdat `<iets>` een argument is, moet dat eerst
-geëvalueerd worden. `<iets>` is `print( <nog_iets> )`. Omdat
-`<nog_iets>` een argument is, moet Python dat eerst evalueren.
-`<nog_iets>` is de string `"Hello, world\`"!. Die hoeft niet verder
-geëvalueerd te worden, dus `print()` wordt uitgevoerd met als argument
-`"Hello, world\`"!, en Python "vangt" de retour waarde van deze
-uitvoering omdat die nodig is als `<iets>`.
+Wanneer Python de code bekijkt, ziet het de eerste functie 
+`print( <something> )`. Omdat `<something>` een argument is, moet dit
+geëvalueerd worden. `<something>` is in dit geval 
+`print( <something_else> )`. Vermits `<something_else>` opnieuw
+een argument is, moet Python ook dit eerst evalueren.
+`<something_else>` is de string `"Hello, world!`". Dit is een geldige
+parameter voor de functie `print()` en kan dus uitgevoerd worden. 
+Python slaat de return value van deze uitvoering op omdat die nodig is
+voor de evaluatie van `<something>`. Nu komt het probleem: `print()`
+heeft geen return value, dus er is niets wat Python kan gebruiken voor
+`<something>`. Voor deze situaties heeft Python een speciale waarde: `None`.
+Dus het eerste `print()` commando krijgt als argument `None` mee, 
+wat leidt tot het afdrukken van "None" op het scherm.
 
-En daar is het probleem: `print()` heeft geen retourwaarde, dus er is
-niks wat Python kan substitueren voor `<iets>`. Voor dit soort situaties
-heeft Python een speciale waarde die `None` heet. Dus het eerste
-`print()` commando krijgt als argument `None` mee, en dat leidt ertoe
-dat Python "None" op het scherm afdrukt.
-
-`None` is een speciale waarde die aangeeft "geen waarde." Als je `None`
-probeert af te drukken, drukt Python het woord "None" af, maar dat is
-niet een string met de waarde `"None"`. Het woord geeft slechts aan dat
-er niks af te drukken was. `None` is niet hetzelfde als een lege string
+`None` is een speciale waarde die aangeeft dat er helemaal "geen waarde" is.
+Wanneer je de waarde `None` afdrukt, verschijnt het woord "None". Dit is
+echter niet een string met de waarde `"None"`. Het woord geeft slechts aan dat
+er niets af te drukken is. `None` is ook niet hetzelfde als een lege string
 (`""`). Een lege string heeft nog steeds een waarde, namelijk een string
-met lengte nul. `None` is geen string, geen float, geen integer, niks.
+met lengte nul. `None` is geen string, geen float, geen integer; het is niets.
 Dus wees voorzichting met het aanroepen van een functie als parameter;
-als de functie geen retour waarde heeft, kunnen er vreemde dingen
+als de functie geen return value heeft, kunnen er vreemde dingen
 gebeuren.
 
-### Een functie is een zwarte doos
+### Een functie als zwarte doos
 
-In de wereld van programmeurs betekent een "zwarte doos" iets waar je
-wat in kunt stoppen en wat uit kunt halen, maar waarvan je niet kunt
-zien hoe het van binnen werkt. Je mag een functie beschouwen als een
-zwarte doos: het is niet van belang te weten hoe de functie werkt of hoe
-de code in de functie eruit ziet. Slechts de naam, de parameters, en de
-retour waarde moet je kennen om de functie te kunnen gebruiken. Het zou
-kunnen dat de functie intern variabelen aanmaakt en berekeningen doet,
-maar die hebben geen effect op de rest van de code.
+Je kunt een functie beschouwen als een "zwarte doos": je kunt er gegevens
+instoppen en resultaten uit halen zonder dat je hoeft te weten
+hoe de functie precies werkt of hoe de code in de functie eruit ziet.
+Het enige dat je hoeft te kennen zijn de naam, de parameters, en de
+return value. Mogelijk maakt de functie intern variabelen aan en voert
+berekeningen uit, maar die hebben geen effect op de rest van de code … 
+tenminste, als je de functie correct implementeert. 
 
-…Tenminste, als de functie netjes geïmplementeerd is. Een functie die
-geen effect heeft op de rest van de code heet een "pure functie." Alle
-functies die ik hier bespreek zijn "pure functies." Maar het feit dat er
-een aparte naam is voor functies die de rest van de code niet aantasten,
-geeft al aan dat er ook functies bestaan die niet "puur" zijn. Dit is
-het duidelijkst bij functies waar de gebruiker parameters aan mee geeft,
-waarbij de inhoud van de variabelen die als parameter worden meegegeven
-gewijzigd wordt. Dat kan niet voor iedere soort variabele. En als het
-gebeurt kan dat best acceptabel zijn, als het de bedoeling is en goed
-gedocumenteerd is. Zulke functies heten "modifiers." Ik bespreek ze in
-een later hoofdstuk.
-
-Vooralsnog mag je aannemen dat iedere functie die je gebruikt, geen
-effect heeft op de rest van de code. Het is veilig om functies aan te
-roepen.
+Functies die geen effect hebben op de rest van de code heten 
+"pure functions". Er bestaan ook functies die wel een effect hebben
+op de rest van de code, dit zijn "modifiers". Wij beperken ons hier tot 
+"pure functions".
