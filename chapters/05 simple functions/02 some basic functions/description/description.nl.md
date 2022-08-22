@@ -137,9 +137,6 @@ print( "Je getal in het kwadraat is", nummer * nummer )
 Deze code werkt indien de gebruiker een getal ingeeft; als de gebruiker
 iets ingeeft dat niet in een getal omgezet kan worden, krijg je toch weer
 een runtime error.
-Verderop in dit hoofdstuk geef ik een methode die je kunt gebruiken om
-naar een getal te vragen en je programma niet te laten "crashen" wanneer
-de gebruiker iets anders ingeeft.
 
 ### `print()`
 
