@@ -151,8 +151,8 @@ Als `print()` wordt aangeroepen zonder parameters, gaat de functie
 alleen naar de volgende regel. Zo kun je lege regels op het scherm
 zetten.
 
-`print()` kan twee speciale parameters meekrijgen, die `sep` en `end`
-heten.
+`print()` kan twee speciale parameters meekrijgen, die **`sep`** en
+**`end`** heten.
 
 `sep` geeft aan wat er getoond moet worden tussen iedere twee
 parameters; default is dit een spatie. Je kunt die spatie wijzigen in
@@ -209,93 +209,92 @@ De `format()` functie wordt niet alleen aangestuurd via parameters
 (zoals bij de eerder besproken functies), maar werkt bovendien enkel 
 met een bepaald data type nl. "string". Dit soort functies -"methodes" genoemd-
 worden anders aangeroepen dan diegene die we eerder behandelden. Hierbij is het
-belangrijkste dat je hoeft te weten dat je een variabele (of waarde)
+belangrijkste dat je weet dat je een variabele (of waarde)
 van het juiste data type vóór de functienaam plaatst, met een punt tussen
 de variabele en de naam van de functie. Die variabele (of waarde) zelf is
 ook beschikbaar voor de methode, net als de parameters.
 
-De `format()` methode (laten we de correcte benaming gebruiken, het is
-geen functie maar een methode) wordt als volgt aangeroepen:
-`<string>.format()`. Hij retourneert een nieuwe string, die een
+De `format()` methode wordt als volgt aangeroepen:
+**`<string>.format()`**. De return value is een nieuwe string die een
 geformatteerde versie is van de string waarvoor de methode is
-aangeroepen. `format()` kan een willekeurig aantal parameters
-meekrijgen, die in de geformatteerde string ingebracht kunnen worden op
-specifieke plaatsen.
+aangeroepen.
 
-De plaatsen waar `format()` de parameter waardes in de string plaatst
-worden in de string aangegeven middels accolades (`{` en `}`). Als je
-alleen `{}` gebruikt om de parameters aan te duiden, worden ze van
-links naar rechts afgehandeld. Bijvoorbeeld:
+`format()` kan een willekeurig aantal **parameters** meekrijgen (tussen
+de haakjes), die in de geformatteerde string ingebracht kunnen worden
+op specifieke **plaatsen**. De plaatsen waar `format()` de parameterwaarden
+in de string plaatst, worden in de string aangegeven door middel van
+accolades `{}`. Als je niets typt tussen de accolades in de string `{}`,
+worden de parameters van links naar rechts verwerkt. Bijvoorbeeld:
 
 ```python
     print( "De eerste drie getallen zijn {}, {} en {}.".format( 
         "een", "twee", "drie" ) )
+    """ let op de syntax: de methode wordt toegepast binnen een print() functie.
+    Voor het punt staat de string die je wilt opmaken, na het punt volgt
+    de benaming van de methode format() met tussen de haakjes de parameters."""
 ```
 
-Als je ze in een andere volgorde wilt afhandelen, kun je de volgorde
-bepalen door een getal tussen de acolades te zetten. De eerste parameter
-is nummer 0, de tweede nummer 1, de derde nummer 2, etcetera (als je het
-vreemd vindt om nummering te beginnen bij nul, weet dan dat dat
-gebruikelijk is in programmeertalen, en dat je het nog vaker zult
-tegenkomen in dit boek). Bijvoorbeeld:
+Als resultaat wordt op het scherm "De eerste drie getallen zijn een, twee en drie."
+afgedrukt. Wens de volgorde waarin de parameters in de zin verschijnen aan te passen,
+dan plaats je een getal tussen de accolades: het plaatsnummer van de parameter.
+De plaats van de eerste parameter is 0, van de tweede 1, van de derde 2, enz.
+Bijvoorbeeld:
 
 ```python
 print( "Achterwaarts zijn ze {2}, {1} en {0}.".format( 
     "een", "twee", "drie" ) )
 ```
 
-`format()` kan variabelen van ieder type verwerken, zolang ze maar een
-fatsoenlijke string representatie hebben. Bijvoorbeeld, `format()` kan
-getallen verwerken, en zelfs verschillende soorten data types mixen:
+Het resultaat wordt nu "Achterwaarts zijn ze drie, twee en een."
+
+`format()` kan variabelen van ieder type verwerken zolang ze maar een
+string representatie hebben. Zo kan `format()` ook
+getallen verwerken, maar ook verschillende soorten data types mixen:
 
 ```python
 print( "De eerste drie getallen zijn {}, {} en {}.".format( 
     1, "twee", 3.0 ) )
 ```
 
-Als je de parameters op een specifieke manier wil formatteren, zijn daar
-mogelijkheden voor, als je een dubbele-punt (:) tussen de accolades zet,
-na het volgorde-nummer als je dat gebruikt, met rechts van de
-dubbele-punt formatteringsinstructies. Ik zal een aantal
-formatteringsinstructies opnoemen.
+Door gebruik te maken van de `format()` methode kunnen we een opmaak geven
+aan de parameters door middel van formatteringsinstructies. Dit gebeurt
+voor elke parameter afzonderlijk en wordt ingevoerd tussen de accolades.
+Na het plaatsnummer (indien van toepassing) typ je een dubbele-punt (:),
+gevolgd door de formatteringsinstructies. We bespreken er een paar.
 
-Ik begin met instructies voor string parameters. Als je een bepaalde
-hoeveelheid tekens wilt reserveren voor een string, dan kun je dat
-aangeven met een integer rechts van de dubbele-punt. Dit wordt de
-"precisie" genoemd. De volgende code gebruikt een precisie van 7.
+De eerste instructies zijn **formateringsinstructies voor string parameters**.
+Wanneer je een bepaalde vaste plaats (een vaste hoeveelheid tekens)
+wilt reserveren voor een string, dan kun je dat aangeven door een integer
+rechts van de dubbele-punt in te voeren. Dit wordt de **"precisie"**
+genoemd. De volgende code gebruikt een precisie van 7.
 
 ```python
 print( "De eerste drie getallen zijn {:7}, {:7} en {:7}.".format( 
     "een", "twee", "drie" ) )
+""" de parameters worden van links naar rechts ingevoerd.
+Voor elke parameter wordt dezelfde plaats gebruikt: de plaats van 7 tekens; al dan niet leeg"""
 ```
 
-Als de precisie te kort is voor de lengte van de string, neemt
-`format()` gewoon meer ruimte voor de string. Je kunt de precisie dus
-niet gebruiken om een string voortijdig af te breken.
+Wanneer nu de opgegeven precisie te kort is voor de lengte van de string,
+past `format()` de ruimte aan zodat de string volledig wordt weergegeven.
+Je kunt de precisie dus niet gebruiken om een string voortijdig af te breken.
 
-```python
-print( "De eerste drie getallen zijn {:3}, {:3} en {:3}.".format( 
-    "een", "twee", "drie" ) )
-```
-
-Als je precisie gebruikt, kun je de parameter links aanlijnen,
-centreren, of rechts aanlijnen in de ruimte die je hebt gereserveerd.
-Dat doe je door een "alignment" teken te plaatsen tussen de dubbele punt
-en de precisie. Deze "alignment" tekens zijn `<` voor links aanlijnen,
-`^` voor centreren, en `>` voor rechts aanlijnen.
+Wanneer je precisie gebruikt, kun je de parameter **"uitlijnen"** in de
+gereserveerde ruimte. Dit doe je door een "alignment" teken te plaatsen
+tussen het dubbele-punt en de precisie. De "alignment" tekens zijn 
+`<` voor links uitlijnen, `^` voor centreren en `>` voor rechts uitlijnen.
 
 ```python
 print( "De eerste drie getallen zijn {:<7}, {:^7} en {:>7}.".
     format( "een", "twee", "drie" ) )
 ```
 
-Ik ga nu over op formatteringsinstructies voor getallen. Als je een
-getal wilt laten interpreteren als een integer, moet je de kleine letter
-"d" plaatsen rechts van de dubbele punt ("d" staat hierbij voor
-"decimaal"). Wil je dat het getal wordt geïnterpreteerd als een float,
-dan moet je een "f" plaatsen rechts van de dubbele-punt. `format()`
-maakt de juiste conversie voor je als dat kan. Je kunt echter niet van
-een float een integer maken, want dat veroorzaakt een runtime error.
+De volgende **formatteringsinstructies** gelden **voor getallen**. Je kunt een 
+**data type** toekennen aan een getal: voor een integer plaats je de kleine letter
+"d" rechts van het dubbele-punt ("d" staat voor "decimaal"), voor een float
+plaats je een "f" rechts van het dubbele-punt. `format()`
+maakt de juiste conversie als dit kan. Je kunt echter geen integer van 
+een float maken; dit veroorzaakt een runtime error.
 
 ```python
 print( "{} gedeeld door {} is {}".format( 1, 2, 1/2 ) )
@@ -303,37 +302,36 @@ print( "{:d} gedeeld door {:d} is {:f}".format( 1, 2, 1/2 ) )
 print( "{:f} gedeeld door {:f} is {:f}".format( 1, 2, 1/2 ) )
 ```
 
-Net als bij strings, kun je voor getallen precisie en aanlijning
-gebruiken. Dit doe je op dezelfde manier. En net als bij strings geldt
-dat als de precisie niet voldoende groot is, de functie gewoon de ruimte
-neemt die nodig is. Let erop dat een eventueel min-teken en een
-eventuele punt in een float ook plaats nodig hebben.
+De volgende resultaten verschijnen na uitvoer:
+"1 gedeeld door 2 is 0.5", "1 gedeeld door 2 is 0.500000" en
+"1.000000 gedeeld door 2.000000 is 0.500000".
+
+Ook voor getallen kun je **precisie** en **uitlijning** gebruiken. Dit doe je op
+dezelfde manier als bij strings. Let erop dat een eventueel min-teken
+ook een plaats nodig heeft, net als een eventueel punt in een float.
 
 ```python
 print( "{:5d} gedeeld door {:5d} is {:5f}".format( 1, 2, 1/2 ) )
 print( "{:<5f} gedeeld door {:^5f} is {:>5f}".format( 1,2,1/2 ))
 ```
 
-Tenslotte, en misschien het meest nuttig, kun je aangeven met hoeveel
-decimalen een float getoond moet worden, door een punt en een getal te
-plaatsen links van de letter "f." De `format()` methode zal het getal
-afronden tot het juiste aantal decimalen. Merk op dat je ook mag
-aangeven dat je nul decimalen wilt zien door `.0` te gebruiken, wat
-ervoor zal zorgen dat een float wordt getoond als een integer.
+Tenslotte, kun je het **aantal decimalen** aangeven waarmee een float getoond moet worden.
+Dit doe je door een punt en een getal te plaatsen links van de letter "f".
+De `format()` methode zal het getal afronden tot het gevraagde aantal decimalen.
+Wanneer je nul decimalen wilt zien door `.0` te gebruiken, wordt de float als een integer getoond.
 
 ```python
 print( "{:.2f} gedeeld door {:.2f} is {:.2f}".format( 1,2,1/2 ))
 ```
 
-De volgende toepassing van
-`format()` realiseert het afronden op drie decimalen:
+"1.00 gedeeld door 2.00 is 0.50" wordt getoond op het scherm.
+In volgende toepassing wordt afgerond op drie decimalen:
 
 ```python
 print( "{:.3f}".format( 7/11 ) )
 ```
 
-
-De combinatie van precisie, aanlijning, en decimalen staat je toe om
+De combinatie van precisie, uitlijning, en decimalen staat je toe om
 redelijk uitziende tabellen te tonen.
 
 ```python
