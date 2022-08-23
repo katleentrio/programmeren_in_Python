@@ -1,12 +1,12 @@
-Bepaal het grootste, het kleinste en het gemiddelde van drie gegeven getallen.
+Bepaal het maximum, het minimum en het gemiddelde van drie gegeven gehele getallen.
 
 ### Invoer
 
-Drie gehele getallen, elk op een afzonderlijke regel.
+Drie gehele getallen; elk op een afzonderlijke regel.
 
 ### Uitvoer
 
-Het grootste, het kleinste en het gemiddelde van de drie getallen. Het gemiddelde moet uitgeschreven worden met twee decimale cijfers (afgerond).
+Het grootste, het kleinste en het gemiddelde van de drie getallen; elk in een afzonderlijke antwoordzin (zie voorbeeld). Het gemiddelde wordt afgerond op twee decimalen.
 
 ### Voorbeeld
 

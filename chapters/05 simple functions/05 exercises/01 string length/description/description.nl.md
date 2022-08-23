@@ -1,4 +1,4 @@
-Vraag de gebruiker om een regel tekst in te geven, en druk de lengte van de tekst af.
+Vraag aan de gebruiker om een regel tekst in te geven en druk vervolgens de lengte van de tekst af.
 
 ### Invoer
 
@@ -13,11 +13,11 @@ De lengte van gegeven tekst.
 #### Invoer:
 
 ```
-And now for something completely different.
+Dit is een voorbeeldzin.
 ```
 
 #### Uitvoer:
 
 ```
-43
+24
 ```
