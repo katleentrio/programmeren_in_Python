@@ -1,81 +1,74 @@
-Een conditioneel statement, vaak een "if"-statement genoemd, bestaat uit
-een test en één of meerdere acties. De test is een zogeheten "boolean
-expressie." De acties worden alleen uitgevoerd als de test evalueert als
-zijnde "waar." Bijvoorbeeld, een app op een smartphone kan een
-waarschuwing geven als de batterij minder dan 5% vol is. Dat betekent
+Een "conditionale statement", vaak een "if"-statement genoemd, bestaat uit
+een test gevolgd door één of meerdere acties. De test is een zogeheten "boolean
+expressie" en kan slechts twee uitkomsten hebben: "waar" of "onwaar".
+De acties die beschreven worden in het if-statement, worden alleen uitgevoerd
+als het resultaat van de test "waar" is.
+
+We verduidelijken dit aan de hand van een voorbeeld. Een app op een smartphone 
+geeft een waarschuwing als de batterij minder dan 5% vol is. Dat betekent
 dat de app test of een zekere variabele `batterij_energie` kleiner is
-dan $$5$$, dus of de vergelijking `batterij_energie < 5` als zijnde "waar"
-geëvalueerd wordt. Als de variabele momenteel de waarde $$17$$ bevat,
-evalueert de test `batterij_energie < 5` als zijnde "onwaar."
+dan $$5$$, dus of de vergelijking `batterij_energie < 5` als resultaat
+"waar" heeft. Is de waarde van de variabele nu $$17$$, evalueert de test
+"onwaar" en hoeft er geen melding gegeven te worden.
 
 ### Booleans
 
-In Python wordt "waar" weergegeven door de waarde `True`, en "onwaar"
-door de waarde `False`.
+Een "boolean" is een data type dat slechts twee waarden kan aannemen:
+`0` of `1`, `False` of `True`, `off` of `on`. Welke waarde er precies
+kan gebruikt worden, is afhankelijk van de omgeving. In Python
+wordt "waar" weergegeven door de waarde `True`, en "onwaar"
+door de waarde `False`. Alles wat niet `False` is, is automatisch `True`.
 
-`True` en `False` zijn zogeheten "boolean waardes," die door Python zijn
-gedefinieerd. `True` en `False` zijn zelfs de *enige* booleans, en alles
-wat niet `False`, is automatisch `True`.
+Het data type van het resultaat van een test is altijd een boolean.
+In Python wordt dit data type weergegeven met `bool`.
 
-Als je je afvraagt welke data type `True` en `False` hebben: ze zijn van
-het type `bool`. In Python kan echter elke waarde worden geïnterpreteerd
-als boolean, ongeacht het data type. Dus als je een test doet of iets
-`True` of `False` is, en je test dat van een waarde die niet van het
-data type `bool` is, dan wordt hetgeen je test toch als ofwel `True`
-ofwel `False` beschouwd.
-
-The volgende waardes worden beschouwd als zijnde `False`:
+The volgende waarden worden beschouwd als zijnde `False`:
 
 -   De speciale waarde `False`
 
--   De speciale waarde `None` (die ik heb besproken in hoofdstuk
-    <a href="#ch:simplefunctions" data-reference-type="ref" data-reference="ch:simplefunctions">6</a>)
+-   De speciale waarde `None`
 
 -   Iedere numerieke waarde die nul is, bijvoorbeeld 0 en 0.0
 
 -   Iedere lege serie, bijvoorbeeld een lege string (`""`)
 
--   Iedere lege "afbeelding," bijvoorbeeld een lege "dictionary"
-    (dictionaries zijn het onderwerp van hoofdstuk
-    <a href="#ch:dictionaries" data-reference-type="ref" data-reference="ch:dictionaries">14</a>)
-
--   Iedere functie of methode die één van de bovenstaande waardes
-    retourneert (inclusief functies die niks retourneren)
+-   Iedere functie of methode die één van de bovenstaande waarden
+    retourneert (inclusief functies die niets retourneren)
 
 Iedere andere waarde wordt beschouwd als zijnde `True`.
 
-Een expressie die evalueert als `True` of `False` heet een "boolean
-expressie."
+Een expressie die evalueert als `True` of `False` noemen we een "boolean
+expressie".
 
 ### Vergelijkingen
 
-De meestgebruikte boolean expressies zijn vergelijkingen. Een
-vergelijking bestaat uit twee waardes met een vergelijkingsoperator
-ertussen. Vergelijkingsoperatoren zijn:
+De meest gebruikte boolean expressies zijn vergelijkingen. Een
+vergelijking bestaat uit twee waarden met een vergelijkingsoperator
+ertussen. De vergelijkingsoperatoren zijn:
 
-| operator | description |
+| operator | omschrijving |
 |:--------:|-------------|
+|        `==`  | gelijk aan |
+|        `!=` |  niet gelijk aan |
 |        `<`  |    kleiner dan |
 |        `<=` |  kleiner dan of gelijk aan |
-|        `==`  | gelijk aan |
-|        `>=` |  groter dan of gelijk aan |
 |        `>`  |  groter dan |
-|        `!=` |  niet gelijk aan |
+|        `>=` |  groter dan of gelijk aan |
+
 {:class="table table-striped table-condensed" style="width:auto;margin-left:auto;margin-right:auto;"}
 
-Een veelgemaakte fout is om twee waardes te vergelijken met een enkele
-$$=$$. De enkele $$=$$ is de assignment operator. Meestal (maar niet altijd)
-produceert Python een syntax of runtime error als je de $$=$$ probeert te
-gebruiken om twee waardes te vergelijken.
+Let er op dat je de vergelijkingsoperator "gelijk aan" correct noteert: deze
+bestaan uit twee gelijkheidstekens $$==$$! De enkele $$=$$ is de assignment operator.
+Meestal geeft Python een syntax of runtime error als je $$=$$ probeert te
+gebruiken om twee waarden te vergelijken.
 
-Je kunt vergelijksoperatoren gebruiken zowel tussen getallen als tussen
-strings. Vergelijkingen tussen strings zijn alfabetische vergelijkingen,
-waarbij je wel moet bedenken dat hoofdletters altijd beschouwd worden
-als kleiner dan kleine letters (en cijfers kleiner dan alle letters). Ik
-ga daar dieper op in in hoofdstuk
-<a href="#ch:strings" data-reference-type="ref" data-reference="ch:strings">11</a>.
+Je kunt vergelijksoperatoren zowel tussen getallen als tussen strings
+gebruiken. Vergelijkingen tussen strings zijn alfabetische vergelijkingen
+waarbij "a" kleiner beschouwd wordt dan "z", hoofdletters altijd kleiner
+beschouwd worden dan kleine letters, en cijfers kleiner dan alle letters.
 
-Hier volgen een paar voorbeelden van vergelijkingen:
+Hieronder worden een aantal voorbeelden gegeven van vergelijkingen. Elke
+vergelijking resulteert in een `False` of `True`. Vind je zelf het juiste resultaat?
 
 ```python
 print( "1.", 2 < 5 )
@@ -93,11 +86,9 @@ print( "12.", "banaan" < "mango" )
 print( "13.", "banaan" < "Mango" )
 ```
 
-Zorg dat je deze vergelijkingen uitvoert, en dat je snapt waarom ze de
-uitkomst geven die ze geven!
-
-Begrijp je waarom `3 < 13` `True` oplevert, maar `"3" < "13"` `False`
-oplevert? Indien niet, denk er dan goed over na!
+1-True 2-True 3-False 4-True 5-True 6-False	7-True 8-False 9-False 10-True
+11-True 12-True 13-False. Zorg dat je begrijpt waarom ze deze uitkomsten geven.
+Begrijp je ook waarom `3 < 13` `True` oplevert, maar `"3" < "13"` `False`?
 
 Je kunt de uitkomst van een boolean expressie aan een variabele
 toekennen als je wilt:
@@ -110,11 +101,7 @@ print( groter )
 print( type( groter ) )
 ```
 
-Schrijf code die test of $$1/2$$ groter dan, gelijk aan, of kleiner is dan
-$$0.5$$. Doe dat ook voor $$1/3$$ en $$0.33$$. Doe het dan ook voor $$(1/3)*3$$
-en $$1$$.
-
-Vergelijkingen tussen data types die niet vergeleken kunnen worden,
+Vergelijkingen tussen data types die niet met elkaar vergeleken kunnen worden,
 leiden meestal tot runtime errors.
 
 ```python
@@ -124,18 +111,18 @@ print( 3 < "3" )
 
 ### `in` operator
 
-Python heeft een speciale operator die de "lidmaatschap test operator"
-heet, en die vanwege die onverkwikkelijke mondvol meestal de "in
-operator" wordt genoemd aangezien hij gecodeerd wordt als `in`. De `in`
-operator test of een waarde voorkomt in een collectie, als de waarde
-links van de `in` staat, en de collectie rechts van de `in`.
+Python heeft een speciale operator die de "membership test operator"
+heet. Meestal wordt deze verkort de "in operator" genoemd aangezien
+hij gecodeerd wordt als `in`. De `in` operator test of een waarde
+voorkomt in een verzameling. De waarde wordt aan de linkerzijde van
+de `in` genoteerd, de verzameling aan de rechterzijde.
 
-Er zijn verschillende soorten collecties in Python, maar de enige die ik
-tot op dit moment bediscussiëerd heb is de string. Een string is een
-collectie van tekens. Je kunt testen of een specifiek teken, of een
-groepje tekens, onderdeel is van een string middels de `in` operator. De
-tegenhanger van de `in` operator is de `not in` operator, die `True`
-oplevert als `in` `False` oplevert, en vice versa. Bijvoorbeeld:
+Er zijn verschillende soorten verzamelingen in Python. Wij beperken ons
+hier echter tot de string. Een string kan beschouwd worden als een verzameling
+van tekens. Je kunt testen of een specifiek teken (of een groep tekens)
+deel uitmaakt van een string met behulp van de `in` operator. De
+tegenhanger van de `in` operator is de `not in` operator die `True`
+oplevert als `in` `False` oplevert, en vice versa. Een voorbeeld:
 
 ```python
 print( "y" in "Python" )
@@ -146,15 +133,14 @@ print( "to" in "Python" )
 print( "y" not in "Python" )
 ```
 
-Zorg er weer voor dat je deze evaluaties begrijpt!
-
-Schrijf code die test van ieder van de klinkers (`"a"`, `"e"`, `"i"`,
-`"o"`, `"u"`) of ze voorkomen in je naam. Je mag hoofdletters negeren.
+De evaluaties geven volgende resultaten: True False False True False False.
+Merk op dat er een onderscheid wordt gemaakt tussen grote en kleine letters.
 
 ### Logische operatoren
 
-Boolean expressies kunnen gecombineerd worden middels logische
-operatoren. Er zijn drie logische operatoren: `and`, `or`, en `not`.
+Meerdere boolean expressies kunnen gecombineerd worden door gebruik te
+maken van logische operatoren. Er zijn drie logische operatoren:
+`and`, `or`, en `not`.
 
 `and` en `or` plaats je tussen twee boolean expressies.
 
@@ -168,7 +154,7 @@ als beide `False` zijn.
 `not` kun je voor een boolean expressie plaatsen om hem om te keren van
 `True` naar `False` en vice versa.
 
-Bijvoorbeeld:
+Wat wordt er telkens afgeprint in volgend voorbeeld?
 
 ```python
 t = True
@@ -185,17 +171,20 @@ print( not t )
 print( not f )
 ```
 
-Kijk uit met het gebruik van logische operatoren, want een combinatie
-van `and`s en `or`s kan leiden tot onverwachte resultaten. Gebruik
-haakjes om te zorgen dat ze in de gewenste volgorde geëvalueerd worden.
-Bijvoorbeeld, in plaats van `a and b or c` te schrijven, moet je
-`(a and b) or c` of `a and (b or c)` schrijven (afhankelijk van de
-gewenste volgorde), zodat het duidelijk is welke evaluatie je wilt
-uitvoeren. Zelfs als je weet in welke volgorde Python de evaluatie doet
-zonder haakjes, hoeft dat niet te gelden voor iemand anders die je code
-leest.
+True, False, False, False, True, True, True, False, False, True
 
-Geef voor de code hieronder waardes voor `a`, `b`, and `c`, die ertoe
+Je kunt een combinatie van `and`s en `or`s gebruiken. De boolean
+expressies worden dan van links naar rechts geëvalueerd. Opgelet,
+een combinatie van `and`s en `or`s kan leiden tot onverwachte
+resultaten. Gebruik haakjes om te zorgen dat ze in de gewenste volgorde
+geëvalueerd worden: in plaats van `a and b or c` te schrijven, moet je
+`(a and b) or c` of `a and (b or c)` schrijven (afhankelijk van de
+gewenste volgorde) zodat het duidelijk is welke evaluatie je wilt
+uitvoeren. Het gebruik van haakjes maakt de code makkelijker leesbaar.
+Dit hoeft uiteraard niet wanneer je een logische expressie maakt met
+alleen `and`s, of alleen `or`s, want dan is de evaluatie duidelijk.
+
+Geef in de volgende code waarden voor `a`, `b`, en `c` die ertoe
 leiden dat de twee expressies verschillende uitkomsten hebben.
 
 ```python
@@ -206,10 +195,6 @@ c = # True of False?
 print( (a and b) or c )
 print( a and (b or c) )
 ```
-
-Als je logische expressie maakt met alleen `and`s, of alleen `or`s, hoef
-je geen haakjes te gebruiken, want dan is er slechts één mogelijke
-evaluatie van de expressie.
 
 Boolean expressies worden van links naar rechts geëvalueerd, en Python
 stopt de evaluatie op het moment dat de uitkomst van de evaluatie bekend
