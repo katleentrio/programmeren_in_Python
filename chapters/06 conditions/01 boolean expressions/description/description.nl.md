@@ -1,4 +1,4 @@
-Een "conditionale statement", vaak een "if"-statement genoemd, bestaat uit
+Een "conditionele statement", vaak een "if"-statement genoemd, bestaat uit
 een test gevolgd door één of meerdere acties. De test is een zogeheten "boolean
 expressie" en kan slechts twee uitkomsten hebben: "waar" of "onwaar".
 De acties die beschreven worden in het if-statement, worden alleen uitgevoerd
@@ -8,7 +8,7 @@ We verduidelijken dit aan de hand van een voorbeeld. Een app op een smartphone
 geeft een waarschuwing als de batterij minder dan 5% vol is. Dat betekent
 dat de app test of een zekere variabele `batterij_energie` kleiner is
 dan $$5$$, dus of de vergelijking `batterij_energie < 5` als resultaat
-"waar" heeft. Is de waarde van de variabele nu $$17$$, evalueert de test
+"waar" heeft. Is de waarde van de variabele nu $$17$$ dan evalueert de test
 "onwaar" en hoeft er geen melding gegeven te worden.
 
 ### Booleans
@@ -148,13 +148,13 @@ Als `and` tussen twee boolean expressies staat, is het resultaat `True`
 als beide expressies `True` zijn; anders is het resultaat `False`.
 
 Als `or` tussen twee boolean expressies staat, is het resultaat `True`
-als één of beide expressies `True` zijn; het resultaat is alleen `False`
+als één of beide expressies `True` is; het resultaat is alleen `False`
 als beide `False` zijn.
 
 `not` kun je voor een boolean expressie plaatsen om hem om te keren van
 `True` naar `False` en vice versa.
 
-Wat wordt er telkens afgeprint in volgend voorbeeld?
+Bedenk nu wat er telkens wordt afgeprint in volgende voorbeelden?
 
 ```python
 t = True
@@ -176,15 +176,17 @@ True, False, False, False, True, True, True, False, False, True
 Je kunt een combinatie van `and`s en `or`s gebruiken. De boolean
 expressies worden dan van links naar rechts geëvalueerd. Opgelet,
 een combinatie van `and`s en `or`s kan leiden tot onverwachte
-resultaten. Gebruik haakjes om te zorgen dat ze in de gewenste volgorde
+resultaten. Hou daarom de expressies zo eenvoudig mogelijk en
+gebruik haakjes om te zorgen dat ze in de gewenste volgorde
 geëvalueerd worden: in plaats van `a and b or c` te schrijven, moet je
-`(a and b) or c` of `a and (b or c)` schrijven (afhankelijk van de
-gewenste volgorde) zodat het duidelijk is welke evaluatie je wilt
-uitvoeren. Het gebruik van haakjes maakt de code makkelijker leesbaar.
-Dit hoeft uiteraard niet wanneer je een logische expressie maakt met
-alleen `and`s, of alleen `or`s, want dan is de evaluatie duidelijk.
+`(a and b) or c` of `a and (b or c)` schrijven afhankelijk van de
+gewenste volgorde. Het gebruik van haakjes maakt de code bovendien
+makkelijker leesbaar. Zo is het voor iedereen duidelijk in welke volgorde
+de evaluaties worden uitgevoerd. Haakjes hoef je uiteraard niet te
+plaatsen wanneer je een logische expressie maakt met alleen `and`s,
+of alleen `or`s, want dan is de evaluatie duidelijk.
 
-Geef in de volgende code waarden voor `a`, `b`, en `c` die ertoe
+Geef in de volgende code waarden aan `a`, `b`, en `c` die ertoe
 leiden dat de twee expressies verschillende uitkomsten hebben.
 
 ```python
@@ -196,9 +198,9 @@ print( (a and b) or c )
 print( a and (b or c) )
 ```
 
-Boolean expressies worden van links naar rechts geëvalueerd, en Python
-stopt de evaluatie op het moment dat de uitkomst van de evaluatie bekend
-is. Neem bijvoorbeeld de volgende code:
+Zoals eerder aangehaald worden boolean expressies van links naar rechts
+geëvalueerd. Python stopt de evaluatie op het moment dat de uitkomst van
+de evaluatie bekend is. Neem bijvoorbeeld de volgende code:
 
 ```python
 x = 1
@@ -206,18 +208,13 @@ y = 0
 print( (x == 0) or (y == 0) or (x / y == 1) )
 ```
 
-Als je deelt door nul, geeft Python een runtime error, dus de evaluatie
-van `x / y == 1` geeft een error als `y` nul is. En als je de code
-bestudeert, zie je dat `y` inderdaad nul is. Maar de code geeft geen
-foutmelding. Python evalueert de boolean expressie van links naar
-rechts, en ziet op een gegeven moment `… or (y == 0) or …`. `y == 0`
-evalueert als `True`. Omdat een expressie die via `or`s gecombineerd is
-`True` is als één van de componenten `True` is, kan Python na evaluatie
-van `(y == 0)` concluderen dat deze hele expressie `True` is. Het is dus
-niet nodig dat Python `x / y == 1` evalueert, en Python doet dat dan ook
-niet. Het is wel van belang dat `y == 0` links van `x / y == 1` staat,
-zodat Python `y == 0` eerst test.
-
-Merk op dat hoewel je heel ingewikkelde boolean expressies kunt bouwen
-via logische operatoren, ik je aanraad dat je je expressies zo eenvoudig
-mogelijk houdt. Eenvoudige expressies houden code leesbaar.
+Python evalueert de boolean expressie van links naar rechts. De gegeven
+expressie is een combinatie van `or`s. Deze expressie zal dus `True` als
+resultaat hebben indien één van de componenten `True` is. `y == 0`
+evalueert `True` dus is het niet nodig dat Python de laatste evaluatie
+nog uitvoert en dus stopt Python na `y == 0`.
+Merk op dat Python in dit geval enkel evaluaties uitvoert op de boolean expressies
+en niet kijkt naar resultaten van de berekeningen. Een berekening resulteert in een
+runtime error bij een nuldeling zoals het geval is bij `x / y == 1` (`y` is nul).
+Vermits hier een boolean expressie wordt geevalueerd geeft de code echter geen
+foutmelding. 

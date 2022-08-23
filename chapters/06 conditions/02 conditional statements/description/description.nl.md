@@ -1,7 +1,6 @@
-Zoals ik aan het begin van dit hoofdstuk aangaf, bestaan conditionele
-statements, die ook wel "condities" of "`if` statements" worden genoemd
-(omdat ze gedefinieerd worden met behulp van het gereserveerde woord
-`if`), uit een test en één of meer acties, waarbij de acties alleen
+Zoals ik in het vorige onderdeel aangaf, bestaat een "conditionele statement"
+(ook wel "condities" of "`if` statements" genoemd) uit
+een test gevolgd door één of meerdere acties, waarbij de acties alleen
 worden uitgevoerd als de test `True` oplevert.
 
 Hier is een voorbeeld:
@@ -9,7 +8,7 @@ Hier is een voorbeeld:
 ```python
 x = 5
 if x == 5:
-    print( "x is 5" )
+    print( "x is 5" ) # enkel indien de waarde van x gelijk is aan 5 wordt deze afgedrukt
 ```
 
 De syntax van een `if` statement is als volgt:
@@ -19,18 +18,16 @@ if <boolean expressie>:
     <acties>
 ```
 
-Let op de dubbele punt (:) die achter de boolean expressie staat, en het
-feit dat `<acties>` inspringt.
+**Let op** de dubbele punt (:) die achter de boolean expressie staat, en het
+inspringen van de `<acties>`.
 
 ### Blokken code
 
-In de syntactische beschrijving van de `if` statement, zie je dat
-`<acties>` "inspringt," dus één tabulatie naar rechts is geplaatst (in
-het Engels heet dit "indent"). Dit is opzettelijk zo gedaan en
-noodzakelijk. Python beschouwt statements die elkaar opvolgen en die
-hetzelfde niveau van inspringing hebben als één blok code. Het blok code
-dat onder het `if` statement staat is de lijst van acties die worden
-uitgevoerd als de boolean expressie `True` is. Bijvoorbeeld:
+Het is noodzakelijk dat `<acties>` "inspringt". Deze worden één tabulatie
+(of 4 spaties) naar rechts geplaatst. Python beschouwt statements die elkaar
+opvolgen en dezelfde insprong hebben als één blok code. Het code blok
+dat onder het `if` statement staat, is de lijst van acties die worden
+uitgevoerd indien de boolean expressie `True` is. Een voorbeeld:
 
 ```python
 x = 7
@@ -40,14 +37,14 @@ if x < 10:
 print( "Deze regel wordt echter altijd uitgevoerd." )
 ```
 
-Wijzig de waarde van `x` en test hoe dat de resultaten beïnvloedt.
+Bedenk hoe de uitvoer er uit ziet voor `x = 7` en `voor x = 11`.
 
-Dus alle regels code die onder de `if` staan en inspringen, horen tot
-het blok code dat wordt uitgevoerd als de boolean expressie behorende
-bij de `if` evalueert als `True`. Het blok code wordt daarentegen
+Alle regels code die onder de `if` staan en inspringen, horen tot
+het blok code dat wordt uitgevoerd als de boolean expressie bij de
+betreffende `if` evalueert als `True`. Het blok code wordt daarentegen
 overgeslagen als de boolean expressie evalueert als `False`. Statements
-die volgen na de `if` en die niet inspringen (althans, niet zo diep als
-het blok code onder de `if`) worden uitgevoerd ongeacht het resultaat
+die volgen na de `if` en niet inspringen (of toch niet zo diep als
+het blok code onder de `if`), worden uitgevoerd ongeacht het resultaat
 van de evaluatie van de boolean expressie.
 
 Je hoeft je niet te beperken tot slechts één `if` statement. Je kunt er
@@ -69,7 +66,7 @@ if x != 6 :
     print( "x is niet 6" )
 ```
 
-Wijzig weer de waarde van `x` en test hoe dat de resultaten beïnvloedt.
+Bedenk hoe de uitvoer er uit ziet voor `x = 4` of `x = 7`.
 
 ### Inspringen
 
