@@ -19,7 +19,8 @@ if <boolean expressie>:
 ```
 
 **Let op** de dubbele punt (:) die achter de boolean expressie staat, en het
-inspringen van de `<acties>`.
+inspringen van de `<acties>`. Je hoeft je niet te beperken tot een enkele
+`<actie>`
 
 ### Blokken code
 
