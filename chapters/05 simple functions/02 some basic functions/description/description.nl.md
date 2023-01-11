@@ -194,9 +194,13 @@ met de `round()` functie. Bijvoorbeeld:
 print( round( 7/11, 3 ) )
 ```
 
-Mogelijk heb je nog meerdere eisen. Stel bijvoorbeeld dat je ook
-10 posities ruimte moet reserveren voor deze uitkomst, en dat binnen
-deze 10 posities de uitkomst links moet uitgelijnd zijn. Dit lijkt
+**Mogelijk heb je nog meerdere eisen naar layout toe. In het vervolg van deze tekst,
+wordt hier dieper op ingegaan. Voor ons gebruik van Python, leidt dit echter te ver.
+Je mag dan ook de rest van deze tekst overslaan en verder gaan met de volgende activiteit.
+Wil je je hier toch verder in verdiepen, kan dit uiteraard altijd.**
+
+Stel bijvoorbeeld dat je 10 posities ruimte moet reserveren voor deze uitkomst, 
+en dat binnen deze 10 posities de uitkomst links moet uitgelijnd zijn. Dit lijkt
 moeilijk realiseerbaar maar de `format()` functie maakt het mogelijk om
 verschillende manieren van opmaak van het resulaat te combineren.
 We bespreken hieronder een aantal mogelijkheden voor het gebruik van
