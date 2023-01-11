@@ -3,7 +3,7 @@ Zoals ik in het vorige onderdeel aangaf, bestaat een "conditionele statement"
 een test gevolgd door één of meerdere acties, waarbij de acties alleen
 worden uitgevoerd als de test `True` oplevert.
 
-Hier is een voorbeeld:
+Een voorbeeld:
 
 ```python
 x = 5
@@ -18,38 +18,28 @@ if <boolean expressie>:
     <acties>
 ```
 
-**Let op** de dubbele punt (:) die achter de boolean expressie staat, en het
-inspringen van de `<acties>`. Je hoeft je niet te beperken tot een enkele
-`<actie>`
+**Let op** noteer steeds een dubbele punt (:) achter de boolean expressie, en laat
+alle `<acties>` die volgen na de boolean expressie, inspringen (meerdere `<acties>` zijn mogelijk).
 
 ### Blokken code
 
-Het is noodzakelijk dat `<acties>` "inspringt". Deze worden één tabulatie
-(of 4 spaties) naar rechts geplaatst. Python beschouwt statements die elkaar
+Het is noodzakelijk dat `<acties>` "inspringt". Python beschouwt statements die elkaar
 opvolgen en dezelfde insprong hebben als één blok code. Het code blok
 dat onder het `if` statement staat, is de lijst van acties die worden
-uitgevoerd indien de boolean expressie `True` is. Een voorbeeld:
+uitgevoerd indien de boolean expressie `True` is; deze worden overgeslagen indien de boolean expressie `False` is. Een voorbeeld:
 
 ```python
 x = 7
 if x < 10:
     print( "Deze regel wordt alleen uitgevoerd als x < 10." )
-    print( "En dat geldt ook voor deze regel." )
-print( "Deze regel wordt echter altijd uitgevoerd." )
+    print( "Idem voor deze regel." )
+print( "Deze regel wordt altijd uitgevoerd." )
 ```
 
 Bedenk hoe de uitvoer er uit ziet voor `x = 7` en `voor x = 11`.
+De `print()` regel die volgt na de `if` en niet inspringt, wordt uitgevoerd ongeacht het resultaat van de evaluatie van de boolean expressie.
 
-Alle regels code die onder de `if` staan en inspringen, horen tot
-het blok code dat wordt uitgevoerd als de boolean expressie bij de
-betreffende `if` evalueert als `True`. Het blok code wordt daarentegen
-overgeslagen als de boolean expressie evalueert als `False`. Statements
-die volgen na de `if` en niet inspringen (of toch niet zo diep als
-het blok code onder de `if`), worden uitgevoerd ongeacht het resultaat
-van de evaluatie van de boolean expressie.
-
-Je hoeft je niet te beperken tot slechts één `if` statement. Je kunt er
-zoveel hebben als je wilt.
+Je kunt meerdere `if` statement gebruiken.
 
 ```python
 x = 5
@@ -73,33 +63,9 @@ Bedenk hoe de uitvoer er uit ziet voor `x = 4` of `x = 7`.
 
 **In Python is correct inspringen van het grootste belang!** Zonder
 correcte inspringing kan Python niet zien welke regels code een blok
-vormen, en kan daarom niet je code uitvoeren zoals je bedoelt.[^5]
+vormen, en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
 
-Je kunt inspringen door middel van de `Tab` toets, of je kunt het doen
-middels spaties. De meeste editors doen aan "auto-indenting," dat wil
-zeggen, ze springen automatisch in als de code daartoe aanleiding geeft.
-Bijvoorbeeld, als je een editor hebt die Python ondersteund, en je
-schrijft een `if` statement, dan zal de editor de daarop volgende regel
-meteen laten inspringen (als dat niet gebeurt, heb je waarschijnlijk een
-syntax fout gemaakt, bijvoorbeeld de dubbele punt vergeten). Ook wordt
-het niveau van inspringing aangehouden voor iedere volgende regel,
-tenzij je middels de `Backspace` toets inspringing verwijdert.
-
-In Python programma's is inspringing normaal vier spaties, dus een druk
-op de `Tab` toets moet vier posities inspringen. Zolang je in een
-specifieke editor werkt, kun je ofwel de `Tab` toets gebruiken, ofwel
-zelf de spatiebalk vier keer indrukken, om één niveau van inspringing op
-te schuiven. Je kunt echter in de problemen komen als je tussentijds
-wisselt van editor, die wellicht andere instellingen voor tabulaties
-gebruikt. Zelfs als je code in die andere editor er goed uitziet, kan
-Python toch tijdens uitvoering melden dat er "indentation conflicts"
-zijn (dat wil zeggen, dat tabulaties en spaties door elkaar gehutseld
-zijn). Dat kan gezien worden als een syntax fout. De meeste editors
-bieden de mogelijkheid via een optie om tabulaties automatisch te
-vervangen door spaties, wat vermijdt dat zulke problemen optreden. Dus
-als je een tekst editor gebruikt om Python code te schrijven, controleer
-dan of die optie bestaat, en laat hem dan automatisch tabulaties
-vervangen door vier spaties.
+Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.
 
 De volgende code bevat inspring-fouten. Verbeter de code.
 
@@ -118,11 +84,10 @@ if x < 4 and y > 3:
         print( "y > 3" )
 ```
 
-### Twee-weg beslissingen
+### Twee-weg beslissingen `if` `else`
 
-Het komt regelmatig voor dat een beslissing twee kanten uit kan gaan,
-dat wil zeggen, onder bepaalde omstandigheden wil je een bepaald iets
-doen, en als die omstandigheden niet optreden wil je iets anders doen.
+Het komt regelmatig voor dat een beslissing twee kanten uit kan gaan:
+onder bepaalde voorwaarden wil je dat er een actie wordt uitgevoerd, wanneer niet voldaan wordt aan gestelde voorwaarde moet er een andere actie uitgevoerd worden.
 Python staat dit toe door aan een `if` statement een `else` tak toe te
 voegen.
 
@@ -352,21 +317,12 @@ prettiger leest.
 
 ![geneste conditie](media/Chart3nl.png "geneste conditie"){:width="80%" data-caption="Stroomdiagram dat een geneste conditie weergeeft."}
 
-[^5]: In veel programmeertalen (of eigenlijk in vrijwel alle
-    programmeertalen) worden blokken code door de compiler/interpreter
+[^5]: In veel programmeertalen worden blokken code door de compiler
     herkend doordat ze beginnen en eindigen met een speciaal symbool of
-    gereserveerd woord. Bijvoorbeeld, in talen als Java en C++ worden
-    blokken code omsloten door accolades, terwijl in talen als Pascal en
-    Modula ze beginnen met het woord `begin` en eindigen met het woord
-    `end`. Dat betekent dat in vrijwel alle talen correcte inspringing
-    niet nodig is. Je ziet toch dat goede programmeurs correct
-    inspringen, ongeacht de taal die ze gebruiken. Dat maakt het
-    namelijk gemakkelijk te zien welke delen van de code bij elkaar
-    horen, bijvoorbeeld, wat er hoort bij een `if` statement. Bij Python
-    is het inspringen een verplichting. Voor ervaren programmeurs die
-    voor het eerst Python leren komt dat wat vreemd over, maar ze
-    beseffen al snel dat het ze niks uitmaakt – ze lieten hun code toch
-    al netjes inspringen. Python maakt het echter ook voor beginnende
-    programmeurs een noodzakelijkheid om netjes in te springen, wat
-    betekent dat ze gedwongen zijn om nette code te schrijven. En dat is
-    alleen maar nuttig voor iedereen.
+    gereserveerd woord: in talen als Java en C++ worden
+    blokken code omsloten door accolades, in talen als Pascal en
+    Modula beginnen ze met het woord `begin` en eindigen met het woord
+    `end`. Ook al is correct inspringen in deze talen niet noodzakelijk, toch
+    doen programmeurs dit meestal, ongeacht de taal die ze gebruiken. Dit maakt de 
+    code overzichtelijker en duidelijker: je ziet meteen welke delen van de code bij elkaar
+    horen. Bij Python is het inspringen wel een verplichting.
