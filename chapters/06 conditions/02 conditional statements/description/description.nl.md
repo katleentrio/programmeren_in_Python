@@ -18,8 +18,8 @@ if <boolean expressie>:
     <acties>
 ```
 
-**Let op** noteer steeds een dubbele punt (:) achter de boolean expressie, en laat
-alle `<acties>` die volgen na de boolean expressie, inspringen (meerdere `<acties>` zijn mogelijk).
+**Let op** noteer steeds een **dubbele punt** (:) achter de boolean expressie, en laat
+alle `<acties>` die volgen na de boolean expressie, **inspringen** (meerdere `<acties>` zijn mogelijk).
 
 ### Blokken code
 
@@ -84,12 +84,10 @@ if x < 4 and y > 3:
         print( "y > 3" )
 ```
 
-### Twee-weg beslissingen `if` `else`
+### Twee-weg beslissingen: `if` - `else` constructie
 
-Het komt regelmatig voor dat een beslissing twee kanten uit kan gaan:
-onder bepaalde voorwaarden wil je dat er een actie wordt uitgevoerd, wanneer niet voldaan wordt aan gestelde voorwaarde moet er een andere actie uitgevoerd worden.
-Python staat dit toe door aan een `if` statement een `else` tak toe te
-voegen.
+Het komt regelmatig voor dat je onder bepaalde voorwaarden een actie wilt laten uitvoeren, wanneer niet voldaan wordt aan de gestelde voorwaarde er een andere actie wordt uitgevoerd.
+Python maakt dit mogelijk door aan een `if` statement een `else` tak toe te voegen.
 
 ```python
 x = 4
@@ -108,87 +106,26 @@ else:
     <acties>
 ```
 
-Merk op dat er een dubbele punt achter de `else` staat, net zoals achter
-de `<boolean expressie>` bij de `if`.
+**Let op** dat er een **dubbele punt** achter de `else` staat, net zoals achter
+de `<boolean expressie>` bij de `if`. Het is ook van belang dat het woord 
+`else` **uitgelijnd** is met het woord `if`waar het bij hoort. 
 
-Het is van belang dat het woord `else` uitgelijnd is met het woord `if`
-waar het bij hoort. Als je ze niet correct uitlijnt, krijg je ofwel een
-tabulatie fout, ofwel je code doet niet wat je zou willen dat hij doet.
+![conditie](media/Condition.png "conditie"){:width="25%"}
 
-Een consequentie van het toevoegen van een `else` tak aan een `if`
-statement is dat altijd precies één van de twee blokken `<acties>` wordt
-uitgevoerd. Als de boolean expressie `True` is, wordt het blok code
-onder de `if` uitgevoerd, en wordt het blok code onder de `else`
-overgeslagen. Als de boolean expressie `False` is, wordt het blok code
-onder de `if` overgeslagen, maar wordt het blok code onder de `else`
-uitgevoerd.
+Wanneer je een `else` tak toevoegt aan een `if` statement, wordt altijd 
+één van de twee blokken `<acties>` uitgevoerd:
+-   Als de boolean expressie `True` is, wordt het blok code onder de `if` uitgevoerd
+    en wordt het blok code onder de `else` overgeslagen.
+-   Als de boolean expressie `False` is, wordt het blok code onder de `if` overgeslagen
+    en wordt het blok code onder de `else` uitgevoerd.
 
-![conditie](media/Condition.png "conditie"){:width="65%"}
+Zo kun je bijvoorbeeld gebruik maken van een `if` - `else` constructie om te testen 
+of een integer even of oneven is. De modulo operator kan hierbij helpen:
+als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
 
-Je kunt testen of een integer even of oneven is met de modulo operator.
-Namelijk als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
-Schrijf code die vraagt om een integer en dan rapporteert of de integer
-even of oneven is (je kunt de `getInteger()` functie van `pcinput`
-gebruiken om om een integer te vragen).
+### Meer-weg beslissingen: `if` - `elif` - `else` constructie
 
-Opmerking met betrekking tot inspringing: het is niet absoluut
-noodzakelijk om het blok code onder de `else` aan te lijnen met het blok
-code onder de `if`, zolang de inspringing maar consistent is binnen het
-blok code. Ervaren programmeurs gebruiken echter consistente inspringing
-door de hele code, wat het gemakkelijk maakt om te zien hoe een
-`if`-`else` statement werkt. Bijvoorbeeld, in de code hieronder is de
-inspringing voor de `else` tak kleiner dan voor de `if` tak. Syntactisch
-is dat correct, maar het maakt de code slechter leesbaar.
-
-```python
-# Syntactisch correct maar lelijke inspringing.
-x = 1
-if x > 2:
-    print( "x is groter dan 2" )
-else:
-  print( "x is kleiner dan of gelijk aan 2" )
-```
-
-### Stroomdiagrammen
-
-In de tijd dat het beroep "programmeur" nog vrij nieuw was, gebruikten
-programmeurs vaak een techniek die "stroomdiagram" genoemd wordt om
-algoritmes te beschrijven. Vandaag de dag worden stroomdiagrammen nog
-slechts zelden gebruikt. Studenten hebben mij echter aangegeven dat
-stroomdiagrammen helpen om begrip te krijgen van de exacte werking van
-conditionele expressies (en van iteraties, die in het volgende hoofdstuk
-besproken worden).
-
-Een stroomdiagram is een schematische weergave van een algoritme middels
-blokken met pijlen ertussen. Er zijn drie soorten blokken (althans, ik
-heb voldoende aan drie soorten blokken voor dit boek). Rechthoekige
-blokken bevatten statements die uitgevoerd worden. Ruitvormige blokken
-bevatten een conditie die geëvalueerd wordt als `True` of `False`.
-Rechthoekige blokken met ronde hoeken geven ofwel de start (met de tekst
-"Start") ofwel het einde (met de tekst "Stop") van het algoritme aan.
-
-Om een stroomdiagram te interpreteren, begin je bij het "Start" blok, en
-volgt de pijlen, waarbij je ieder statement dat je tegenkomt uitvoert.
-Als je een ruitvormig blok tegenkomt, evalueer je de conditie die erin
-staat, en dan volg je ofwel de pijl die met `True` gemarkeerd is als de
-conditie `True` is, ofwel de pijl die met `False` gemarkeerd is als de
-conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
-
-![twee-weg beslissing](media/Chart1.png "twee-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een twee-weg beslissing weergeeft."}
-
-Bijvoorbeeld, de code die hierboven (in
-<a href="#s:tweeweg" data-reference-type="ref" data-reference="s:tweeweg">[s:tweeweg]</a>)
-staat, waarbij een getal vergeleken wordt met 2 en waarbij wordt
-afgedrukt of het getal groter is dan 2, of kleiner dan of gelijk aan 2
-is, is equivalent met het stroomdiagram dat getoond wordt in afbeelding
-<a href="#f:chart1" data-reference-type="ref" data-reference="f:chart1">7.1</a>.
-
-### Meer-weg beslissingen
-
-Het komt voor dat je een situatie hebt waarbij je één van meerdere
-blokken code wilt uitvoeren, maar niet meer dan één. Dit soort meer-weg
-beslissingen kun je implementeren met een extra toevoeging aan een `if`
-statement, namelijk in de vorm van één of meer `elif` takken (`elif`
+Bij het `if` - `else` constructie, wordt slechts één blok code uitgevoerd van twee gegeven blokken code. Soms wil je echter dat er één blok code uitgevoerd wordt, niet uit twee maar uit meerdere blokken code. Dit soort meer-weg beslissingen kun je implementeren met een extra toevoeging aan een `if` statement in de vorm van één of meer `elif` takken (`elif`
 staat voor "else if").
 
 ```python
@@ -205,15 +142,11 @@ else:
     print( "Wegen de jaren zwaar?" )
 ```
 
-Deze code is equivalent aan het algoritme dat is weergeven in afbeelding
-<a href="#f:chart2" data-reference-type="ref" data-reference="f:chart2">7.3</a>.
-
 Verander in de code hierboven de waarde van de variabele `leeftijd` en
-bestudeer de resultaten.
+één van de andere code blokken zal uitgevoerd worden.
 
-![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
-
-De syntax is:
+De syntax wordt hieronder gegeven voor één `elif` maar kan uitgebreid worden met 
+meerdere.:
 
 ```python
 if <boolean expressie>:
@@ -224,46 +157,23 @@ else:
     <acties>
 ```
 
-De syntax hierboven toont slechts één `elif`, maar je mag er meerdere
-hebben. De verschillende tests in een `if`-`elif`-`else` constructie
+De verschillende tests in een `if`-`elif`-`else` constructie
 worden in volgorde uitgevoerd. De eerste boolean expressie die
-geëvalueerd wordt als `True` laat het bijbehorende blok code uitvoeren.
-Geen andere blokken code in de hele constructie worden daarna nog
-uitgevoerd, en er worden daarna ook geen boolean expressies in de
-constructie meer getest.
-
-Kortom, eerst wordt de boolean expressie bij de `if` geëvalueerd. Als
-die `True` is, wordt het blok code onder de `if` uitgevoerd. Anders
-wordt de boolean expressie bij de eerste `elif` geëvalueerd. Als die
-`True` blijkt te zijn, wordt de code behorende bij deze `elif`
-uitgevoerd. Zo niet, dan wordt de boolean expressie bij de tweede `elif`
-geëvalueerd. Etcetera. Slechts als alle boolean expressies in de
+geëvalueerd wordt als `True` laat het bijhorende blok code uitvoeren.
+Daarna slaat Python de rest van de code binnen de constructie over.
+De volgende boolean expressies in de constructie worden dus niet meer getest
+en bijgevolg worden er ook geen andere blokken code daarna nog
+uitgevoerd. Slechts als alle boolean expressies in de
 constructie `False` blijken te zijn, wordt het blok code bij de `else`
 uitgevoerd.
 
-Voor het voorbeeld hierboven betekent dit dat bij de eerste `elif` de
-test `leeftijd < 18` volstaat, en niet hoeft te worden aangevuld met een
-test `and leeftijd >= 12`, want als `leeftijd` kleiner geweest zou zijn
-dan 12, dan zou de boolean expressie voor de `if` al `True` zijn
-geweest, en zou de boolean expressie bij de eerste `elif` niet eens door
-Python zijn gezien.
-
-Het toevoegen van `else` is altijd optioneel. In de meeste gevallen
-waarin ik zelf meerdere `elif`s gebruik, zet ik wel een `else`, al was
-het maar voor het afvangen van fouten.
-
-Schrijf een programma dat een variabele `gewicht` heeft. Als `gewicht`
-groter is dan $$20$$ (kilo), print je: "Er moet een toeslag van \$$25
-betaald worden voor baggage die te zwaar is." Als `gewicht` kleiner is
-dan $$20$$, print je: "Goede reis!" Als `gewicht` precies $$20$$ is, print
-je: "Poeh! Dat gewicht is precies goed!" Wijzig de waarde van `gewicht`
-een paar keer om de code te testen.
+Het toevoegen van `else` is optioneel. Het laatste tak binnen de constructie
+mag dus ook een `elif` tak.
 
 ### Geneste condities
 
-Gegeven de syntactische regels voor `if`-`elif`-`else` constructies en
-inspringing, is het mogelijk om `if` statements op te nemen in de code
-blokken behorende bij andere `if` statements. Zo'n geneste `if` wordt
+Het is mogelijk om `if` statements op te nemen in de code
+blokken van andere `if` statements. Zo'n geneste `if` wordt
 alleen uitgevoerd als de boolean expressie behorende bij het code blok
 waarin de geneste `if` staat `True` is.
 
@@ -326,3 +236,38 @@ prettiger leest.
     doen programmeurs dit meestal, ongeacht de taal die ze gebruiken. Dit maakt de 
     code overzichtelijker en duidelijker: je ziet meteen welke delen van de code bij elkaar
     horen. Bij Python is het inspringen wel een verplichting.
+
+### Stroomdiagrammen
+
+In de tijd dat het beroep "programmeur" nog vrij nieuw was, gebruikten
+programmeurs vaak een techniek die "stroomdiagram" genoemd wordt om
+algoritmes te beschrijven. Vandaag de dag worden stroomdiagrammen nog
+slechts zelden gebruikt. Studenten hebben mij echter aangegeven dat
+stroomdiagrammen helpen om begrip te krijgen van de exacte werking van
+conditionele expressies (en van iteraties, die in het volgende hoofdstuk
+besproken worden).
+
+Een stroomdiagram is een schematische weergave van een algoritme middels
+blokken met pijlen ertussen. Er zijn drie soorten blokken (althans, ik
+heb voldoende aan drie soorten blokken voor dit boek). Rechthoekige
+blokken bevatten statements die uitgevoerd worden. Ruitvormige blokken
+bevatten een conditie die geëvalueerd wordt als `True` of `False`.
+Rechthoekige blokken met ronde hoeken geven ofwel de start (met de tekst
+"Start") ofwel het einde (met de tekst "Stop") van het algoritme aan.
+
+Om een stroomdiagram te interpreteren, begin je bij het "Start" blok, en
+volgt de pijlen, waarbij je ieder statement dat je tegenkomt uitvoert.
+Als je een ruitvormig blok tegenkomt, evalueer je de conditie die erin
+staat, en dan volg je ofwel de pijl die met `True` gemarkeerd is als de
+conditie `True` is, ofwel de pijl die met `False` gemarkeerd is als de
+conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
+
+![twee-weg beslissing](media/Chart1.png "twee-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een twee-weg beslissing weergeeft."}
+
+Bijvoorbeeld, de code die hierboven (in
+<a href="#s:tweeweg" data-reference-type="ref" data-reference="s:tweeweg">[s:tweeweg]</a>)
+staat, waarbij een getal vergeleken wordt met 2 en waarbij wordt
+afgedrukt of het getal groter is dan 2, of kleiner dan of gelijk aan 2
+is, is equivalent met het stroomdiagram dat getoond wordt in afbeelding
+<a href="#f:chart1" data-reference-type="ref" data-reference="f:chart1">7.1</a>.
+
