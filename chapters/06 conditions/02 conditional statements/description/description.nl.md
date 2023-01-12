@@ -19,13 +19,13 @@ if <boolean expressie>:
 ```
 
 **Let op** noteer steeds een **dubbele punt** (:) achter de boolean expressie, en laat
-alle `<acties>` die volgen na de boolean expressie, **inspringen** (meerdere `<acties>` zijn mogelijk).
+alle `<acties>` die volgen na de boolean expressie, **inspringen**.
 
 ### Blokken code
 
-Het is noodzakelijk dat `<acties>` "inspringt". Python beschouwt statements die elkaar
+Het is noodzakelijk dat de `<acties>` "inspringen". Python beschouwt statements die elkaar
 opvolgen en dezelfde insprong hebben als één blok code. Het code blok
-dat onder het `if` statement staat, is de lijst van acties die worden
+dat onder het `if` statement staat, is de lijst van alle acties die worden
 uitgevoerd indien de boolean expressie `True` is; deze worden overgeslagen indien de boolean expressie `False` is. Een voorbeeld:
 
 ```python
@@ -36,10 +36,10 @@ if x < 10:
 print( "Deze regel wordt altijd uitgevoerd." )
 ```
 
-Bedenk hoe de uitvoer er uit ziet voor `x = 7` en `voor x = 11`.
+Bedenk hoe de uitvoer er uit ziet voor `x = 7` en voor `x = 11`.
 De `print()` regel die volgt na de `if` en niet inspringt, wordt uitgevoerd ongeacht het resultaat van de evaluatie van de boolean expressie.
 
-Je kunt meerdere `if` statement gebruiken.
+Je kunt meerdere `if` statements gebruiken.
 
 ```python
 x = 5
@@ -61,9 +61,9 @@ Bedenk hoe de uitvoer er uit ziet voor `x = 4` of `x = 7`.
 
 ### Inspringen
 
-**In Python is correct inspringen van het grootste belang!** Zonder
+**In Python is het gebruik van correcte insprongen zeer belangrijk!** Zonder
 correcte inspringing kan Python niet zien welke regels code een blok
-vormen, en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
+vormen en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
 
 Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.
 
@@ -125,7 +125,7 @@ als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
 
 ### Meer-weg beslissingen: `if` - `elif` - `else` constructie
 
-Bij het `if` - `else` constructie, wordt slechts één blok code uitgevoerd van twee gegeven blokken code. Soms wil je echter dat er één blok code uitgevoerd wordt, niet uit twee maar uit meerdere blokken code. Dit soort meer-weg beslissingen kun je implementeren met een extra toevoeging aan een `if` statement in de vorm van één of meer `elif` takken (`elif`
+Bij een `if` - `else` constructie, wordt slechts één blok code uitgevoerd van twee gegeven blokken code. Soms wil je echter dat er één blok code uitgevoerd wordt, niet van twee maar van meerdere blokken code. Dit soort meer-weg beslissingen kun je implementeren met een extra toevoeging aan een `if` statement in de vorm van één of meer `elif` takken (`elif`
 staat voor "else if").
 
 ```python
@@ -145,8 +145,8 @@ else:
 Verander in de code hierboven de waarde van de variabele `leeftijd` en
 één van de andere code blokken zal uitgevoerd worden.
 
-De syntax wordt hieronder gegeven voor één `elif` maar kan uitgebreid worden met 
-meerdere.:
+De syntax is (gegeven voor één `elif` maar kan uitgebreid worden met 
+meerdere):
 
 ```python
 if <boolean expressie>:
@@ -162,19 +162,19 @@ worden in volgorde uitgevoerd. De eerste boolean expressie die
 geëvalueerd wordt als `True` laat het bijhorende blok code uitvoeren.
 Daarna slaat Python de rest van de code binnen de constructie over.
 De volgende boolean expressies in de constructie worden dus niet meer getest
-en bijgevolg worden er ook geen andere blokken code daarna nog
+en bijgevolg worden er ook geen andere blokken code meer
 uitgevoerd. Slechts als alle boolean expressies in de
 constructie `False` blijken te zijn, wordt het blok code bij de `else`
 uitgevoerd.
 
-Het toevoegen van `else` is optioneel. Het laatste tak binnen de constructie
-mag dus ook een `elif` tak.
+Het toevoegen van `else` is optioneel. De laatste tak binnen de constructie
+mag dus ook een `elif` tak zijn.
 
 ### Geneste condities
 
 Het is mogelijk om `if` statements op te nemen in de code
-blokken van andere `if` statements. Zo'n geneste `if` wordt
-alleen uitgevoerd als de boolean expressie behorende bij het code blok
+blokken van een andere `if` statement. Zo'n geneste `if` wordt
+alleen uitgevoerd als de boolean expressie die hoort bij het code blok
 waarin de geneste `if` staat `True` is.
 
 ```python
@@ -192,18 +192,8 @@ else:
     print( x, "is niet deelbaar door 7 of 11." )
 ```
 
-Deze code is equivalent aan het algoritme dat wordt weergegeven in
-afbeelding
-<a href="#f:chart3" data-reference-type="ref" data-reference="f:chart3">7.4</a>.
-
-Wijzig de waarde van `x` en controleer de resultaten.
-
-In het voorbeeld hierboven wil ik alleen maar het nesten van `if`
-statements demonstreren. Er zijn leesbaardere manieren om te doen wat
-deze code doet. Het nesten van `if` statements kan vaak vermeden worden
-door `elif`s te gebruiken. Bijvoorbeeld, de code hieronder doet
-hetzelfde als de "leeftijd" code hierboven, maar nu met geneste `if`s in
-plaats van `elif`s.
+Onderstaand voorbeeld is een voorbeeld waarbij eveneens gewerkt wordt met geneste `if`
+statements.
 
 ```python
 leeftijd = 21
@@ -222,10 +212,12 @@ else:
                 print( "Wegen de jaren zwaar?" )
 ```
 
+Het nesten van `if` statements kan vaak vermeden worden
+door `elif`s te gebruiken. De code in het bovenstaand voorbeeld doet
+hetzelfde als de "leeftijd" code gegeven onder het deel over de meer-weg beslissingen.
 Ik neem aan dat je het ermee eens bent dat de versie met `elif`s
 prettiger leest.
 
-![geneste conditie](media/Chart3nl.png "geneste conditie"){:width="80%" data-caption="Stroomdiagram dat een geneste conditie weergeeft."}
 
 [^5]: In veel programmeertalen worden blokken code door de compiler
     herkend doordat ze beginnen en eindigen met een speciaal symbool of
@@ -239,28 +231,28 @@ prettiger leest.
 
 ### Stroomdiagrammen
 
-In de tijd dat het beroep "programmeur" nog vrij nieuw was, gebruikten
-programmeurs vaak een techniek die "stroomdiagram" genoemd wordt om
-algoritmes te beschrijven. Vandaag de dag worden stroomdiagrammen nog
-slechts zelden gebruikt. Studenten hebben mij echter aangegeven dat
-stroomdiagrammen helpen om begrip te krijgen van de exacte werking van
-conditionele expressies (en van iteraties, die in het volgende hoofdstuk
-besproken worden).
+Vroeger stelden programmeurs een "stroomdiagram" op om
+algoritmes te beschrijven. Dit stroomdiagram gebruikten ze dan als leidraad bij het uitschrijven van de code.  
 
-Een stroomdiagram is een schematische weergave van een algoritme middels
-blokken met pijlen ertussen. Er zijn drie soorten blokken (althans, ik
-heb voldoende aan drie soorten blokken voor dit boek). Rechthoekige
-blokken bevatten statements die uitgevoerd worden. Ruitvormige blokken
-bevatten een conditie die geëvalueerd wordt als `True` of `False`.
-Rechthoekige blokken met ronde hoeken geven ofwel de start (met de tekst
-"Start") ofwel het einde (met de tekst "Stop") van het algoritme aan.
+Een stroomdiagram is een visuele, schematische weergave van de werking van een code. 
+Hierbij wordt gebruik gemaakt van blokken die met elkaar verbonden worden door pijlen.
+De vorm van het blok bepaalt de functie ervan.
+De drie belangrijkste soorten zijn:
+-   een rechthoekig blok met afgeronde hoeken. Deze bevat de tekst "Start" of "Stop" en geeft 
+    ofwel de start ofwel het einde van het algoritme aan.
+-   een rechthoekig blok. Deze bevat statements die uitgevoerd worden.
+-   een ruitvormig blok. Deze bevat een conditie die geëvalueerd wordt als `True` of `False`.
 
 Om een stroomdiagram te interpreteren, begin je bij het "Start" blok, en
-volgt de pijlen, waarbij je ieder statement dat je tegenkomt uitvoert.
-Als je een ruitvormig blok tegenkomt, evalueer je de conditie die erin
-staat, en dan volg je ofwel de pijl die met `True` gemarkeerd is als de
+volg je de pijlen, waarbij je ieder statement dat je tegenkomt uitvoert.
+Bij een ruitvormig blok evalueer je de conditie die erin
+staat en volg je ofwel de pijl die met `True` gemarkeerd is als de
 conditie `True` is, ofwel de pijl die met `False` gemarkeerd is als de
 conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
+
+![multi-branch decision](media/Chart2en.png "multi-branch decision"){:width="60%" data-caption="Flow chart expressing a multi-branch decision."}
+
+![meer-weg beslissing](media/Chart2.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
 
 ![twee-weg beslissing](media/Chart1.png "twee-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een twee-weg beslissing weergeeft."}
 
