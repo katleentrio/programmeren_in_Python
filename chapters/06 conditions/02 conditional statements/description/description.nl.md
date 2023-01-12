@@ -215,7 +215,7 @@ else:
 Het nesten van `if` statements kan vaak vermeden worden
 door `elif`s te gebruiken. De code in het bovenstaand voorbeeld doet
 hetzelfde als de "leeftijd" code gegeven onder het deel over de meer-weg beslissingen.
-Ik neem aan dat je het ermee eens bent dat de versie met `elif`s
+Ik neem aan dat je het ermee eens bent dat de versie met `elif`'s
 prettiger leest.
 
 
@@ -238,10 +238,10 @@ Een stroomdiagram is een visuele, schematische weergave van de werking van een c
 Hierbij wordt gebruik gemaakt van blokken die met elkaar verbonden worden door pijlen.
 De vorm van het blok bepaalt de functie ervan.
 De drie belangrijkste soorten zijn:
--   een rechthoekig blok met afgeronde hoeken. Deze bevat de tekst "Start" of "Stop" en geeft 
-    ofwel de start ofwel het einde van het algoritme aan.
--   een rechthoekig blok. Deze bevat statements die uitgevoerd worden.
--   een ruitvormig blok. Deze bevat een conditie die geëvalueerd wordt als `True` of `False`.
+-   een rechthoekig blok met afgeronde hoeken: bevat de tekst "Start" of "Stop" en geeft 
+    ofwel de start ofwel het einde van het algoritme aan;
+-   een rechthoekig blok: bevat statements die uitgevoerd worden;
+-   een ruitvormig blok: bevat een conditie die geëvalueerd wordt als `True` of `False`.
 
 Om een stroomdiagram te interpreteren, begin je bij het "Start" blok, en
 volg je de pijlen, waarbij je ieder statement dat je tegenkomt uitvoert.
@@ -252,4 +252,4 @@ conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
 
 ![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
 
-Bovenstaand stroomdiagram hoort bij de leeftijdcode die eerder in dit hoofdstuk werd uitgewerkt.
+Bovenstaand stroomdiagram hoort bij de "leeftijd" code die eerder in dit hoofdstuk werd uitgewerkt.
