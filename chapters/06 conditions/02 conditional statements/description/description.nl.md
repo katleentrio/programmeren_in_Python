@@ -250,16 +250,6 @@ staat en volg je ofwel de pijl die met `True` gemarkeerd is als de
 conditie `True` is, ofwel de pijl die met `False` gemarkeerd is als de
 conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
 
-![multi-branch decision](media/Chart2en.png "multi-branch decision"){:width="60%" data-caption="Flow chart expressing a multi-branch decision."}
-
 ![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
 
-![twee-weg beslissing](media/Chart1.png "twee-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een twee-weg beslissing weergeeft."}
-
-Bijvoorbeeld, de code die hierboven (in
-<a href="#s:tweeweg" data-reference-type="ref" data-reference="s:tweeweg">[s:tweeweg]</a>)
-staat, waarbij een getal vergeleken wordt met 2 en waarbij wordt
-afgedrukt of het getal groter is dan 2, of kleiner dan of gelijk aan 2
-is, is equivalent met het stroomdiagram dat getoond wordt in afbeelding
-<a href="#f:chart1" data-reference-type="ref" data-reference="f:chart1">7.1</a>.
-
+Bovenstaand stroomdiagram hoort bij de leeftijdcode die eerder in dit hoofdstuk werd uitgewerkt.
