@@ -250,6 +250,6 @@ staat en volg je ofwel de pijl die met `True` gemarkeerd is als de
 conditie `True` is, ofwel de pijl die met `False` gemarkeerd is als de
 conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
 
-![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
+![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="35%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
 
 Bovenstaand stroomdiagram hoort bij de "leeftijd" code die eerder in dit hoofdstuk werd uitgewerkt.
