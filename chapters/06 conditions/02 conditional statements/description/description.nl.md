@@ -252,7 +252,7 @@ conditie `False` is. Wanneer je het "Stop" blok tegenkomt, ben je klaar.
 
 ![multi-branch decision](media/Chart2en.png "multi-branch decision"){:width="60%" data-caption="Flow chart expressing a multi-branch decision."}
 
-![meer-weg beslissing](media/Chart2.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
+![meer-weg beslissing](media/Chart2nl.png "meer-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een meer-weg beslissing weergeeft."}
 
 ![twee-weg beslissing](media/Chart1.png "twee-weg beslissing"){:width="60%" data-caption="Stroomdiagram dat een twee-weg beslissing weergeeft."}
 
