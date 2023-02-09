@@ -1,3 +1,5 @@
+### If statement
+
 Zoals ik in het vorige onderdeel aangaf, bestaat een "conditionele statement"
 (ook wel "condities" of "`if` statements" genoemd) uit
 een test gevolgd door één of meerdere acties, waarbij de acties alleen
@@ -8,20 +10,19 @@ Een voorbeeld:
 ```python
 x = 5
 if x == 5:
-    print( "x is 5" ) # enkel indien de waarde van x gelijk is aan 5 wordt deze afgedrukt
+    print( "x is 5" )   # in dit geval is x gelijk aan 5 dus wordt het print commando uitgevoerd.
 ```
 
-De syntax van een `if` statement is als volgt:
+De syntax van een `if` statement ziet er als volgt uit:
 
 ```python
 if <boolean expressie>:
     <acties>
 ```
 
-**Let op** noteer steeds een **dubbele punt** (:) achter de boolean expressie, en laat
-alle `<acties>` die volgen na de boolean expressie, **inspringen**.
+**Let op: noteer steeds een dubbele punt (:) achter de boolean expressie en laat alle `<acties>` die volgen na de boolean expressie **inspringen**.
 
-### Blokken code
+**BLOKKEN CODE**
 
 Het is noodzakelijk dat de `<acties>` "inspringen". Python beschouwt statements die elkaar
 opvolgen en dezelfde insprong hebben als één blok code. Het code blok
@@ -59,15 +60,15 @@ if x != 6 :
 
 Bedenk hoe de uitvoer er uit ziet voor `x = 4` of `x = 7`.
 
-### Inspringen
+**INSPRINGEN**
 
 **In Python is het gebruik van correcte insprongen zeer belangrijk!** Zonder
 correcte inspringing kan Python niet zien welke regels code een blok
 vormen en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
 
-Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.
+**Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.**
 
-De volgende code bevat inspring-fouten. Verbeter de code.
+De volgende code bevat inspring-fouten. Kan jij de fouten uit de code halen?
 
 ```python
 # Deze code bevat tabulatie-fouten!
@@ -158,14 +159,10 @@ else:
 ```
 
 De verschillende tests in een `if`-`elif`-`else` constructie
-worden in volgorde uitgevoerd. De eerste boolean expressie die
-geëvalueerd wordt als `True` laat het bijhorende blok code uitvoeren.
-Daarna slaat Python de rest van de code binnen de constructie over.
+worden in volgorde uitgevoerd. **De eerste boolean expressie die geëvalueerd wordt als `True` laat het bijhorende blok code uitvoeren. Daarna slaat Python de rest van de code binnen de constructie over.**
 De volgende boolean expressies in de constructie worden dus niet meer getest
 en bijgevolg worden er ook geen andere blokken code meer
-uitgevoerd. Slechts als alle boolean expressies in de
-constructie `False` blijken te zijn, wordt het blok code bij de `else`
-uitgevoerd.
+uitgevoerd. **Slechts als alle boolean expressies in de constructie `False` blijken te zijn, wordt het blok code bij de `else` uitgevoerd.**
 
 Het toevoegen van `else` is optioneel. De laatste tak binnen de constructie
 mag dus ook een `elif` tak zijn.
@@ -231,7 +228,7 @@ prettiger leest.
 
 ### Stroomdiagrammen
 
-Vroeger stelden programmeurs een "stroomdiagram" op om
+Vanuit voorgaande voorbeelden, merk je dat het soms moeilijk wordt om een overzicht te behouden bij de meer ingewikkelde code. Het is dan ook belangrijk om een duidelijk schema te hebben dat als leidraad kan dienen bij het uitschrijven van de code. Programmeurs gebruikten een "stroomdiagram" om 
 algoritmes te beschrijven. Dit stroomdiagram gebruikten ze dan als leidraad bij het uitschrijven van de code.  
 
 Een stroomdiagram is een visuele, schematische weergave van de werking van een code. 

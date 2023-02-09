@@ -8,7 +8,7 @@ $$a^2 + b^2 = c^2$$
 
 ### Invoer
 
-De lengten van twee rechthoekszijden van een rechthoekige driehoek; elk op een afzonderlijke regel.
+Vraag de gebruiker naar de lengten van twee rechthoekszijden van een rechthoekige driehoek; elk op een afzonderlijke regel.
 
 ### Uitvoer
 

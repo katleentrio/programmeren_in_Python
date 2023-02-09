@@ -12,15 +12,15 @@ van deze variabele kleiner is dan $$5$$; m.a.w. of de vergelijking `batterij_ene
 
 ### Boolean
 
-Een "boolean" is een data type dat slechts twee waarden kan aannemen:
-`0` of `1`, `False` of `True`, `off` of `on`. In Python
-wordt "waar" weergegeven door de waarde `True`, en "onwaar"
-door de waarde `False`. Alles wat niet `False` is, is automatisch `True`.
+Een "boolean" is -net als een integer, float of string- een data type. 
+**Data van het type "boolean" kan slechts twee waarden aannemen: `0` of `1`, `False` of `True`, `off` of `on`.** 
+In Python wordt "waar" weergegeven door de waarde `True`, en "onwaar"
+door de waarde `False`. **Alles wat niet `False` is, is automatisch `True`.**
 
 Het data type van het resultaat van een test is altijd een boolean.
 In Python wordt dit data type weergegeven met `bool`.
 
-Iedere waarde wordt beschouwd als zijnde `True`, met uitzondering van de volgende waarden die worden beschouwd als zijnde `False`:
+Iedere waarde wordt beschouwd als `True`, met uitzondering van de volgende waarden die worden beschouwd als `False`:
 
 -   De speciale waarden `False`, `None`
 
@@ -31,8 +31,7 @@ Iedere waarde wordt beschouwd als zijnde `True`, met uitzondering van de volgend
 -   Iedere functie of methode die één van de bovenstaande waarden
     retourneert (inclusief functies die niets retourneren)
 
-Een expressie die evalueert als `True` of `False` noemen we een "boolean
-expressie".
+**Een expressie die evalueert als `True` of `False` noemen we een "boolean expressie".**
 
 ### Vergelijkingen
 
@@ -51,8 +50,8 @@ ertussen. De vergelijkingsoperatoren zijn:
 
 {:class="table table-striped table-condensed" style="width:auto;margin-left:auto;margin-right:auto;"}
 
-Let er op dat je de vergelijkingsoperator "gelijk aan" correct noteert: deze
-bestaan uit twee gelijkheidstekens $$==$$! *De enkele $$=$$ is de assignment operator. Meestal geeft Python een syntax of runtime error als je $$=$$ probeert te gebruiken om twee waarden met elkaar te vergelijken.*
+**Let er op dat je de vergelijkingsoperator "gelijk aan" correct noteert: deze bestaan uit twee gelijkheidstekens $$==$$!**
+ *Het enkel gelijkheidsteken $$=$$ is de assignment operator (kent een waarde toe aan een variabele). Meestal geeft Python een syntax of runtime error als je $$=$$ probeert te gebruiken om twee waarden met elkaar te vergelijken.*
 
 Je kunt vergelijksoperatoren zowel tussen getallen als tussen strings
 gebruiken. Vergelijkingen tussen strings zijn alfabetische vergelijkingen
@@ -87,10 +86,10 @@ toekennen als je wilt:
 
 ```python
 groter = 5 > 2
-print( groter )
+print( groter )   # True wordt geprint
 groter = 5 < 2
-print( groter )
-print( type( groter ) )
+print( groter )   # False wordt geprint
+print( type( groter ) )   # 'Bool' wordt geprint
 ```
 
 Vergelijkingen tussen data types die niet met elkaar vergeleken kunnen worden,
@@ -163,7 +162,7 @@ foutmelding.
 
 ### `in` operator
 
-**Binnen de toepassingen waarvoor wij Python gebruiken, is deze operator iets minder belangrijk. Je deze uitleg dan ook overslaan en meteen overgaan naar de volgende activeit. Wil je je hier toch verder in verdiepen, kan dit uiteraard door de rest van de tekst door te nemen.**
+**Binnen de toepassingen waarvoor wij Python gebruiken, is de `in` operator minder belangrijk. Je mag de uitleg bij dit onderdeel dan ook overslaan en meteen overgaan naar de volgende activeit. Wil je je hier toch verder in verdiepen, kan dit uiteraard altijd door de rest van de tekst door te nemen.**
 
 Python heeft een speciale operator die de "membership test operator"
 heet. Meestal wordt deze verkort de "in operator" genoemd en wordt gecodeerd als `in`.
@@ -185,4 +184,4 @@ print( "y" not in "Python" )
 ```
 
 De evaluaties geven volgende resultaten: True False False True False False.
-Merk op dat er een onderscheid wordt gemaakt tussen grote en kleine letters.
+**Merk op dat er een onderscheid wordt gemaakt tussen grote en kleine letters.**

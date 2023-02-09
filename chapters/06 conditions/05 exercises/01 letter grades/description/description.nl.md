@@ -1,4 +1,4 @@
-In de Verenigde Staten worden schoolcijfers vaak uitgedrukt op een vijfletterschaal (`A`, `B`, `C`, `D` en `F`), waarbij `A` de hoogste score is en `F` de laagste score. Hieronder staat het classificatiesysteem dat het vaakst gebruikt wordt aan openbare middelbare scholen in de Verenigde Staten om numeriek scores (percentages) om te zetten naar letterscores.
+In een aantal landen worden schoolcijfers vaak uitgedrukt op een vijfletterschaal (`A`, `B`, `C`, `D` en `F`), waarbij `A` de hoogste score is en `F` de laagste. Hieronder staat het classificatiesysteem dat meestal gebruikt wordt aan middelbare scholen om numerieke scores (percentages) om te zetten naar letterscores.
 
 {: .dodona-centered-group}
 | letterscore | percentage |
@@ -12,7 +12,7 @@ In de Verenigde Staten worden schoolcijfers vaak uitgedrukt op een vijflettersch
 
 ### Invoer
 
-Een numerieke score (percentage) voorgesteld als een natuurlijk getal $$s \in [0, 100]$$.
+Vraag de gebruiker naar een numerieke score (percentage) voorgesteld als een natuurlijk getal $$s \in [0, 100]$$.
 
 ### Uitvoer
 

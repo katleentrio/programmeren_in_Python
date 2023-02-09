@@ -1,35 +1,26 @@
-Soms wil je een programma vroegtijdig beëindigen onder bepaalde
-condities. Bijvoorbeeld, je programma vraagt de gebruiker om een waarde,
-en voert met die waarde een aantal berekeningen uit. Als de gebruiker
-een waarde invoert die niet in de berekeningen gebruikt kan worden, wil
-je het programma meteen beëindigen. Dat kun je als volgt coderen:
+**Binnen de toepassingen waarvoor wij Python gebruiken, is dit een minder interessant hoofdstukje. Je mag deze activiteit dan ook overslaan.**
+
+Soms wil je onder bepaalde voorwaarden een programma vroegtijdig beëindigen. 
+Stel dat het programma input vraagt aan de gebruiker om hier verder mee te werken, maar dat de input aan bepaalde voorwaarden moet voldoen. Wanneer de gebruiker dan een waarde invoert die niet aan de gestelde voorwaarden voldoet, wil je het programma meteen beëindigen. Kijk naar het volgende voorbeeld.
 
 ```python
-from pcinput import getInteger
-
-num = getInteger( "Geef een positief geheel getal: " )
-if num < 0:
-    print( "Je had een positief geheel getal moeten geven!" )
+num = int(input( "Geef een geheel getal verschillend van nul: " ))
+if num == 0:
+    print( "Je had een getal verschillend van nul moeten geven!" )
 else:
-    print( "Ik handel je getal", num, "af" )
-    print( "Nog meer code" )
-    print( "Honderden regels code" )
+    print( "Ik deel 10 door ", num )
+    print( "Ik tel hier 100 bij op." )
+    print( "enzovoort, enzovoort" )
 ```
 
-Het is irritant dat een groot deel van het programma al één inspringing
-diep staat, terwijl je er de voorkeur aan zou hebben gegeven als het
-programma gestopt was na de foutmelding, en de rest van het programma
-zonder inspringing geschreven zou kunnen worden. Je kunt dat regelen met
-behulp van de functie `exit()` die in de module `sys` staat. De code is
-dan:
+Door de `else` tak toe te voegen, voert het programma ofwel de acties uit die horen bij de foutief ingevoerde waarde, ofwel de acties die uitgevoerd moeten worden indien een correcte waarde wordt ingegeven. 
+Je kan dit op een elegantere manier oplossen door gebruik te maken van de functie `exit()` die in de module `sys` staat. De code wordt dan:
 
 ```python
-from pcinput import getInteger
 from sys import exit
 
-num = getInteger( "Geef een positief geheel getal: " )
-if num < 0:
-    print( "Je had een positief geheel getal moeten geven!" )
+if num == 0:
+    print( "Je had een getal verschillend van nul moeten geven!" )
     exit()
 
 print( "Ik handel je getal", num, "af" )
@@ -37,20 +28,4 @@ print( "Nog meer code" )
 print( "Honderden regels code" )
 ```
 
-Als je deze code uitvoert en een negatief getal ingeeft, kan het
-gebeuren dat je ziet dat Python een `SystemExit` melding genereert, die
-eruit ziet als een grote, lelijke fout. Dit is afhankelijk van de editor
-die je gebruikt (IDLE geeft deze melding niet). Het is geen fout, ook al
-ziet het er zo uit. Deze melding zegt alleen dat je het programma
-geforceerd beëindigd hebt, maar dat is precies wat je wilde doen. Je mag
-dit beschouwen als een nette manier van afbreken.
-
-In principe moet je meldingen van Python over je programma niet negeren,
-maar deze is een uitzondering. Je mag je programma op deze manier
-afbreken. In hoofdstuk
-<a href="#ch:functions" data-reference-type="ref" data-reference="ch:functions">9</a>
-zal ik een andere manier van programma afbreken bespreken, die ervoor
-zorgt dat je deze melding niet krijgt. Dat kun je tegen die tijd
-gebruiken (als de melding je echt stoort), maar vooralsnog moet je hem
-maar accepteren.
-
+Wanneer de gebruiker nu een nul invoert, wordt het programma meteen beeindigd; geen enkele van commando's die volgen na de `exit()` functie worden nog uitgevoerd. 

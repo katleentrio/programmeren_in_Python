@@ -1,21 +1,23 @@
-In dit hoofdstuk is het volgende besproken:
+Kort overzicht van wat we in dit hoofdstuk leerden:
 
--   Wat boolean expressies zijn
+-   Wat zijn boolean expressies?
 
 -   Boolean waardes `True` en `False`
 
--   Vergelijkingen met `<`, `<=`, `==`, `>`, `>=`, en `!=`
+-   Gebruik van de vergelijkingsoperatoren `<`, `<=`, `==`, `>`, `>=`, en `!=`
 
--   De `in` operator
+-   Gebruik van de `in` operator (optioneel)
 
--   Logische operatoren `and`, `or`, en `not`
+-   Gebruik van de Logische operatoren `and`, `or`, en `not` (optioneel)
 
--   Conditionele statements met `if`, `elif`, en `else`
+-   Werken met conditionele statements: `if`, `elif`, en `else`
 
--   Blokken code
-
--   Inspringing
+-   Het belang van Blokken code en toepassen van een correcte Inspringing
 
 -   Geneste condities
 
--   `exit()`
+-   Voortijdig afbreken van de code door gebruik van de functie `exit()` (optioneel)
+
+-   Opstellen van een stroomdiagram: een schematische voorstelling van de werking van code.
+
+Tijd om dit nu zelf toe te passen in de volgende oefeningen.

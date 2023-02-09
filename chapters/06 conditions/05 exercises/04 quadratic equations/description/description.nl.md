@@ -8,7 +8,7 @@ De grootheid
 
 $$\Delta = b^2 - 4ac$$
 
-wordt de **discriminant** van de kwadratische vergelijking genoemd. Het teken van $$\Delta$$ bepaalt het aantal reële oplossingen:
+is de **discriminant** van de kwadratische vergelijking. Het teken van $$\Delta$$ bepaalt het aantal reële oplossingen:
 
 - als $$\Delta > 0$$ dan zijn er twee verschillende reële oplossingen $$x_1 \neq x_2$$
 
@@ -22,13 +22,13 @@ $$x_{1} = \frac{-b - \sqrt{\Delta}}{2a}\ \ \ \text{en}\ \ \ x_{2} = \frac{-b + \
 
 ### Invoer
 
-De drie parameters $$a$$, $$b$$ en $$c$$ van een kwadratische vergelijking, elk op een afzonderlijke regel.
+Vraag de gebruiker naar de drie parameters $$a$$, $$b$$ en $$c$$ van een kwadratische vergelijking, elk op een afzonderlijke regel.
 
 ### Uitvoer
 
-En regel die aangeeft hoeveel verschillende reële oplossingen de kwadratische vergelijking heeft. De oplossingen zelf moeten ook vermeld worden (als die er zijn).
+Een regel die aangeeft hoeveel verschillende reële oplossingen de kwadratische vergelijking heeft. De oplossingen zelf moeten ook vermeld worden (als die er zijn). Kijk naar onderstaande voorbeelden voor de gevraagde syntax.
 
-### Voorbeeld
+### Voorbeeld 1
 
 #### Invoer:
 
@@ -44,7 +44,7 @@ En regel die aangeeft hoeveel verschillende reële oplossingen de kwadratische v
 Er zijn 2 reële oplossingen: -5.0 en 1.0
 ```
 
-### Voorbeeld
+### Voorbeeld 2
 
 #### Invoer:
 
@@ -60,7 +60,7 @@ Er zijn 2 reële oplossingen: -5.0 en 1.0
 Er is 1 reële oplossing: 6.0
 ```
 
-### Voorbeeld
+### Voorbeeld 3
 
 #### Invoer:
 
@@ -76,7 +76,7 @@ Er is 1 reële oplossing: 6.0
 Er zijn geen reële oplossingen
 ```
 
-### Voorbeeld
+### Voorbeeld 4
 
 #### Invoer:
 

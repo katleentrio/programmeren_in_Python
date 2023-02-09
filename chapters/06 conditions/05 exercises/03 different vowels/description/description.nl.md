@@ -1,14 +1,16 @@
+**Deze oefening kan je alleen maken indien je de "in operator" hebt doorgenomen.**
+
 Bepaal het aantal *verschillende* klinkers die in een gegeven zin voorkomen.
 
 ### Invoer
 
-Een regel tekst.
+Vraag de gebruiker naar een willekeurige regel tekst.
 
 ### Uitvoer
 
-Een regel die aangeeft hoveel verschillende klinkers er in de tekst voorkomen. Bij het tellen van klinkers mag geen onderscheid gemaakt worden tussen hoofdletters en kleine letters.
+Een regel die aangeeft hoeveel verschillende klinkers er in de tekst voorkomen (kijk naar de volgende voorbeelden voor de correcte syntax). Bij het tellen van klinkers mag geen onderscheid gemaakt worden tussen hoofdletters en kleine letters.
 
-### Voorbeeld
+### Voorbeeld 1
 
 #### Invoer:
 
@@ -22,7 +24,7 @@ And now for something completely different.
 De zin bevat 4 verschillende klinkers.
 ```
 
-### Voorbeeld
+### Voorbeeld 2
 
 #### Invoer:
 
@@ -36,7 +38,7 @@ Spam! Spam! Spam! Spam! Spam! Spam!
 De zin bevat slechts 1 verschillende klinker.
 ```
 
-### Voorbeeld
+### Voorbeeld 3
 
 #### Invoer:
 

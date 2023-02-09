@@ -2,7 +2,7 @@ Vraag aan de gebruiker om een regel tekst in te geven en druk vervolgens de leng
 
 ### Invoer
 
-Een regel tekst.
+Vraag de gebruiker naar een willekeurige regel tekst.
 
 ### Uitvoer
 

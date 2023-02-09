@@ -2,7 +2,7 @@ Bepaal het maximum, het minimum en het gemiddelde van drie gegeven gehele getall
 
 ### Invoer
 
-Drie gehele getallen; elk op een afzonderlijke regel.
+Vraag de gebruiker naar drie gehele getallen; elk op een afzonderlijke regel.
 
 ### Uitvoer
 
