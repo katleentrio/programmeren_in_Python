@@ -25,9 +25,10 @@ moet het getal 1 miljard dus schrijven als `1000000000`.
 
 ### Float
 
-Floats zijn **decimale getallen**. Merk op dat je in Python een **punt** moet
-gebruiken als decimaal-scheidingsteken, en geen komma. Bijvoorbeeld, `3.14159265`.
-Ook een float is begrensd, maar ook hier is het onwaarschijnlijk dat je ooit de maximale grootte bereikt.
+Floats zijn **rationale getallen** (decimale getallen). Ook een float is begrensd, 
+maar ook hier is het onwaarschijnlijk dat je ooit de maximale grootte bereikt.
+Merk op dat je in Python een **punt** moet gebruiken als decimaal-scheidingsteken, 
+en geen komma. Bijvoorbeeld, `3.14159265`.
 
 `13` is een integer. Wil je dat dit getal een float is, dan kan je dat doen door 
 er `.0` achter te zetten. `13.0` is een float. Beide getallen geven dezelfde waarde weer.
