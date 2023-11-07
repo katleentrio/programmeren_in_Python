@@ -1,13 +1,13 @@
 Zoals eerder gemeld, krijgen variabelen een naam. Je bent vrij om de naam
 te kiezen en hoeft je dus niet te beperken tot `x`, `y`, en `z` zoals in voorgaande
-voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels**:
+voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels / afspraken**:
 
 -   Een variabele naam mag enkel bestaan uit letters (zowel hoofd- als kleine letters), cijfers en "underscores" (`_`).
     Let op: Python is "case sensitive" dus gevoelig voor de verschillen tussen hoofd- en kleine letters. Zo is de variabele naam `wereld` voor Python niet hetzelfde als de variabele naam `Wereld`.
 
--   Een variabele naam moet beginnen met een letter of een underscore.
+-   Een variabele naam begint steeds met een letter. 
 
--   Een variabele naam mag geen gereserveerd woord zijn. 
+-   Een variabele naam mag geen gereserveerd woord zijn binnen Python. 
 
 "Gereserveerde woorden" (of "keywords") zijn:
 
@@ -19,36 +19,16 @@ voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels**:
     assert     else       import     pass
     break      except     in         raise
 
-### Afspraken 
 
-Programmeurs houden zich aan een aantal conventies wanneer ze 
-variabele namen kiezen. Tracht je hier ook aan te houden
-wanneer je je eigen code schrijft. De belangrijkste conventies zijn de volgende:
+-   Kies *nooit* een variabele naam die ook de naam is van een functie. Dit kan leiden tot fouten.
 
--   Kies *nooit* een variabele naam die ook de naam is
-    van een functie. Zo loop je immers
-    de kans dat de functie niet langer door de code gebruikt kan worden,
-    wat kan leiden tot fouten.
-
--   Kies een naam die betekenisvol is in de context van het programma. Voorbeeld: een
+-   Kies een betekenisvolle namen in het Nederlands. Voorbeeld: een
     variabele die het aantal seconden in een week bijhoudt, zou de naam
-    `secs_per_week` kunnen hebben.
-    Uitzondering hierop: voor "*wegwerp variabelen*" hoef je geen betekenisvolle 
-    variabele naam te kiezen. Wegwerp variabelen zijn
-    variabelen die slechts in een klein deel van de code gebruikt
-    worden en naderhand niet meer. Ze hebben
-    eigenlijk geen betekenis maar worden toegepast als tijdelijk hulpmiddel.
-    Vaak worden hiervoor één-letter namen gebruikt, zoals `i` of `j`.
-
--   Om verwarring tussen hoofd- en kleine letters te vermijden,
-    gebruik je best alleen kleine letters in variabele namen.
-
+    `sec_per_week` kunnen hebben.
+   
 -   Als een variabele naam uit meerdere woorden bestaat,
-    plaats dan underscores tussen die woorden.
-
--   Kies nooit variabele namen die beginnen met een
-    underscore, ook al is dit toegelaten. (Dit wordt voorbehouden voor de
-    auteurs van Python.)
+    scheid de woorden dan met underscores vb. `secs_per_week`.
+    Je kan er ook voor kiezen om elk woord te starten met een hoofdletter vb. `SecPerWeek`
 
 De conventie met betrekking tot het kiezen van betekenisvolle
 variabele namen is eigenlijk de belangrijkste omdat het de code leesbaar en
@@ -80,15 +60,13 @@ print( volume_van_kegel )
 
 Dit maakt het een stuk leesbaarder.
 
-Code met betekenisvolle namen wordt vaak "zelf-documenterend" genoemd;
-je hoeft er geen commentaarregels in op te nemen om de gebruiker te
-laten begrijpen wat de code precies. Dat neemt niet weg
-dat in bovenstaande code als eerste regel een commentaarregel zoals hieronder
-nog meer duidelijkheid kan bieden:  
+Bij code met betekenisvolle namen hoef je geen commentaarregels op te nemen om de gebruiker te
+laten begrijpen wat de code precies doet. Toch kan als eerste regel een commentaarregel zoals hieronder weergegeven meer duidelijkheid bieden over het doel van het programma:  
 
 ```python
 # berekening van volume van kegel met gegeven straal en hoogte
 ```
+**Wij spreken af dat we elke code laten starten met een commentaarregel die het doel van het programma aangeeft.**
 
 {:class="callout callout-info"}
 > ### Oefening op het gebruik van correcte variabele namen
@@ -108,7 +86,7 @@ nog meer duidelijkheid kan bieden:
 >  
 > #### Antwoord
 > De derde, vijfde, en zevende zijn *foutieve* namen: in de derde gebruikt men een at-sign (`@`), de vijfde begint met een cijfer, en de zevende naam is een gereserveerd woord (dit valt op vanwege de syntax highlighting). 
-> Alle andere namen zijn correct. Toch zouden *volgens de conventies* de tweede, de zesde en de achtste naam *vermeden* moeten worden: de zesde begint met een underscore, de tweede en achtste bevatten een hoofdletter en de achtste maam lijkt bovendien op een gereserveerd woord.
+> Alle andere namen zijn correct. Toch zouden *volgens de conventies* de tweede, de zesde en de achtste naam *vermeden* moeten worden: de zesde begint met een underscore, de tweede en achtste bevatten een hoofdletter en de achtste naam lijkt bovendien op een gereserveerd woord.
 
 ### Constanten
 

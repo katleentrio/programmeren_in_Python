@@ -10,6 +10,8 @@ het als het alarm afgaat?
 ### Opgave
 
 Schrijf een programma dat het antwoord afdrukt.
+
+### Uitvoer
 Geef het antwoord als uur-notatie (vb 05:10). 
 
 {:class="callout callout-info"}
