@@ -1,4 +1,4 @@
-Alle data hebben een eigen data type. Het programma moet het data type kennen om er mee te kunnen werken. 
+Aan alle data kan je een data type toekennen: gaat het om een tekst, om een geheel getal, … . Het data type moet gedefinieerd worden zodat het programma er mee kan werken. 
 De drie belangrijkste data types die je op dit moment moet kennen zijn strings, integers, en
 floats.
 
