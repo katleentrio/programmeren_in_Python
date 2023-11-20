@@ -28,7 +28,7 @@ wat je erbij op wilt tellen aan de rechterkant.
 
 Op analoge manier kun je `-=` gebruiken om een vaste waarde af te trekken van
 een variabele, `*=` voor vermenigvuldiging, `/=` voor deling, ... . 
-De meest gebruikte verkorte operator is `+=`, de anderen komen zelden voor.
+De meest gebruikte verkorte operatoren zijn `+=` en `-=`, de anderen komen zelden voor.
 
 Wat is het resultaat van onderstaande code?
 
