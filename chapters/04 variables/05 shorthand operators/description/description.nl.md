@@ -1,7 +1,7 @@
 Door gebruik te maken van de operatoren die we reeds besproken,
 kun je de inhoud van variabelen meermaals wijzigen doorheen de code.
 Een voorbeeld van een veel voorkomende aanpassing van de inhoud van een
-numerieke variabele, is dat je de bestaande waarde met waarde 1 wenst te verhogen. 
+numerieke variabele, is dat je de waarde van de variabele met waarde 1 wenst te verhogen. 
 Voor een aantal bewerkingen die veelvuldig voorkomen, bevat Python een 
 aantal "verkorte opartoren" om de inhoud van variabelen aan te passen.
 
@@ -13,7 +13,7 @@ aantal_bananen = aantal_bananen + 1
 print( aantal_bananen )
 ```
 
-Bovenstaande code geeft hetzelfde resultaat als onderstaande:
+Bovenstaande code geeft hetzelfde resultaat als onderstaande (test maar eens uit):
 
 ```python
 aantal_bananen = 100
@@ -27,9 +27,8 @@ kun je `+=` gebruiken als assignment operator; aan de linkerkant staat de variab
 wat je erbij op wilt tellen aan de rechterkant. 
 
 Op analoge manier kun je `-=` gebruiken om een vaste waarde af te trekken van
-een variabele, `*=` voor vermenigvuldiging, `/=` voor deling, `**=` voor
-machtsverheffing, ... . De meest gebruikte verkorte operator is `+=`,
-de anderen komen zelden voor.
+een variabele, `*=` voor vermenigvuldiging, `/=` voor deling, ... . 
+De meest gebruikte verkorte operator is `+=`, de anderen komen zelden voor.
 
 Wat is het resultaat van onderstaande code?
 

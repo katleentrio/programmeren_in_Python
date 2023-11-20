@@ -7,6 +7,14 @@ voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels / af
 
 -   Een variabele naam begint steeds met een letter. 
 
+-   Kies een betekenisvolle naam in het Nederlands. Voorbeeld: een
+    variabele die het aantal seconden in een week bijhoudt, zou de naam
+    `sec_per_week` kunnen hebben.
+   
+-   Als een variabele naam uit meerdere woorden bestaat,
+    scheid de woorden dan met underscores vb. `secs_per_week`.
+    Je kan er ook voor kiezen om elk woord te starten met een hoofdletter vb. `SecPerWeek`
+
 -   Een variabele naam mag geen gereserveerd woord zijn binnen Python. 
 
 "Gereserveerde woorden" (of "keywords") zijn:
@@ -22,17 +30,8 @@ voorbeelden. Houd je in de naamkeuze wel aan een aantal **eenvoudige regels / af
 
 -   Kies *nooit* een variabele naam die ook de naam is van een functie. Dit kan leiden tot fouten.
 
--   Kies een betekenisvolle namen in het Nederlands. Voorbeeld: een
-    variabele die het aantal seconden in een week bijhoudt, zou de naam
-    `sec_per_week` kunnen hebben.
-   
--   Als een variabele naam uit meerdere woorden bestaat,
-    scheid de woorden dan met underscores vb. `secs_per_week`.
-    Je kan er ook voor kiezen om elk woord te starten met een hoofdletter vb. `SecPerWeek`
-
-De conventie met betrekking tot het kiezen van betekenisvolle
-variabele namen is eigenlijk de belangrijkste omdat het de code leesbaar en
-onderhoudbaar maakt. Bekijk de volgende code eens. Begrijp wat deze code doet?
+De conventie met betrekking tot het kiezen van **betekenisvolle variabele namen** is eigenlijk de belangrijkste omdat het de code leesbaar en
+onderhoudbaar maakt. Bekijk de volgende code eens. Begrijp je wat deze code doet?
 
 ```python
 a = 3.14159265
@@ -90,13 +89,12 @@ laten begrijpen wat de code precies doet. Toch kan als eerste regel een commenta
 
 ### Constanten
 
-"Constanten" zijn vaste waarden die aan een variabele zijn toegekend
-en dus niet meer veranderen. Het is de afspraak dat alle letters in de
-namen van deze variabelen hoofdletters zijn. Constanten worden gebruikt
-om de code leesbaarder en onderhoudbaarder te maken. 
+"Constanten" zijn **variabelen waaraan een vaste waarde is toegekend**. De inhoud van de variabele verandert dus niet bij het doorlopen van de code. 
+Constanten krijgen, net als elke andere variabele een naam.  Kies een betekenisvolle naam zodat de code duidelijker wordt, makkelijker te begrijpen is. Zeker wanneer vaste waarden meerdere malen terugkeren in de code, is het raadzaam om eenmalig een constante te definiëren bovenin de code, waar ze gemakkelijk gevonden en gewijzigd kan worden.
 
-In het volgende voorbeeld wordt het eindbedrag berekend 
-voor een rekening van €24,95 exclusief BTW:
+Volgens afspraak worden alle letters in de namen van de constante als **hoofdletters** geschreven. 
+
+Het volgende voorbeeld maakt het voordeel en het gebruik van constanten duidelijk. Het eindbedrag (inclusief BTW) wordt berekend voor een rekening van €24,95 exclusief BTW. Het resultaat wordt afgerond op een cent.
 
 ```python
 totaal = 24.95
@@ -104,8 +102,7 @@ eind_totaal = int( 100 * totaal * 1.21 ) / 100
 print( eind_totaal )
 ```
 
-In de volgende equivalente code worden constanten gebruikt. Dit
-maakt de code leesbaarder:
+Hieronder wordt dezelfde code opnieuw geschreven, maar dit keer met gebruik van constanten.
 
 ```python
 BTW_FACTOR = 1.21
@@ -115,15 +112,7 @@ totaal = 24.95
 eind_totaal = int( CENTEN * totaal * BTW_FACTOR ) / CENTEN
 print( eind_totaal )
 ```
+Merk op dat de code eenvoudiger te begrijpen is gezien er een betekenis wordt gegeven aan de constanten. Wanneer de BTW tarieven zouden wijzigen, volstaat het om bovenaan in de code de waarde van de variabele BTW_FACTOR aan te passen.
 
-Een bijkomend voordeel bij het gebruik van constanten is dat het nu
-ook gemakkelijker is om de code aan te passen als de BTW tarieven wijzigen.
-*Zeker als vaste waarden meerdere malen terugkeren in de code, is het raadzaam om eenmalig een constante te definieren bovenin de code, waar ze gemakkelijk gevonden en gewijzigd kunnen worden.*
-
-Hoewel constanten erg nuttig kunnen zijn, worden ze -in tegenstelling
-tot veel andere programmeertalen- niet door Python
-ondersteund en beschouwd als een gewone variabele.
-Het is echter de gewoonte om de variabelen waarvan de naam volledig uit
-hoofdletters bestaat, te beschouwen als constanten die niet
-in de code gewijzigd mogen worden nadat ze hun initiële waarde hebben
-gekregen. 
+*Opmerking: in andere programmeertalen heeft een constante een eigen datatype.*
+*In Python is een constante een gewone variabele die we volgens afspraak een naam geven die volledig bestaat uit hoofdletters.* 

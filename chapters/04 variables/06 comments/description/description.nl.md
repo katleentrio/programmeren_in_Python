@@ -1,11 +1,9 @@
-Tot hiertoe was de code die je opstelde steeds vrij eenvoudig en
+Tot hiertoe was de code die je opstelde vrij eenvoudig en
 beperkt in lengte. Dit is echter meestal niet het geval. 
 Om een meer complexere en langere code vlot te kunnen lezen
 en goed te weten welke stappen er precies worden uitgevoerd,
 is het gebruik van commentaarregels aan te raden.
-Commentaarregels zijn teksten in code die door Python genegeerd worden
-tijdens de uitvoering, maar die bedoeld zijn om
-specifieke delen van de code uit te leggen.
+**Commentaarregels zijn teksten in code die door Python genegeerd worden tijdens de uitvoering, maar die bedoeld zijn om specifieke delen van de code uit te leggen.**
 
 Je kunt op twee manieren commentaar schrijven in Python code.
 
@@ -38,3 +36,5 @@ meerdere regels beslaan."""
 tussen drie enkele aanhalingstekens.'''
 print( "Klaar." )
 ```
+
+Afspraak: start een nieuwe code steeds met een commentaarregel in het Nederlands die het doel van het programma aangeeft. Gebruik commentaarregels in de loop van de code ter verduidelijking van de opbouw en werking.

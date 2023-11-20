@@ -13,7 +13,7 @@ print( x )
 ```
 
 In deze code gebeuren twee dingen. 
-Ten eerste wordt er een variabele gecrëerd met de naam `x` 
+Ten eerste wordt er een variabele gecreëerd met de naam `x` 
 waaraan de waarde 5 wordt toegekend.  Ten tweede wordt
 de inhoud van de variabele `x` op het scherm getoond door middel van de `print()` functie.
 Merk op dat `print( x )` niet de letter `x` toont, maar de waarde die in
