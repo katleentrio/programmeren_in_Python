@@ -90,7 +90,7 @@ Deze gegevens kan je opvragen met behulp van de functie `input()`.
 
 De functie heeft één **parameter: een string waarin gevraagd wordt naar de nodige data**.
 Deze string is de **"prompt"**; de tekst die verschijnt aan de gebruiker.
-Wanneer nu `input()` wordt aangeroepen, verschijnt de prompt op het schermen. De gebruiker geeft zijn
+Wanneer nu `input()` wordt aangeroepen, verschijnt de prompt op het scherm. De gebruiker geeft zijn
 data in (mag ook niets zijn) en sluit de invoer af door op `Enter` te drukken.
 De **return value** van de functie is de **data ingevoerd door de gebruiker, exclusief de `Enter`.** De return value  van de functie is **steeds een string.**
 
