@@ -60,7 +60,7 @@ print( pow( grondtal, exponent ) )
 ```
 
 De volgende code geeft een ander antwoord dan de vorige. De functie houdt
-enkel met de volgorde.
+enkel rekening met de volgorde; niet met de naam van een variabele.
 
 ```python
 grondtal = 2
