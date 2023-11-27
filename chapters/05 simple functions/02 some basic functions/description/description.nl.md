@@ -2,8 +2,8 @@ We bekijken een aantal basis functies.
 
 ### Type casting
 
-Eerder heb ik al gesproken over type casting functies. We gaan hier meer
-in detail op in.
+Eerder werd al gesproken over type casting functies. We bekijken dit meer
+in detail.
 
 -   `float()` heeft één parameter en geeft als return value een floating-point
     representatie van de waarde van de parameter. Als de waarde een
@@ -16,7 +16,7 @@ in detail op in.
 -   `int()` heeft één parameter en geeft als return value een integer 
     representatie van de waarde van de parameter. Als de waarde een integer is,
     krijg je dezelfde waarde terug. Als de waarde een float is, krijg je een
-    integer terug die de waarde van de float naar beneden heeft
+    integer terug die de waarde van de float *naar beneden* heeft
     afgerond. Als de parameter een string bevat die je als integer zou
     kunnen interpreteren, dan krijg je die integer terug als waarde.
     Anders krijg je een runtime error.
@@ -30,37 +30,31 @@ Wat doet de volgende code?
 print( 10 * int( "100,000,000" ) )
 ```
 
-De code hierboven geeft een runtime error.
-Welke twee tekens moet je verwijderen om dit probleem op te lossen ?
-*(de twee komma's)*
+Pas de code aan zodat er runtime error meer verschijnt en het juiste resultaat wordt afgedrukt op het scherm.
 
 ### Berekeningen
 
 Een paar basis Python functies helpen bij berekeningen.
 
--   `abs()` krijgt een numerieke parameter waarde en en geeft als
-    return value de absolute waarde van de parameter (is de waarde
-    positief wordt hij geretourneerd, is de waarde negatief
-    wordt de waarde vermenigvuldigd met -1 geretourneerd).
+-   `abs()` heeft een numerieke parameter en geeft als
+    return value de absolute waarde van de parameter.
 
--   `max()` krijgt twee of meer numerieke parameters en geeft als
+-   `max()` heeft twee of meer numerieke parameters (gescheiden door een komma) en geeft als
     return value de grootste.
 
--   `min()` krijgt twee of meer numerieke parameters en geeft als
+-   `min()` heeft twee of meer numerieke parameters (gescheiden door een komma) en geeft als
     return value de kleinste.
 
--   `pow()` krijgt twee numerieke parameters en geeft als return value
-    de eerste verheven tot de macht weergeven door de tweede. Optioneel
-    mag je een derde parameter meegeven die een integer moet zijn. Als je dat
-    doet, krijg je de waarde modulo de derde parameter terug.
+-   `pow()` heeft twee numerieke parameters en geeft als return value
+    de eerste parameter verheven tot de macht weergeven door de tweede.
 
--   `round()` krijgt een numerieke parameter die wiskundig wordt
+-   `round()` heeft een numerieke parameter die wiskundig wordt
     afgerond. Optioneel mag je als tweede parameter een integer meegeven
-    die aangeeft hoeveel cijfers achter de komma behouden moeten worden.
+    die aangeeft **hoeveel cijfers na de komma** gegeven moeten worden.
     Als de tweede parameter niet wordt meegegeven, wordt afgerond op
     gehele getallen.
 
-Bekijk de code hieronder en bedenk wat er op het scherm getoond wordt.
+Bekijk de code hieronder en bedenk wat er op het scherm getoond wordt. Test in Spyder.
 
 ```python
 x = -2
@@ -76,12 +70,11 @@ print( round( z, 1 ) )
 
 ### `len()`
 
-`len()` is een basis functie die één parameter krijgt en de lengte
-van die parameter teruggeeft. Op dit moment is het enig zinvolle data
-type dat je mee kunt geven aan `len()` een string waarvan je de
-lengte krijgt. 
+`len()` is een basis functie die één parameter heeft en de lengte
+van die parameter teruggeeft. Deze functie wordt meestal toegepast op een string waarvan je de
+lengte terugkrijgt. 
 
-Wat print de code hieronder?
+Wat print de code hieronder? Zoek eerst zelf het antwoord; doe dan de test in Spyder.
 
 ```python
 print( len( 'man' ) )
@@ -90,23 +83,19 @@ print( len( "" ) )  # "" is een lege string
 print( len( 'mango\'s' ) )
 ```
 
-*Antwoorden: 3, 5, 0, 7. Waarom heeft de laatste string een lengte van 7 en niet van 8?*
-
 ### `input()`
 
-Veel programma's wensen data te krijgen van de gebruiker om verder te verwerken.
-Je kunt de gebruiker vragen om een string in te voeren met behulp
-van de functie `input()`. De functie krijgt één parameter: een string.
-Deze string is de zogeheten "prompt." Wanneer nu `input()` wordt
-aangeroepen, verschijnt de prompt op het schermen. De gebruiker geeft eender
-welke tekst in (mag ook niets zijn) en sluit de invoer af door op `Enter` te drukken.
-De return value van de functie is de string die de gebruiker heeft
-ingegeven, exclusief de `Enter`.
+Veel programma's willen gegevens krijgen van de gebruiker om verder te verwerken.
+Deze gegevens kan je opvragen met behulp van de functie `input()`.
+
+De functie heeft één **parameter: een string waarin gevraagd wordt naar de nodige data**.
+Deze string is de **"prompt"**; de tekst die verschijnt aan de gebruiker.
+Wanneer nu `input()` wordt aangeroepen, verschijnt de prompt op het schermen. De gebruiker geeft zijn
+data in (mag ook niets zijn) en sluit de invoer af door op `Enter` te drukken.
+De **return value** van de functie is de **data ingevoerd door de gebruiker, exclusief de `Enter`.** De return value  van de functie is **steeds een string.**
 
 Afhankelijk van de omgeving waarin je werkt, kan de prompt er anders uit zien.
-Soms is het een rechthoek op het scherm met de prompt ervoor waarin de gebruiker
-mag typen, soms moet de gebruiker de ingave op een command-line doen, soms
-verschijnt een popup-window waarin de gebruiker moet typen.
+Dit kan een popup-window zijn waarin de gebruiker moet typen, het is ook mogelijk dat de gebruiker de ingave op een command-line moet typen. Dit laatste is het geval bij gebruik van Spyder.
 
 Hier is een voorbeeld:
 
@@ -115,7 +104,7 @@ tekst = input( "Geef een tekst in: " )
 print( "Je hebt het volgende ingetypt:", tekst )
 ```
 
-Realiseer je dat `input()` altijd een string teruggeeft. Bekijk de
+**Realiseer je dat `input()` altijd een string teruggeeft.** Bekijk de
 volgende code:
 
 ```python
@@ -126,7 +115,7 @@ print( "Je getal in het kwadraat is", nummer * nummer )
 Deze code geeft ALTIJD een runtime error. Vermits `input()` een string
 teruggeeft (ook al voer je een getal in!), wordt op de tweede regel een
 poging gedaan twee strings met elkaar te vermenigvuldigen wat niet kan.
-Je kunt dit probleem oplossen door gebruik te maken van type casting:
+**Je kunt dit probleem oplossen door gebruik te maken van type casting**:
 
 ```python
 nummer = input( "Geef een getal: " )
@@ -140,7 +129,7 @@ een runtime error.
 
 ### `print()`
 
-De functie `print()` krijgt nul of meer parameters mee, toont ze op het
+De functie `print()` heeft nul of meer parameters, toont ze op het
 scherm (als het er meerdere zijn met spaties ertussen) en gaat daarna
 naar de volgende regel. Dus als je twee `print` statements gebruikt,
 komt de output van de tweede onder die van de eerste te staan.
@@ -148,19 +137,19 @@ Als `print()` wordt aangeroepen zonder parameters, gaat de functie
 alleen naar de volgende regel. Zo kun je lege regels op het scherm
 zetten.
 
-`print()` kan twee speciale parameters meekrijgen, die **`sep`** en
-**`end`** heten.
+`print()` kan twee speciale parameters meekrijgen, die `sep` en
+`end` heten.
 
-`sep` geeft aan wat er getoond moet worden tussen iedere twee
+**`sep`** geeft aan wat er getoond moet worden tussen iedere twee
 parameters; default is dit een spatie. Je kunt die spatie wijzigen in
-iets anders via `sep`, inclusief in een lege string.
+iets anders via `sep`.
 
-`end` geeft aan wat `print()` moet uitvoeren nadat alle parameters zijn
+**`end`** geeft aan wat `print()` moet uitvoeren nadat alle parameters zijn
 getoond; default gaat hij naar een "nieuwe regel." Door `end` te wijzigen
 kun je ervoor zorgen dat `print()` iets anders doet.
 
 Om `sep` en `end` te gebruiken, moet je de parameters `sep=<string>` en/of
-`end=<string>` opnemen. *(opmerking: als in een beschrijving van code iets tussen `<` en `>` staat, moet je dit niet letterlijk typen maar vervangen door wat de term tussen de `<` en `>` aangeeft, dus `<string>` betekent dat je daar een string moet typen.)*
+`end=<string>` opnemen. *(opmerking: als in een beschrijvende tekst van code iets tussen `<>` staat, moet je de haakjes niet letterlijk over typen maar vervangen door wat de term tussen de `<>` aangeeft, dus `<string>` betekent dat je daar een string moet typen.)*
 Een voorbeeld met gebruikt van `sep` en `end`:
 
 ```python
@@ -170,17 +159,19 @@ print( "Y", end="" )
 print( "Z" )
 ```
 
-Na uitvoer bevat de eerste regel "XxXxX": drie keer hoofdletter "X"
+Test dit uit. Je zal zien dat na uitvoer de eerste regel "XxXxX" bevat: drie keer hoofdletter "X"
 gescheiden door een kleine letter "x", waarna wordt overgegaan naar een
 nieuwe regel.
 De tweede regel bevat "XYZ": na aanroepen van de `print()` "X" en "Y",
-wordt niet naar een volgende regel gegaan.
+wordt niet naar een volgende regel gegaan; na "Z" wel.
 
 ### `format()`
 
-`format()` is een nogal complexe functie die op een speciale manier
-gebruikt moet worden. De functie staat je toe een geformatteerde string
-te bouwen, dus een string met opmaak. We illustreren dit met een voorbeeld.
+De laatste functie die wer hier bespreken is de `format()` functie. Deze maakt het mogelijk een geformatteerde string
+te bouwen, dus een string met opmaak. 
+
+We illustreren het aanpassen van de opmaak met een eenvoudig voorbeeld waarbij
+je de `format()` functie nog niet nodig hebt. 
 Je wilt de uitkomst van de volgende berekening tonen (float):
 
 ```python
@@ -194,10 +185,10 @@ met de `round()` functie. Bijvoorbeeld:
 print( round( 7/11, 3 ) )
 ```
 
-**Mogelijk heb je nog meerdere eisen naar layout toe. In het vervolg van deze tekst,
-wordt hier dieper op ingegaan. Voor ons gebruik van Python, leidt dit echter te ver.
-Je mag dan ook de rest van deze tekst overslaan en verder gaan met de volgende activiteit.
-Wil je je hier toch verder in verdiepen, kan dit uiteraard altijd.**
+Met behulp van de `format()` functie kan je nog veel meer aanpassingen aanbrengen.
+Het is wel een nogal complexe functie die op een speciale manier
+gebruikt moet worden. In het vervolg van deze tekst wordt hier dieper op ingegaan.
+**Voor ons gebruik van Python, is de opmaak echter niet prioritair. Je mag de uitleg bij deze functie dan ook overslaan en verder gaan met de volgende activiteit. Weet dat je hier altijd extra info kan terugvinden. Ben je nieuwsgierig en wil je hier toch meer over weten, mag je je uiteraard verder verdiepen in deze functie.**
 
 Stel bijvoorbeeld dat je 10 posities ruimte moet reserveren voor deze uitkomst, 
 en dat binnen deze 10 posities de uitkomst links moet uitgelijnd zijn. Dit lijkt

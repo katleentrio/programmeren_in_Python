@@ -17,6 +17,7 @@ Een antwoordzin die de lengte van de schuine zijde geeft, afgerond tot op drie c
 ```
 Lengte van de schuine zijde: ???
 ```
+Uiteraard verschijnt op de plaats van de drie vraagtekens de berekende waarde. 
 
 ### Voorbeeld
 

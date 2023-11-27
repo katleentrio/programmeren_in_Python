@@ -1,24 +1,18 @@
-Naast die basisfuncties waarvan we er een aantal besproken hebben in het
+Naast de basisfuncties waarvan we er een aantal besproken hebben in het
 voorgaande deeltje, biedt Python ook een groot
 aantal zogeheten "modules" aan waarin zich vele nuttige functies bevinden.
 Een module is eigenlijk een verzameling van een aantal functies.
+
+Er zijn twee verschillende manieren om te werken met functies vanuit een module.
+
+**optie 1**
 Je kunt de functies van een module gebruiken in jouw programma door eerst de module
-te importeren. Dit doe je door boven in je programma `import <modulenaam>`
+te importeren in de code. Dit doe je door boven in je programma `import <modulenaam>`
 op te nemen. Je kunt dan alle functies die de module bevat
 gebruiken door de functienaam vooraf te laten gaan door de naam van de module en een
 punt. Om bijvoorbeeld de functie `sqrt()` (vierkantswortel) uit de `math` module te
 gebruiken, roep je `math.sqrt()` aan nadat je eerder `math` geïmporteerd hebt.
-
-Als alternatief kun je ook specifieke functies vanuit een module
-importeren zonder de volledige module te importeren:  
-
-```python
-from <module> import <functie1>, <functie2>, <functie3>, …
-```
-  
-Bij deze alternatieve manier om functies te importeren, moet je
-de naam van de module niet meer plaatsen voor de functie-aanroep.
-Zo is:
+Voorbeeld:
 
 ```python
 import math
@@ -26,7 +20,16 @@ import math
 print( math.sqrt( 4 ) )
 ```
 
-equivalent aan:
+**optie 2**
+Importeer specifieke functies vanuit een module zonder de volledige module te importeren. Dit doe je op de volgende manier:  
+
+```python
+from <module> import <functie1>, <functie2>, <functie3>, …
+```
+  
+Bij deze alternatieve manier om functies te importeren, moet je
+de naam van de module niet meer plaatsen voor de functie-aanroep.
+Voorbeeld:
 
 ```python
 from math import sqrt
@@ -34,10 +37,9 @@ from math import sqrt
 print( sqrt( 4 ) )
 ```
 
-Als je een functie onder een andere naam in je programma wilt gebruiken,
-kun je dat doen door gebruik te maken van het gereserveerde woord `as`. Dit kan zinvol
-zijn als je meerdere modules gebruikt waarin toevallig functies
-voorkomen die dezelfde naam hebben.
+Beide bovenstaande voorbeelden zijn equivalent.
+
+*Ter info: Als je een functie onder een andere naam in je programma wilt gebruiken,kun je dat doen door gebruik te maken van het gereserveerde woord `as`. Dit kan zinvol zijn als je meerdere modules gebruikt waarin toevallig functies voorkomen die dezelfde naam hebben.*
 
 ```python
 from math import sqrt as squareroot
@@ -57,14 +59,14 @@ functies zijn zeer efficiënt en geven meestal een float als return value.
 Ik bespreek hier de belangrijkste (de anderen kan je steeds opzoeken in de Python
 referentie):
 
--   `sqrt()` krijgt één numerieke parameter en geeft als return value de
+-   `sqrt()` heeft één numerieke parameter en geeft als return value de
     vierkantswortel van die parameter.
 
--   *`exp()` krijgt één numerieke parameter en geeft als return value $$e$$ tot de macht van die parameter. (leerstof wiskunde 3de graad)*
+-   *`exp()` heeft één numerieke parameter en geeft als return value $$e$$ tot de macht van die parameter. (leerstof wiskunde 3de graad)*
 
--   *`log()` krijgt één numerieke parameter en geeft als return value het natuurlijk logaritme van die parameter. Het natuurlijk logaritme is de waarde die de parameter als uitkomst heeft als je $$e$$ verheft tot deze waarde. (leerstof wiskunde 3de graad)*
+-   *`log()` heeft één numerieke parameter en geeft als return value het natuurlijk logaritme van die parameter. Het natuurlijk logaritme is de waarde die de parameter als uitkomst heeft als je $$e$$ verheft tot deze waarde. (leerstof wiskunde 3de graad)*
 
--   *`log10()` krijgt één numerieke parameter en geeft als return value het logaritme met 10 als basis van de parameter. (leerstof wiskunde 3de graad)*
+-   *`log10()` heeft één numerieke parameter en geeft als return value het logaritme met 10 als basis van de parameter. (leerstof wiskunde 3de graad)*
 
 
 Bijvoorbeeld:
@@ -80,10 +82,10 @@ print( "De vierkantswortel van", getal, "is gelijk aan", sqrt(getal) )
 
 De `random` module bevat functies die "toevalsgetallen" genereren.
 
--   `random()` krijgt geen parameter en geeft als return value een toevalsgetal;
+-   `random()` heeft geen parameter en geeft als return value een toevalsgetal;
     een float binnen het interval $$[0,1[$$.
 
--   `randint()` krijgt twee parameters: twee integers waarbij de
+-   `randint()` heeft twee parameters: twee integers waarbij de
     eerste kleiner dan of gelijk moet zijn aan de tweede. Het
     geeft als return value een toevalsgetal dat een integer is dat ligt binnen het
     gesloten interval met als grenzen deze twee parameters. Zo geeft `randint(2,5)`
