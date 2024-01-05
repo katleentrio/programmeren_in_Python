@@ -1,7 +1,6 @@
 ### If statement
 
-Zoals ik in het vorige onderdeel aangaf, bestaat een "conditionele statement"
-(ook wel "condities" of "`if` statements" genoemd) uit
+Een "conditionele statement" (ook wel "condities" of "`if` statements" genoemd) bestaat uit
 een test gevolgd door één of meerdere acties, waarbij de acties alleen
 worden uitgevoerd als de test `True` oplevert.
 
@@ -37,8 +36,8 @@ if x < 10:
 print( "Deze regel wordt altijd uitgevoerd." )
 ```
 
-Bedenk hoe de uitvoer er uit ziet voor `x = 7` en voor `x = 11`.
-De `print()` regel die volgt na de `if` en niet inspringt, wordt uitgevoerd ongeacht het resultaat van de evaluatie van de boolean expressie.
+Bedenk (en test) hoe de uitvoer er uit ziet voor `x = 7` en voor `x = 11`.
+De `print()` regel die volgt na de `if` en niet inspringt behoort niet meer tot de `if` en wordt dus uitgevoerd ongeacht het resultaat van de evaluatie van de boolean expressie.
 
 Je kunt meerdere `if` statements gebruiken.
 
@@ -68,7 +67,7 @@ vormen en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
 
 **Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.**
 
-De volgende code bevat inspring-fouten. Kan jij de fouten uit de code halen?
+De volgende code bevat inspring-fouten. Haal de fouten de code en doe de test.
 
 ```python
 # Deze code bevat tabulatie-fouten!
@@ -87,18 +86,19 @@ if x < 4 and y > 3:
 
 ### Twee-weg beslissingen: `if` - `else` constructie
 
-Het komt regelmatig voor dat je onder bepaalde voorwaarden een actie wilt laten uitvoeren, wanneer niet voldaan wordt aan de gestelde voorwaarde er een andere actie wordt uitgevoerd.
-Python maakt dit mogelijk door aan een `if` statement een `else` tak toe te voegen.
+Het komt regelmatig voor dat je onder bepaalde voorwaarden een actie wilt laten uitvoeren; wanneer niet voldaan wordt aan de gestelde voorwaarde er een andere actie wordt uitgevoerd.
+Python maakt dit mogelijk door aan een `if` statement een `else` tak toe te voegen. Er wordt altijd slechts
+één van de twee blokken `<acties>` uitgevoerd:
+-   Als de boolean expressie `True` is, wordt het blok code onder de `if` uitgevoerd
+    en wordt het blok code onder de `else` overgeslagen.
+-   Als de boolean expressie `False` is, wordt het blok code onder de `if` overgeslagen
+    en wordt het blok code onder de `else` uitgevoerd.
 
-```python
-x = 4
-if x > 2:
-    print( "x is groter dan 2" )
-else:
-    print( "x is kleiner dan of gelijk aan 2" ) 
-```
+Zo kun je bijvoorbeeld gebruik maken van een `if` - `else` constructie om te testen 
+of een integer even of oneven is. De modulo operator kan hierbij helpen:
+als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
 
-De syntax is:
+De syntax ziet er als volgt uit:
 
 ```python
 if <boolean expressie>:
@@ -113,41 +113,21 @@ de `<boolean expressie>` bij de `if`. Het is ook van belang dat het woord
 
 ![conditie](media/Condition.png "conditie"){:width="25%"}
 
-Wanneer je een `else` tak toevoegt aan een `if` statement, wordt altijd 
-één van de twee blokken `<acties>` uitgevoerd:
--   Als de boolean expressie `True` is, wordt het blok code onder de `if` uitgevoerd
-    en wordt het blok code onder de `else` overgeslagen.
--   Als de boolean expressie `False` is, wordt het blok code onder de `if` overgeslagen
-    en wordt het blok code onder de `else` uitgevoerd.
+Een voorbeeld:
+```python
+x = 4
+if x > 2:
+    print( "x is groter dan 2" )
+else:
+    print( "x is kleiner dan of gelijk aan 2" ) 
+```
 
-Zo kun je bijvoorbeeld gebruik maken van een `if` - `else` constructie om te testen 
-of een integer even of oneven is. De modulo operator kan hierbij helpen:
-als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
 
 ### Meer-weg beslissingen: `if` - `elif` - `else` constructie
 
-Bij een `if` - `else` constructie, wordt slechts één blok code uitgevoerd van twee gegeven blokken code. Soms wil je echter dat er één blok code uitgevoerd wordt, niet van twee maar van meerdere blokken code. Dit soort meer-weg beslissingen kun je implementeren met een extra toevoeging aan een `if` statement in de vorm van één of meer `elif` takken (`elif`
-staat voor "else if").
+Bij een `if` - `else` constructie, wordt slechts één blok code uitgevoerd van twee gegeven blokken code. Soms wil je echter dat er één blok code uitgevoerd wordt, niet van twee maar van meerdere blokken code. Dit soort meer-weg beslissingen kun je implementeren met een extra toevoeging aan een `if` statement in de vorm van één of meer `elif` takken (`elif` staat voor "else if").
 
-```python
-leeftijd = 21
-if leeftijd < 12:
-    print( "Je bent een kind!" )
-elif leeftijd < 18:
-    print( "Je bent een teenager!" )
-elif leeftijd < 30:
-    print( "Je bent nog jong!" )
-elif leeftijd < 50:
-    print( "Beginnen grijze haren te komen?" )
-else:
-    print( "Wegen de jaren zwaar?" )
-```
-
-Verander in de code hierboven de waarde van de variabele `leeftijd` en
-één van de andere code blokken zal uitgevoerd worden.
-
-De syntax is (gegeven voor één `elif` maar kan uitgebreid worden met 
-meerdere):
+De syntax ziet er als volgt uit (gegeven voor één `elif` maar kan uitgebreid worden met meerdere):
 
 ```python
 if <boolean expressie>:
@@ -166,6 +146,27 @@ uitgevoerd. **Slechts als alle boolean expressies in de constructie `False` blij
 
 Het toevoegen van `else` is optioneel. De laatste tak binnen de constructie
 mag dus ook een `elif` tak zijn.
+
+Een voorbeeld:
+
+```python
+leeftijd = 21
+if leeftijd < 12:
+    print( "Je bent een kind!" )
+elif leeftijd < 18:
+    print( "Je bent een teenager!" )
+elif leeftijd < 30:
+    print( "Je bent nog jong!" )
+elif leeftijd < 50:
+    print( "Beginnen grijze haren te komen?" )
+else:
+    print( "Wegen de jaren zwaar?" )
+```
+
+Verander in de code hierboven de waarde van de variabele `leeftijd` en
+één van de andere code blokken zal uitgevoerd worden. Doe de test.
+Pas ook de code eens aan zodat je eerst naar de leeftijd van de gebruiker vraagt (import) en deze leeftijd gebruikt om de tests op uit te voeren.
+
 
 ### Geneste condities
 
@@ -228,8 +229,11 @@ prettiger leest.
 
 ### Stroomdiagrammen
 
-Vanuit voorgaande voorbeelden, merk je dat het soms moeilijk wordt om een overzicht te behouden bij de meer ingewikkelde code. Het is dan ook belangrijk om een duidelijk schema te hebben dat als leidraad kan dienen bij het uitschrijven van de code. Programmeurs gebruikten een "stroomdiagram" om 
+Vanuit voorgaande voorbeelden, merk je dat het soms moeilijk wordt om een overzicht te behouden bij de meer ingewikkelde code. Het is dan ook **belangrijk om een duidelijk schema te hebben dat als leidraad kan dienen** bij het uitschrijven van de code. Programmeurs gebruikten een "stroomdiagram" om 
 algoritmes te beschrijven. Dit stroomdiagram gebruikten ze dan als leidraad bij het uitschrijven van de code.  
+
+Hieronder volgt een **korte herhaling** van leerstof die jullie reeds gezien hebben in eerdere lessen.
+Denk er aan om bij ingewikkelde code **zelf eerst een stroomdiagram op te stellen**, vooraleer je onbezonnen van start gaat.
 
 Een stroomdiagram is een visuele, schematische weergave van de werking van een code. 
 Hierbij wordt gebruik gemaakt van blokken die met elkaar verbonden worden door pijlen.

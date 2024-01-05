@@ -1,4 +1,4 @@
-Een "conditionele statement", vaak een "if"-statement genoemd, bestaat uit
+Een "conditionele statement" (voorwaarde), vaak een "if"-statement genoemd, bestaat uit
 een test, gevolgd door één of meerdere acties. De test is een zogeheten "boolean
 expressie" en kan slechts twee uitkomsten hebben: "waar" of "onwaar".
 De acties die beschreven worden in het if-statement, worden alleen uitgevoerd
@@ -7,8 +7,10 @@ als het resultaat van de test "waar" is.
 We verduidelijken dit aan de hand van een voorbeeld. Een app op een smartphone 
 geeft een waarschuwing als de batterij minder dan 5% vol is. Dat betekent
 dat de app een test uitvoert op een variabele `batterij_energie` en controleert of de waarde
-van deze variabele kleiner is dan $$5$$; m.a.w. of de vergelijking `batterij_energie < 5` als resultaat "waar" heeft. Is de waarde van de variabele $$17$$ dan is het resultaat van de test
+van deze variabele kleiner is dan $$5$$; m.a.w. heeft de vergelijking `batterij_energie < 5` als resultaat "waar" dan zal de waarschuwing verschijnen. Is de waarde van de variabele $$17$$ dan is het resultaat van de test
 "onwaar" en hoeft er geen melding gegeven te worden.
+
+We gaan eerst dieper in op de ""boolean expressie -de test die uitgevoerd moet worden- vooraleer we in volgend hoofdstukje uitleggen hoe een "conditionele statement" wordt opgebouwd.
 
 ### Boolean
 
@@ -59,7 +61,7 @@ waarbij "a" kleiner beschouwd wordt dan "z", hoofdletters altijd kleiner
 beschouwd worden dan kleine letters, en cijfers kleiner dan alle letters.
 
 Hieronder worden een aantal voorbeelden gegeven van vergelijkingen. Elke
-vergelijking resulteert in een `False` of `True`. Vind je zelf het juiste resultaat?
+vergelijking resulteert in een `False` of `True`. Vind je zelf het juiste resultaat? Controleer in Spyder.
 
 ```python
 print( "1.", 2 < 5 )
@@ -77,8 +79,6 @@ print( "12.", "banaan" < "mango" )
 print( "13.", "banaan" < "Mango" )
 ```
 
-1-True 2-True 3-False 4-True 5-True 6-False	7-True 8-False 9-False 10-True
-11-True 12-True 13-False. Zorg dat je begrijpt waarom ze deze uitkomsten geven.
 Begrijp je ook waarom `3 < 13` `True` oplevert, maar `"3" < "13"` `False`?
 
 Je kunt de uitkomst van een boolean expressie aan een variabele
@@ -115,7 +115,7 @@ maken van logische operatoren. De drie logische operatoren ken je reeds vanuit w
 `not` kun je voor een boolean expressie plaatsen om hem om te keren van
 `True` naar `False` en vice versa.
 
-Bedenk nu wat er telkens wordt afgeprint in volgende voorbeelden?
+Bedenk nu wat er telkens wordt afgeprint in volgende voorbeelden. Test uit in Spyder.
 
 ```python
 t = True
@@ -132,14 +132,12 @@ print( not t )
 print( not f )
 ```
 
-True, False, False, False, True, True, True, False, False, True
-
 Je kunt een combinatie van `and`s en `or`s gebruiken. Zonder gebruik van haakjes in je notatie worden de boolean expressies van links naar rechts geëvalueerd. Heb je een andere volgorde nodig, gebruik dan haakjes: in plaats van `a and b or c` te schrijven, moet je
 `(a and b) or c` of `a and (b or c)` schrijven afhankelijk van de
 gewenste volgorde. Het gebruik van haakjes maakt de code bovendien
 makkelijker leesbaar. 
 
-Zoals eerder aangehaald worden boolean expressies van links naar rechts
+Zoals eerder aangehaald, worden boolean expressies van links naar rechts
 geëvalueerd. Python stopt de evaluatie op het moment dat de uitkomst van
 de evaluatie bekend is. Neem bijvoorbeeld de volgende code:
 
@@ -150,15 +148,11 @@ print( (x == 0) or (y == 0) or (x / y == 1) )
 ```
 
 Python evalueert de boolean expressie van links naar rechts. De gegeven
-expressie is een combinatie van `or`s. Deze expressie zal dus `True` als
-resultaat hebben indien één van de componenten `True` is. `y == 0`
+expressie is een combinatie van `or`s. Het resultaat van deze expressie is `True` als
+één van de componenten `True` is. `y == 0`
 evalueert `True` dus is het niet nodig dat Python de laatste evaluatie
 nog uitvoert en dus stopt Python na `y == 0`.
-Merk op dat Python in dit geval enkel evaluaties uitvoert op de boolean expressies
-en niet kijkt naar resultaten van de berekeningen. Een berekening resulteert in een
-runtime error bij een nuldeling zoals het geval is bij `x / y == 1` (`y` is nul).
-Vermits hier een boolean expressie wordt geevalueerd geeft de code echter geen
-foutmelding. 
+*Merk op dat Python in dit geval enkel evaluaties uitvoert op de boolean expressies en niet kijkt naar resultaten van de berekeningen. Een berekening resulteert in een runtime error bij een nuldeling zoals het geval is bij `x / y == 1` (`y` is nul). Vermits hier een boolean expressie wordt geevalueerd geeft de code echter geen foutmelding.*
 
 ### `in` operator
 
@@ -172,7 +166,9 @@ Een string kan beschouwd worden als een verzameling van tekens.
 Met behulp van de `in` operator kun je dus testen of een specifiek teken
 (of een groep tekens) deel uitmaakt van een string. De
 tegenhanger van de `in` operator is de `not in` operator die `True`
-oplevert als `in` `False` oplevert, en vice versa. Een voorbeeld:
+oplevert als `in` `False` oplevert, en vice versa. 
+
+Een voorbeeld:
 
 ```python
 print( "y" in "Python" )
