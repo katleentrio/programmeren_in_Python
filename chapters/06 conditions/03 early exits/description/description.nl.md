@@ -1,5 +1,3 @@
-**Binnen de toepassingen waarvoor wij Python gebruiken, is dit een minder interessant hoofdstukje. Je mag deze activiteit dan ook overslaan.**
-
 Soms wil je onder bepaalde voorwaarden een programma vroegtijdig beëindigen. 
 Stel dat het programma input vraagt aan de gebruiker om hier verder mee te werken, maar dat de input aan bepaalde voorwaarden moet voldoen. Wanneer de gebruiker dan een waarde invoert die niet aan de gestelde voorwaarden voldoet, wil je het programma meteen beëindigen. Kijk naar het volgende voorbeeld.
 

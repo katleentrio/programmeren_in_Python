@@ -156,8 +156,6 @@ nog uitvoert en dus stopt Python na `y == 0`.
 
 ### `in` operator
 
-**Binnen de toepassingen waarvoor wij Python gebruiken, is de `in` operator minder belangrijk. Je mag de uitleg bij dit onderdeel dan ook overslaan en meteen overgaan naar de volgende activeit. Wil je je hier toch verder in verdiepen, kan dit uiteraard altijd door de rest van de tekst door te nemen.**
-
 Python heeft een speciale operator die de "membership test operator"
 heet. Meestal wordt deze verkort de "in operator" genoemd en wordt gecodeerd als `in`.
 De `in` operator test of een waarde voorkomt in een verzameling. De waarde wordt aan de linkerzijde van de `in` genoteerd, de verzameling aan de rechterzijde.

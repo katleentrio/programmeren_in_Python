@@ -6,7 +6,7 @@ Kort overzicht van wat we in dit hoofdstuk leerden:
 
 -   Hoe kun je code debuggen waarin variabelen onverwachte waarden hebben?
 
--   Wat is het type van een variabele en hoe kan ik dit controleren (Sorft typing)?
+-   Wat is het type van een variabele en hoe kan ik dit controleren (Soft typing)?
 
 -   Wat zijn verkorte operatoren en hoe kan ik hiermee werken?
 

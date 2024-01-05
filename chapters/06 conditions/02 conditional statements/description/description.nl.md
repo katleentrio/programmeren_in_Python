@@ -216,7 +216,6 @@ hetzelfde als de "leeftijd" code gegeven onder het deel over de meer-weg besliss
 Ik neem aan dat je het ermee eens bent dat de versie met `elif`'s
 prettiger leest.
 
-
 [^5]: In veel programmeertalen worden blokken code door de compiler
     herkend doordat ze beginnen en eindigen met een speciaal symbool of
     gereserveerd woord: in talen als Java en C++ worden

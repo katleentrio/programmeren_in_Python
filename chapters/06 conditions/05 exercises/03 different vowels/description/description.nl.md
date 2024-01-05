@@ -1,5 +1,3 @@
-**Deze oefening kan je alleen maken indien je de "in operator" hebt doorgenomen.**
-
 Bepaal het aantal *verschillende* klinkers die in een gegeven zin voorkomen.
 
 ### Invoer
