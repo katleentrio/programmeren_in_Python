@@ -19,7 +19,7 @@ if <boolean expressie>:
     <acties>
 ```
 
-**Let op: noteer steeds een dubbele punt (:) achter de boolean expressie en laat alle `<acties>` die volgen na de boolean expressie **inspringen**.
+Let op: noteer steeds een **dubbele punt (:) achter de boolean expressie** en laat alle `<acties>` die volgen na de boolean expressie **inspringen**.
 
 **BLOKKEN CODE**
 
