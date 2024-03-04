@@ -132,7 +132,7 @@ print( not t )
 print( not f )
 ```
 
-Je kunt een combinatie van `and`s en `or`s gebruiken. Zonder gebruik van haakjes in je notatie worden de boolean expressies van links naar rechts geëvalueerd. Heb je een andere volgorde nodig, gebruik dan haakjes: in plaats van `a and b or c` te schrijven, moet je
+Je kunt een combinatie van `and`'s en `or`'s gebruiken. Zonder gebruik van haakjes in je notatie worden de boolean expressies van links naar rechts geëvalueerd. Heb je een andere volgorde nodig, gebruik dan haakjes: in plaats van `a and b or c` te schrijven, moet je
 `(a and b) or c` of `a and (b or c)` schrijven afhankelijk van de
 gewenste volgorde. Het gebruik van haakjes maakt de code bovendien
 makkelijker leesbaar. 
@@ -148,7 +148,7 @@ print( (x == 0) or (y == 0) or (x / y == 1) )
 ```
 
 Python evalueert de boolean expressie van links naar rechts. De gegeven
-expressie is een combinatie van `or`s. Het resultaat van deze expressie is `True` als
+expressie is een combinatie van `or`'s. Het resultaat van deze expressie is `True` als
 één van de componenten `True` is. `y == 0`
 evalueert `True` dus is het niet nodig dat Python de laatste evaluatie
 nog uitvoert en dus stopt Python na `y == 0`.

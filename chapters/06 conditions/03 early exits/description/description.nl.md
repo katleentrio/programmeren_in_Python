@@ -26,4 +26,4 @@ print( "Nog meer code" )
 print( "Honderden regels code" )
 ```
 
-Wanneer de gebruiker nu een nul invoert, wordt het programma meteen beeindigd; geen enkele van commando's die volgen na de `exit()` functie worden nog uitgevoerd. 
+Wanneer de gebruiker nu een nul invoert, wordt het programma meteen beëindigd; geen enkele van commando's die volgen na de `exit()` functie worden nog uitgevoerd. 

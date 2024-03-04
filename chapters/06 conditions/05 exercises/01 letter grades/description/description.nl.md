@@ -1,4 +1,4 @@
-In een aantal landen worden schoolcijfers vaak uitgedrukt op een vijfletterschaal (`A`, `B`, `C`, `D` en `F`), waarbij `A` de hoogste score is en `F` de laagste. Hieronder staat het classificatiesysteem dat meestal gebruikt wordt aan middelbare scholen om numerieke scores (percentages) om te zetten naar letterscores.
+In een aantal landen worden schoolcijfers vaak uitgedrukt op een vijfletterschaal (`A`, `B`, `C`, `D` en `F`), waarbij `A` de hoogste score is en `F` de laagste. Hieronder staat het classificatiesysteem dat meestal gebruikt wordt in middelbare scholen om numerieke scores (percentages) om te zetten naar letterscores.
 
 {: .dodona-centered-group}
 | letterscore | percentage |

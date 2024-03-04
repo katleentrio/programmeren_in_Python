@@ -67,7 +67,7 @@ vormen en kan de code bijgevolg niet uitgevoerd worden zoals je bedoelt.[^5]
 
 **Inspringen doe je door één tabulatie naar rechts toe te passen (de `Tab` toets) of 4 spaties te gebruiken.**
 
-De volgende code bevat inspring-fouten. Haal de fouten de code en doe de test.
+De volgende code bevat inspring-fouten. Haal de fouten uit de code en doe de test.
 
 ```python
 # Deze code bevat tabulatie-fouten!
@@ -98,7 +98,7 @@ Zo kun je bijvoorbeeld gebruik maken van een `if` - `else` constructie om te tes
 of een integer even of oneven is. De modulo operator kan hierbij helpen:
 als `x % 2` nul is, dan is `x` even, en anders is `x` oneven.
 
-De syntax ziet er als volgt uit:
+De algemene syntax ziet er als volgt uit:
 
 ```python
 if <boolean expressie>:
@@ -211,7 +211,7 @@ else:
 ```
 
 Het nesten van `if` statements kan vaak vermeden worden
-door `elif`s te gebruiken. De code in het bovenstaand voorbeeld doet
+door `elif`'s te gebruiken. De code in het bovenstaand voorbeeld doet
 hetzelfde als de "leeftijd" code gegeven onder het deel over de meer-weg beslissingen.
 Ik neem aan dat je het ermee eens bent dat de versie met `elif`'s
 prettiger leest.
