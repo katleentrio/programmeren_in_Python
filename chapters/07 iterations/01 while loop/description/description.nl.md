@@ -147,8 +147,8 @@ met het ingeven van getallen door -in dit geval- een nul in te geven. Het totaal
 afgedrukt wanneer de loop beëindigd is.
 
 ```python
-num = -1            # beginwaarde voor num is -1, verschillend van 0
-totaal = 0          # deze variabele geeft de som, startend bij beginwaarde 0
+num = -1                                        # beginwaarde voor num is -1, verschillend van 0
+totaal = 0                                      # deze variabele geeft de som, startend bij beginwaarde 0
 while num != 0:
     num = int(input( "Geef een getal: " ))      # num krijgt telkens de waarde van het ingevoerde getal
     totaal += num
