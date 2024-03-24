@@ -1,4 +1,5 @@
 {
+  "type": "exercise",
   "evaluation": {
     "handler": "tested",
     "test_suite": "suite.yaml"
