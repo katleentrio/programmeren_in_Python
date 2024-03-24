@@ -1,8 +1,6 @@
 {
   "type": "exercise",
   "evaluation": {
-    "handler": "tested",
-    "test_suite": "suite.yaml"
-  },
-  "programming_language": "python"
+    "pythia_judge": "doctest"
+  }
 }
