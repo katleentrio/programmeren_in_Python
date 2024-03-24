@@ -12,6 +12,8 @@ In dit hoofdstuk is het volgende besproken:
 
 -   Commentaar in functies
 
+[Aanvullend]
+
 -   Variabele scope en levensduur
 
 -   Lokale en globale variabelen

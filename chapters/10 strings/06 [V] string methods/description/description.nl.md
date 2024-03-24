@@ -48,42 +48,6 @@ print( s.upper() )
 print( s.lower() )
 ```
 
-### `find()`
-
-`find()` kun je gebruiken om in een string te zoeken naar de start-index
-van een bepaalde substring. Als parameter krijgt de methode de gezochte
-substring. Optioneel kan een tweede, numerieke parameter meegegeven
-worden die aangeeft bij welke index gestart moet worden met zoeken. Een
-optionele derde, numerieke parameter is de index waarbij het zoeken moet
-stoppen. Je krijgt de laagste index waarbij de substring gevonden wordt
-terug, of -1 als de substring niet voorkomt.
-
-```python
-s = "Humpty Dumpty zat op de muur"
-print( s.find( "zat" ) )
-print( s.find( "t" ) )
-print( s.find( "t", 12 ) )
-print( s.find( "q" ) )
-```
-
-### `replace()`
-
-`replace()` vervangt alle instanties van een substring in een string
-door een andere substring. Als parameters krijgt het de substring die
-gezocht wordt, en de substring die als vervanging dient. Optioneel kan
-een derde, numerieke parameter meegegeven worden die aangeeft hoe vaak
-een vervanging moet plaatsvinden.
-
-Ik wil hier nogmaals benadrukken dat strings onveranderbaar zijn, dus de
-`replace()` functie maakt niet echt vervangingen in de string; hij
-retourneert een nieuwe string die een kopie is van de originele string,
-waarbij de vervangingen zijn gemaakt.
-
-```python
-s = 'Humpty Dumpty zat op de muur'
-print( s.replace( 'zat op', 'viel van' ) )
-```
-
 ### `split()`
 
 `split()` splitst een string op in woorden, gebaseerd op een gegeven
@@ -143,26 +107,6 @@ lijst = s.split( ';' )
 s = " ".join( lijst )
 print( s )
 ```
-
-### Oefening
-
-In de string
-`"Barbara had een bar, waar ze rabarbar verkocht, en die daarom de rabarbarbarbarabar werd genoemd."`
-is het woord `"rabarber"` verkeerd gespeld. Gebruik `replace()` om alle
-voorkomende gevallen van deze fout te verbeteren.
-
-Neem de string `"Niemand verwacht de Spaanse Inquisitie\`\# In feite,!
-`zij die de Spaanse Inquisitie wel verwachten..."` en toon hem tot aan,
-maar niet inclusief, de hash mark (`#`). Gebruik `find()` om de index van
-de hash mark te bepalen.
-
-Schrijf een programma dat een "schone" versie van alle woorden in de
-string print. Alle tekens die geen letter zijn, worden niet beschouwd
-als deel van een woord, maar als separator. Alle letters moeten in
-kleine letters worden omgezet. Bijvoorbeeld, de string
-`"Ik heb zo'n honger."` produceert vijf woorden, namelijk `"ik"`,
-`"heb"`, `"zo"`, `"n"`, en `"honger"`. Je kunt de functie die je eerder
-hebt geschreven voor het schoonmaken van strings hier gebruiken.
 
 [^13]: In werkelijkheid is het vaak iets ingewikkelder omdat er komma's
     kunnen staan in de waardes die zijn opgeslagen in het CSV bestand,

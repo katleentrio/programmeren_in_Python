@@ -42,57 +42,9 @@ print( fruit[-1] )
 print( fruit[5] )
 ```
 
-Je mag ook variabelen als indices gebruiken, en zelfs berekeningen of
-functie-aanroepen. Je moet er echter altijd voor zorgen dat berekeningen
-leiden tot integers, want floats kunnen niet als indices gebruikt
-worden. Hieronder staan een paar voorbeelden, waarvan de meeste zo
-ingewikkeld zijn dat ik geen reden zie om ze op deze manier in een
-programma te zetten. Maar ze laten zien wat de mogelijkheden zijn.
-
-```python
-from math import sqrt
-
-fruit = "aalbes"
-x = 3
-
-print( fruit[3-2] )
-print( fruit[int( sqrt( 4 ) )] )
-print( fruit[2**2] )
-print( fruit[int( (x-len( fruit ))/3 )] )
-print( fruit[-len( fruit )])
-print( fruit[-x] )
-```
-
 In principe mag je een index ook gebruiken bij een string die niet in
 een variabele staat, bijvoorbeeld, `"aalbes"[3]` is de letter `"b"`. Het
 mag duidelijk zijn dat niemand dat ooit doet.
-
-Naast enkele indices om letters in een string te benaderen, kun je ook
-substrings van een string benaderen door twee getallen tussen vierkante
-haken te zetten met een dubbele punt (:) ertussen. De eerste van deze
-getallen is de index waar de substring start, de tweede waar de
-substring eindigt. De substring is exclusief de letter die hoort bij de
-tweede index. Door het linkergetal weg te laten geef je aan dat de
-substring begint bij de start van de string (dus bij index 0). Door het
-rechtergetal weg te laten geef je aan dat de substring eindigt met het
-laatste teken van de string (inclusief dit laatste teken).
-
-Als je probeert een teken van een string te benaderen met een index die
-buiten de string valt, krijg je een runtime error ("index out of
-bounds"). Als je een substring probeert te benaderen geldt die beperking
-niet; het is toegestaan om getallen te gebruiken die buiten het bereik
-van de string vallen.
-
-```python
-fruit = "aalbes"
-print( fruit[:] )
-print( fruit[0:] )
-print( fruit[:6] )
-print( fruit[:100] )
-print( fruit[:len( fruit )] )
-print( fruit[1:-1] )
-print( fruit[2], fruit[1:6] )
-```
 
 ### Strings doorlopen
 
@@ -148,33 +100,3 @@ voeg je een spatie toe aan de nieuwe string. Je kunt testen of een teken
 acceptabel is met eenvoudige vergelijkingen, bijvoorbeeld, alle kleine
 letters kun je herkennen omdat ze de test `ch >= 'a' and ch <= 'z'`
 `True` maken.
-
-### Substrings met stappen
-
-Substrings kunnen behalve een index voor begin en einde een derde
-argument krijgen, namelijk stapgrootte. Dit argument werkt equivalent
-aan het derde argument voor de `range()` functie. De syntax voor
-substrings is `<string>[<begin>:<einde>:<stap>]`. Indien niet opgegeven,
-is de stapgrootte 1.
-
-Een veelgebruikte toepassing van de stapgrootte is het gebruik van een
-negatieve waarde om de string te inverteren.
-
-```python
-fruit = "banaan"
-print( fruit[::2] )
-print( fruit[1::2] )
-print( fruit[::-1] ) 
-print( fruit[::-2] ) 
-```
-
-Het inverteren van een string via `[::-1]` is conceptueel gelijk aan het
-doorlopen van de string vanaf het laatste teken tot het eerst met
-achterwaartse stappen van grootte 1.
-
-```python
-fruit = "banaan"
-print( fruit[::-1] )
-for i in range( 5, -1, -1 ):
-    print( fruit[i] )
-```

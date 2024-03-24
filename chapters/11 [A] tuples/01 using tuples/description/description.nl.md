@@ -127,16 +127,6 @@ t1 = ("appel", "banaan", "kers", "doerian")
 print( t1[2] )
 ```
 
-Je kunt zelfs sub-tuples maken, met dezelfde regels als je hebt voor
-substrings (als je die niet meer weet, lees dan nog eens hoofdstuk
-<a href="#ch:strings" data-reference-type="ref" data-reference="ch:strings">11</a>).
-Een sub-tuple is ook weer een tuple. Bijvoorbeeld:
-
-```python
-t1 = ("appel", "banaan", "kers", "doerian", "mango")
-print( t1[1:4] )
-```
-
 Omdat tuples indices hebben, kun je als alternatief voor een `for` loop
 om de elementen van de tuple te doorlopen, gebruik maken van de indices.
 
