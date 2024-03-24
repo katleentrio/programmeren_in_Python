@@ -74,7 +74,7 @@ van de functie wilt dat je meegeeft).
 
 ```python
 def hallo( naam ):
-    print( "Hallo, {}!".format( naam ) )
+    print( "Hallo," naam +"+")
 
 hallo( "Groucho" )
 hallo( "Chico" )
@@ -88,7 +88,7 @@ krijgen van buiten de functie (namelijk via de functie aanroep). De
 parameters zijn "lokaal" voor de functie, dat wil zeggen, ze kunnen niet
 benaderd worden door code die niet in het blok code van de functie
 staat, noch kunnen ze waardes van variabelen buiten de functie
-beïnvloeden. Meer hierover volgt later in dit hoofdstuk.
+beïnvloeden. Gebruik nooit dezelfde variabelen in je hoofdprogramma als in een functie om verwarring te vermijden.
 
 Functies kunnen meerdere parameters hebben. Bijvoorbeeld, de volgende
 functie krijgt twee parameters en vermenigvuldigt hun waardes, waarna
@@ -102,45 +102,6 @@ def vermenigvuldig( x, y ):
 vermenigvuldig( 2020, 5278238 )
 vermenigvuldig( 2, 3 )
 ```
-
-### Parameter types
-
-In veel programmeertalen
-moet je bij de definitie van een functie aangeven wat de types van de
-parameters zijn. Dit zorgt ervoor dat de compiler/interpreter kan
-controleren of de functie met de juiste soort argumenten wordt
-aangeroepen. Bij Python geef je geen data types aan. Dit betekent dat,
-bijvoorbeeld, de `vermenigvuldig()` functie hierboven kan worden
-aangeroepen met string argumenten. Als je dat doet, veroorzaakt dat een
-runtime error (want je kunt geen strings met elkaar vermenigvuldigen).
-
-Als je een "veilige" functie wilt schrijven, kun je het type argumenten
-dat de functie meekrijgt testen met de `isinstance()` functie.
-`isinstance()` krijgt een waarde of variabele mee als eerste argument,
-en een data type als tweede argument. De functie geeft `True` als de
-waarde of variabele van het genoemde type is, en anders `False`.
-Bijvoorbeeld:
-
-```python
-a = "Hallo"
-if isinstance( a, int ):
-    print( "integer" )
-elif isinstance( a, float ):
-    print( "float" )
-elif isinstance( a, str ):
-    print( "string" )
-else:
-    print( "anders" )
-```
-
-Als je de parameters zo test, moet je natuurlijk wel besluiten wat je
-doet als de functie met verkeerde argumenten is aangeroepen. De
-standaard manier om dit af te handelen is door een "exception" te
-genereren. Dat bespreek ik in hoofdstuk
-<a href="#ch:exceptions" data-reference-type="ref" data-reference="ch:exceptions">18</a>.
-Vooralsnog mag je aannemen dat functies die je zelf schrijft worden
-aangeroepen met argumenten van het correcte type. Zolang je alleen zelf
-de functies gebruikt, kun je dat altijd garanderen.
 
 ### Default parameter waardes
 
@@ -183,7 +144,8 @@ functie toe te communiceren. Vaak wil je ook informatie vanuit de
 functie naar het programma buiten de functie toe communiceren. Daartoe
 dient het commando `return`.
 
-Als Python `return` tegenkomt in een functie, beëindigt dat de functie.
+**Als Python `return` tegenkomt in een functie, beëindigt dat de functie.**
+
 Python gaat dan verder met de code vlak na de plek waar de functie werd
 aangeroepen. Je mag achter het woord `return` nul, één, of meerdere
 waardes of variabelen opnemen. Deze waardes worden dan gecommuniceerd
@@ -219,103 +181,6 @@ geretourneerd. Het hoofdprogramma "vangt" de waarde door het toekennen
 van de waarde aan de variabele `c`. Daarna wordt de inhoud van `c`
 geprint.
 
-Merk op dat het `return` statement in bovenstaande voorbeeld een
-complete berekening meekrijgt. Die berekening wordt binnen de functie
-uitgevoerd, en slechts de waarde die de uitkomst is van die berekening
-wordt geretourneerd naar het hoofdprogramma.
-
-Stel je nu voor dat je deze berekening alleen wilt uitvoeren met
-positieve getallen (wat niet gek zou zijn, aangezien de functie
-duidelijk bedoeld is om de lengte van de schuine zijde van een
-rechthoekige driehoek te berekenen, en wie heeft er nu ooit gehoord van
-een driehoek met zijden die nul of minder lang zijn). Bestudeer de
-volgende code:
-
-```python
-from math import sqrt
-
-def pythagoras( a, b ):
-    if a <= 0 or b <= 0:
-        return
-    return sqrt( a*a + b*b )
-
-print( pythagoras( 3, 4 ) )
-print( pythagoras( -3, 4 ) )
-```
-
-Op het eerste gezicht is er niks mis met deze code: aangezien er niks te
-berekenen is voor negatieve getallen, retourneert het geen waarde als er
-een negatief argument wordt verstrekt. Echter, als je het programma
-uitvoert zie je dat het de speciale waarde `None` afdrukt. Ik heb deze
-speciale waarde besproken in hoofdstuk
-<a href="#ch:simplefunctions" data-reference-type="ref" data-reference="ch:simplefunctions">6</a>.
-Het hoofdprogramma verwacht dat de functie `pythagoras()` een getal
-teruggeeft dat afgedrukt kan worden, dus `pythagoras()` voldoet niet aan
-de verwachting aangezien het niets retourneert in bepaalde
-omstandigheden. Je moet er altijd heel duidelijk over zijn welk data
-type je functie retourneert, en ervoor zorgen dat een retourwaarde van
-dat type ook altijd terugkomt, ongeacht de omstandigheden.
-
-De volgende code is overigens equivalent met bovenstaande code (en bevat
-dus dezelfde fout):
-
-```python
-from math import sqrt
-
-def pythagoras( a, b ):
-    if a > 0 and b > 0:
-        return sqrt( a*a + b*b )
-
-print( pythagoras( 3, 4 ) )
-print( pythagoras( -3, 4 ) )
-```
-
-In deze code is niet expliciet zichtbaar dat er een `return` is zonder
-waarde erachter, maar hij is er wel. Als Python de laatste regel van een
-functie uitvoert, dan volgt daarna impliciet een `return`, en zal Python
-dus uit de functie retourneren zonder waarde.
-
-Wellicht vraag je je af wat je moet retourneren in omstandigheden
-waarvoor je geen goede retourwaarde hebt. Dat hangt af van de
-toepassing. Bijvoorbeeld, voor de functie `pythagoras()` zou je kunnen
-besluiten dat je $$-1$$ retourneert als er iets niet in orde is met de
-argumenten. Zolang je dat maar communiceert naar de gebruiker van de
-functie, kan de gebruiker in het hoofdprogramma dit soort uitzonderlijke
-omstandigheden naar wens afhandelen. Bijvoorbeeld:
-
-```python
-from math import sqrt
-from pcinput import getInteger
-
-def pythagoras( a, b ):
-    if a <= 0 or b <= 0:
-        return -1
-    return sqrt( a*a + b*b )
-
-num1 = getInteger( "Geef zijde 1: " )
-num2 = getInteger( "Geef zijde 2: " )
-num3 = pythagoras( num1, num2 )
-if num3 < 0:
-    print( "De getallen kunnen niet worden gebruikt." )
-else:
-    print( "De lengte van de diagonaal is", num3 )
-```
-
-Merk op dat iedere regel code die in een functie volgt na een `return`
-op het zelfde niveau van inspringing altijd genegeerd zal worden.
-Bijvoorbeeld, in de functie:
-
-```python
-from math import sqrt
-
-def pythagoras( a, b ):
-    if a <= 0 or b <= 0:
-        return -1
-        print( "Deze regel wordt nooit uitgevoerd" )
-    return sqrt( a*a + b*b )
-```
-
-geeft de regel onder `return -1` duidelijk aan hoe nutteloos hij is.
 
 ### Het verschil tussen `return` en `print`
 
@@ -327,6 +192,7 @@ twee stukken code:
 ```python
 def print3():
    print( 3 )
+   print("na 3 komt 4")
 print3()
 ```
 
@@ -335,6 +201,7 @@ en:
 ```python
 def return3():
    return 3
+   print("komt 4 na 3?")
 print( return3() )
 ```
 
@@ -346,6 +213,9 @@ retourneert, terwijl bij de functie `return3()` de waarde 3 wordt
 geretourneerd, en geprint in het hoofdprogramma. Voor de gebruiker lijkt
 er geen verschil te zijn: beide programma's printen 3. Voor een
 programmeur zijn beide functies echter compleet verschillend.
+
+Merk ook op dat bij `print3()` de tekst `"na 3 komt 4"` ook wordt getoond. 
+Wordt de tekst `"komt 4 na 3?"` ook getoond bij `return3()`?
 
 De functie `print3()` kan voor slechts één doel gebruikt worden,
 namelijk het tonen van het getal 3. De functie `return3()` kan echter
@@ -440,7 +310,7 @@ def plusDagen( jaar, maand, dag, increment ):
     return einddatum.year, einddatum.month, einddatum.day
 
 y, m, d = plusDagen( 2015, 11, 13, 55 )
-print( "{}/{}/{}".format( y, m, d ) )
+print(f'{y}/{m}/{d}')
 ```
 
 De functie `plusDagen()` krijgt vier argumenten, namelijk integers die
@@ -560,8 +430,6 @@ retourneert, begint over het algemeen met het woord `get`, gevolgd door
 de naam van de eigenschap, beginnend met een hoofdletter. Bijvoorbeeld,
 een functie die van een float alleen het fractionele gedeelte (de
 cijfers achter de komma) retourneert, zou heten `getFractie()`.[^9]
-
-Schrijf de functie getFractie().
 
 De tegenhanger van een "get" functie is een functie die een eigenschap
 een bepaalde waarde geeft. De naam van zo'n functie begint meestal met

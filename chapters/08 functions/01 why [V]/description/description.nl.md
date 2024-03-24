@@ -1,4 +1,6 @@
-Waarom zou je functies willen creëren? Er zijn een hoop goede redenen:
+Waarom zou je functies willen creëren? Er zijn een hoop goede redenen. Je mag ze allemaal eens doornemen, maar voor nu onthoud je dat jouw code leesbaarder zal worden.
+
+Hieronder kan je de hoop redenen eens lezen (optioneel):
 
 -   Je hebt een bepaalde functionaliteit voor je code nodig die je
     onafhankelijk van de rest van je programma wilt ontwikkelen. Als je
@@ -58,4 +60,6 @@ samengevat als een middel om de volgende zaken te bewerkstelligen:
 
 -   *Recursie*: Het beschikbaar maken van een techniek die "recursie"
     heet, wat het onderwerp is van hoofdstuk
-    <a href="#ch:recursion" data-reference-type="ref" data-reference="ch:recursion">10</a>.
+    <a href="#ch:recursion" data-reference-type="ref" data-reference="ch:recursion">10</a>. 
+    Dit behandelen we normaal gezien niet.
+ 
