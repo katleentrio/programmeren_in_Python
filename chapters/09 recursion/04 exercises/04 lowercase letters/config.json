@@ -1,0 +1,18 @@
+{
+  "description": {
+    "names": {
+      "nl": "[A] Kleine letters",
+      "en": "Lowercase letters"
+    }
+  },
+  "labels": [
+
+  ],
+  "evaluation": {
+    "pythia_judge": "output"
+  },
+  "internals": {
+    "token": "dWMW9gNRBF-UIFbE7jug2u3inISCketvg6veAxYHqDw5ehm6WfKZYCVqIxUYvmp7",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

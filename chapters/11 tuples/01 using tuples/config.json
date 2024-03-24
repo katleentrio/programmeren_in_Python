@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "nl": "[V] Gebruik van tuples",
+      "en": "Using tuples"
+    }
+  },
+  "labels": [
+
+  ],
+  "internals": {
+    "token": "3vV-i56dIAMgkuEs8M9DgaFk2_Bm4NXFc-Uz7fGjKUhYkkFj7_s2NeHQRyrNdFYk",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

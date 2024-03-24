@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "nl": "[V] Wat is recursie?",
+      "en": "What is recursion?"
+    }
+  },
+  "labels": [
+
+  ],
+  "internals": {
+    "token": "UJh9NRS_IHm8vrKWKZFekNs-7WvWVnGPYbTzmcTFhzaCXqiwubewzUI5qBRFYFF9",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

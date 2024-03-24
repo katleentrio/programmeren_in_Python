@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "nl": "[V] Complexe getallen optellen",
+      "en": "Add complex numbers"
+    }
+  },
+  "labels": [
+
+  ],
+  "internals": {
+    "token": "nh-gxupwNseV3TFy4SVTYGfGrCxQ-Y-ryEg9eKT8pdgMRb8IgyITMs7iZdpBvz7d",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "nl": "[V] Grootste gemene deler",
+      "en": "Greatest common divider"
+    }
+  },
+  "labels": [
+
+  ],
+  "internals": {
+    "token": "-gp9Q2pUgdqqCDb3aauS2kGRuCbBgBI5ExKPB_mthyM5-sI6ZecXTtIucnXqzIUD",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}
