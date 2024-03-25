@@ -1,15 +1,15 @@
 {
   "description": {
     "names": {
-      "nl": "[A] Grip krijgen op complexiteit",
-      "en": "Managing program complexity"
+      "nl": "[O] Modules",
+      "en": "Modules"
     }
   },
   "labels": [
 
   ],
   "internals": {
-    "token": "2CiSjWs_J6i9Katy2yGyU6Y-6jHuySTq2gdC6m3waZd76D_yNCw6_bjJSZNwqX5e",
+    "token": "wacJS72I_Q9IfCWhDz66bmzp8Nx9W2mTPUIGE6F-3FpIqM74YcpB8bBQ_wjCAkpM",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }
