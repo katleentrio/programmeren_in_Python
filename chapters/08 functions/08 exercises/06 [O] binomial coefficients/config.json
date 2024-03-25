@@ -1,15 +1,15 @@
 {
   "description": {
     "names": {
-      "nl": "[A] Gemeenschappelijke karakters",
-      "en": "Common characters"
+      "nl": "Binomiaalcoëfficiënt",
+      "en": "Binomial coefficient"
     }
   },
   "labels": [
 
   ],
   "internals": {
-    "token": "aeqHh9MSneBZ3NvR-ID632S-5tAqfytpVzGbjWAn3UBTn-iN5vJUGKbJ5xDYyxHJ",
+    "token": "faeJei_cGu8wtFftZ8mVsQufXX3adDRdFCgahd7a8A9evdUX_2bVptmWGSEKRsNR",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }

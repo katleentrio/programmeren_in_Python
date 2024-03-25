@@ -1,15 +1,15 @@
 {
   "description": {
     "names": {
-      "nl": "[A] Loop-en-een-half (TODO)",
-      "en": "Loop-and-a-half (TODO)"
+      "nl": "Gemeenschappelijke karakters",
+      "en": "Common characters"
     }
   },
   "labels": [
 
   ],
   "internals": {
-    "token": "C7di32S_Enmn4p93-xRGzrMq4EquiU6QXEKmQQARY5ZaR5CiiGPmiZduuAm8Vp5X",
+    "token": "aeqHh9MSneBZ3NvR-ID632S-5tAqfytpVzGbjWAn3UBTn-iN5vJUGKbJ5xDYyxHJ",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }
