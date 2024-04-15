@@ -20,7 +20,20 @@ die bepaalde nuttige constanten en methodes bevat die je in je
 programma's kunt gebruiken, maar de methodes die ik hier noem kun je
 gebruiken zonder de `string` module te importeren.
 
-### `strip()`
+### `upper()` en `lower()` - moetje
+
+`upper()` creëert een versie van een string met alle letters als
+hoofdletters. `lower()` werkt op dezelfde manier, maar maakt van alle
+letters kleine letters. Geen van beide methodes heeft parameters.
+
+```python
+s = "The Meaning of Life"
+print( s )
+print( s.upper() )
+print( s.lower() )
+```
+
+### `strip()`- magje
 
 `strip()` verwijdert spaties aan het begin en einde van een string,
 inclusief eventuele "newline" tekens en andere tekens die als spaties
@@ -35,20 +48,7 @@ s = s.strip()
 print( "["+s+"]" )
 ```
 
-### `upper()` en `lower()`
-
-`upper()` creëert een versie van een string met alle letters als
-hoofdletters. `lower()` werkt op dezelfde manier, maar maakt van alle
-letters kleine letters. Geen van beide methodes heeft parameters.
-
-```python
-s = "The Meaning of Life"
-print( s )
-print( s.upper() )
-print( s.lower() )
-```
-
-### `split()`
+### `split()` - magje
 
 `split()` splitst een string op in woorden, gebaseerd op een gegeven
 teken of substring die als separator beschouwd wordt. De separator is
@@ -88,7 +88,7 @@ for waarde in waardes:
     print( waarde )
 ```
 
-### `join()`
+### `join()` - magje
 
 `join()` is de tegenhanger van `split()`. `join()` plakt een lijst van
 woorden aaneen tot een string, waarbij de woorden in de string van

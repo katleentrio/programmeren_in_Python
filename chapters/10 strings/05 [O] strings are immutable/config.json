@@ -1,7 +1,7 @@
 {
   "description": {
     "names": {
-      "nl": "[A] Strings zijn onveranderbaar",
+      "nl": "[O] Strings zijn onveranderbaar",
       "en": "Strings are immutable"
     }
   },

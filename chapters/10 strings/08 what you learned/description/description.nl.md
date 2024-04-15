@@ -6,9 +6,11 @@ In dit hoofdstuk is het volgende besproken:
 
 -   Positive and negative indices voor strings
 
--   String methodes `strip()`, `upper()`, `lower()`, `split()`, en `join()`
+-   String methodes `upper()`, `lower()`
 
 [Aanvullend]
+
+-   String methodes `strip()`, `split()`, en `join()`
 
 -   Onveranderlijkheid van strings
 
