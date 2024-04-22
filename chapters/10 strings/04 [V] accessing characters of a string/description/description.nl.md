@@ -1,3 +1,5 @@
+## Moetje
+
 Ik heb al meerdere keren laten zien dat een string een verzameling is
 van tekens in een specifieke volgorde. Je kunt de individuele tekens van
 een string middels indices benaderen.
@@ -78,6 +80,8 @@ de string, is de eerste methode, waarbij de constructie
 `for <teken> in <string>` wordt gebruikt, verreweg het meest elegant en
 leesbaar. Maar soms moet je een probleem oplossen waarbij een andere
 methode nodig is.
+
+## Magje
 
 Schrijf een programma dat van een string de indices print van alle
 klinkers (a, e, i, o, en u). Dit kan met een `for` loop of een `while`

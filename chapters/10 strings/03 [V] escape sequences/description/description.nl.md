@@ -1,3 +1,5 @@
+## Moetje
+
 `"\n"` is een "speciaal teken" (in het Engels heet dit een "escape
 sequence"). Speciale tekens in Python worden over het algemeen
 geschreven als een backslash gevolgd door een code. De code kan één of
@@ -11,6 +13,8 @@ gebruiken om een enkel respectievelijk dubbel aanhalingsteken in een
 string op te nemen, ongeacht het type aanhalingstekens dat je om de
 string heen hebt gezet. Ik heb ook genoemd dat je `"\\"` kunt gebruiken
 om een "echte" backslash in de string op te nemen.
+
+## Magje
 
 Naast deze zijn er nog diverse andere speciale tekens. De meeste zijn
 behoorlijk archaïsch en worden niet meer gebruikt op moderne computers,

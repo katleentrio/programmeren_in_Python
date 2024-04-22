@@ -1,3 +1,5 @@
+## Moetje
+
 Er is een aantal methodes beschikbaar die ontworpen zijn om strings te
 bewerken. Al deze methodes worden toegepast op een string om een
 operatie uit te voeren. Omdat strings onveranderbaar zijn, zullen deze
@@ -20,7 +22,7 @@ die bepaalde nuttige constanten en methodes bevat die je in je
 programma's kunt gebruiken, maar de methodes die ik hier noem kun je
 gebruiken zonder de `string` module te importeren.
 
-### `upper()` en `lower()` - moetje
+### `upper()` en `lower()`
 
 `upper()` creëert een versie van een string met alle letters als
 hoofdletters. `lower()` werkt op dezelfde manier, maar maakt van alle
@@ -33,7 +35,9 @@ print( s.upper() )
 print( s.lower() )
 ```
 
-### `strip()`- magje
+## Magje
+
+### `strip()`
 
 `strip()` verwijdert spaties aan het begin en einde van een string,
 inclusief eventuele "newline" tekens en andere tekens die als spaties
@@ -48,7 +52,7 @@ s = s.strip()
 print( "["+s+"]" )
 ```
 
-### `split()` - magje
+### `split()`
 
 `split()` splitst een string op in woorden, gebaseerd op een gegeven
 teken of substring die als separator beschouwd wordt. De separator is
@@ -88,7 +92,7 @@ for waarde in waardes:
     print( waarde )
 ```
 
-### `join()` - magje
+### `join()`
 
 `join()` is de tegenhanger van `split()`. `join()` plakt een lijst van
 woorden aaneen tot een string, waarbij de woorden in de string van
