@@ -1,8 +1,8 @@
 {
   "description": {
     "names": {
-      "nl": "Toets for Simpson",
-      "en": "Toets for Simpson"
+      "nl": "Toets for Bart Simpson",
+      "en": "Toets for Bart Simpson"
     }
   },
   "labels": [
@@ -11,5 +11,6 @@
   "internals": {
     "token": "_I75mEUDxRyt7kKyxkWw3CAWGqKNktB6CGfbY4EnCRe-42rzjvnzT_MPj8chb3Xm",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
-  }
+  },
+  "access": "private"
 }
