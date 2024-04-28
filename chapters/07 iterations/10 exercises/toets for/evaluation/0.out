@@ -53,3 +53,10 @@ Ik zal meer dan twee oefeningen programmeren maken!
 Ik zal meer dan twee oefeningen programmeren maken!
 Ik zal meer dan twee oefeningen programmeren maken!
 Ik zal meer dan twee oefeningen programmeren maken!
+------------------------------------------------------------
+tab name: Tests
+python input without prompt: true
+block count: multi
+input block size: 1
+output block size: ends with
+comparison: exact match
