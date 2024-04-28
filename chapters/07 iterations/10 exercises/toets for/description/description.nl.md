@@ -9,11 +9,11 @@ In een interview maakte Matt bekend dat hij de naam 'Bart' koos omdat het een an
 
 ### Opgave
 
-Schrijf een programma die de tekst op het bord schrijft volgens een gegeven getal.
+Schrijf een programma die de tekst op het bord schrijft volgens een gegeven getal. Het minimumaantal is 1.
 
 ### Invoer
 
-Een geheel getal.
+Een geheel getal groter dan 1
 
 ### Uitvoer
 
