@@ -1,11 +1,11 @@
 {
   "description": {
     "names": {
-      "nl": "Letterscores",
-      "en": "Letter grades"
+      "nl": "Zon"
+      
     }
   },
-  "labels": [
+  "labels": [ "selectie", "If"
 
   ],
   "internals": {
