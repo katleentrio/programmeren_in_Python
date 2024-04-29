@@ -17,11 +17,11 @@ if not os.path.exists(solutiondir):
 
 # configuration settings
 settings = f'''
-tab name: Grades
+tab name: solutions
 python input without prompt: true
 block count: multi
 input block size: 1
-output block size: 1
+output block size: ends with
 comparison: exact match
 '''
 
