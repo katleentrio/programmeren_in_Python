@@ -1,0 +1,15 @@
+{
+  "description": {
+    "names": {
+      "nl": "Letterscores",
+      "en": "Letter grades"
+    }
+  },
+  "labels": [
+
+  ],
+  "internals": {
+    "token": "uYh8fEWniuTrft7R3AwUx6t8-M82GQuHKrswpAue8Kxgvuidcmk3qJ7SGfNvi4Ny",
+    "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
+  }
+}
