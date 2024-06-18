@@ -15,3 +15,5 @@ Schrijf een functie `tafel_van_vermenigvuldiging` waaraan een getal $$n \in \mat
 9 * 12 = 108
 10 * 12 = 120
 ```
+### Tip
+Gebruik voor deze opdracht print() i.p.v. return()
