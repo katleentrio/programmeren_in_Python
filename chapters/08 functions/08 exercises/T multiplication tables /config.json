@@ -2,14 +2,13 @@
   "description": {
     "names": {
       "nl": "[V] Tafels van vermenigvuldiging via functie"
-      
     }
   },
-  "labels": [ "toets functie"
-
+  "labels": [
+    "toets functie"
   ],
   "internals": {
-    "token": "ZaUjWTqdAZ22KvV-IiExzGVzdPb9KfG_JsPsqtDX99btQ7D4IQbfeGpUWkbu92It",
+    "token": "hjbBmfsM4Tdv6ezwzJ7SK6sWuqzEB6Uc4CyJqfVJIXZfwBM3WixItbYUE-vZhDzm",
     "_info": "These fields are used for internal bookkeeping in Dodona, please do not change them."
   }
 }
