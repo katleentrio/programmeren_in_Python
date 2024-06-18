@@ -1,11 +1,11 @@
 {
   "description": {
     "names": {
-      "nl": "[V] Tafels van vermenigvuldiging via functie",
-      "en": "Multiplication tables"
+      "nl": "[V] Tafels van vermenigvuldiging via functie"
+      
     }
   },
-  "labels": [
+  "labels": [ "Oefening functie"
 
   ],
   "internals": {
